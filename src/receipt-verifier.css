@@ -1,0 +1,22 @@
+.receipt-verifier > p,
+.receipt-verifier form > p,
+.receipt-verification-result p {
+  max-width: 75ch;
+  font-size: 12px;
+  line-height: 1.75;
+}
+.receipt-verifier form > button { margin-top: 3px; }
+.receipt-verifier [role="alert"] { color: #8d362e; font-weight: 550; }
+.receipt-verification-result {
+  margin-top: 22px;
+  padding-top: 19px;
+  border-top: 1px solid var(--line);
+}
+.receipt-verification-result h3 { font-size: 15px; margin-bottom: 8px; }
+.receipt-verification-result .metric-row { font-size: 12px; padding: 10px 0; }
+.receipt-verification-result .metric-row dd { font-size: 13px; }
+@media (max-width: 560px) {
+  .receipt-verifier { padding: 18px 15px; }
+  .receipt-verification-result .metric-row { gap: 16px; }
+  .receipt-verification-result .metric-row dt { max-width: 52%; }
+}

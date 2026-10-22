@@ -1,0 +1,15 @@
+{
+  "engine": "kokoro",
+  "voice": "af_heart",
+  "speed": 1,
+  "gap": 0.35,
+  "tail": 0.6,
+  "lufs": -16,
+  "lines": [
+    { "id": "01-review", "at": 0.5, "text": "A saved release review can now be checked independently." },
+    { "id": "02-replay", "at": 6.8, "text": "This real local receipt reproduces its decision and four source records through the same review engine." },
+    { "id": "03-edit", "at": 18.8, "text": "Changing the claimed decision makes replay fail. No source instruction or model request is executed." },
+    { "id": "04-expiry", "at": 30.8, "text": "In this labeled synthetic expiry case, the historical decision still matches. The dated assessment now abstains." },
+    { "id": "05-boundary", "at": 44.5, "text": "Replay checks consistency. It does not authenticate CI or authorize a release." }
+  ]
+}

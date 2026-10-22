@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { bytes, request, timeLabel } from './api.js';
+import './receipt-verifier.css';
 
 export default function ReceiptVerifier() {
   const [text, setText] = useState('');
