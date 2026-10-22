@@ -1,7 +1,7 @@
 {
   "schemaVersion": "qarinah.hackos-upgrade.v1",
-  "observedAtUtc": "2026-10-22T15:37:38.680Z",
-  "status": "approved-source-published-entry-update-in-progress",
+  "observedAtUtc": "2026-10-22T15:42:12.578Z",
+  "status": "existing-entry-updated-and-submitted",
   "event": "Open Agent Hackathon 2026",
   "source": {
     "url": "https://github.com/AjnasNB/qarinah-evidence-desk",
@@ -24,9 +24,40 @@
   },
   "description": {
     "path": "docs/submission/HACKOS-DESCRIPTION-R7.txt",
-    "characters": 1959
+    "characters": 1959,
+    "persistedExactly": true
   },
-  "entrySaveConfirmed": false,
+  "entrySaveConfirmed": true,
   "fullAssetUrls": "Retained privately outside Git",
-  "receiptPublishing": "Local publication receipt; no subsequent push authorized"
+  "receiptPublishing": "Local publication receipt; no subsequent push authorized",
+  "persistedAfterPageReload": true,
+  "uploadPersistence": {
+    "videoChanged": true,
+    "videoHost": "iframe.mediadelivery.net",
+    "deckUnchanged": true,
+    "repositoryUnchanged": true,
+    "teamUnchanged": true,
+    "platformCounter": "Submitted 1/1",
+    "singleExistingEntry": true,
+    "confirmationUsed": "Submit anyway",
+    "unfinishedTasksReported": 10,
+    "requirementsReported": 0,
+    "tasksMarkedComplete": false
+  },
+  "hostedVideoPlayback": {
+    "currentTimeSeconds": 25.422792,
+    "durationSeconds": 148.010666,
+    "height": 1080,
+    "mediaError": null,
+    "muted": true,
+    "observedAtUtc": "2026-10-22T15:45:23.383Z",
+    "paused": false,
+    "readyState": 4,
+    "width": 1920,
+    "started": true,
+    "sourceDurationSeconds": 148,
+    "durationToleranceSeconds": 0.1,
+    "scope": "DOM media state confirms muted playback start and loaded 1080p stream; no full remote viewing or human listening review claimed",
+    "transcodeNote": "First load before host preparation returned HLS errors; reload later loaded 148s and 1080p and played normally."
+  }
 }

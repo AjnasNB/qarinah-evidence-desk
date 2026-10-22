@@ -1,6 +1,6 @@
 # Submission readiness — 22 October 2026
 
-**Outcome: submitted on 22 October 2026.** The original audit below was followed by specifically approved source publication, direct video/PDF uploads and final submission. HackOS showed **Submitted 1/1** after reload. See [the outcome receipt](SUBMISSION-RECEIPT-2026-10-22.json). No additional product tests were needed because the published production code matches the last clean 51-test validation.
+**Outcome: submitted and updated on 22 October 2026.** The initial source/video/PDF submission is preserved in [its historical receipt](SUBMISSION-RECEIPT-2026-10-22.json). The later specifically approved upgrade published source `6bd93e0`, replaced the video with R7 and saved the exact 1,959-character description while retaining the PDF. HackOS again showed **Submitted 1/1** after reload. See [the current upgrade receipt](UPGRADE-RECEIPT-2026-10-22.json). The new production-code validation passes 81 tests, typecheck, build and vendor integrity; the original audit below retains its original 51-test scope and dated observations.
 
 ## Official route and dates
 

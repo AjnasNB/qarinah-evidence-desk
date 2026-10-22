@@ -1,6 +1,8 @@
-# R7 proposed entry update
+# R7 published entry update
 
-Local review film: `showtime-out/qed-receipt-proof-20261022-193800/final-r7-ready.mp4`, **148 seconds**, 1920 × 1080, 30 fps. Its exact file identity is in [asset.json](asset.json). It has not been uploaded or substituted for the submitted R6.
+Published entry film: `showtime-out/qed-receipt-proof-20261022-193800/final-r7-ready.mp4`, **148 seconds**, 1920 × 1080, 30 fps. Its exact file identity is in [asset.json](asset.json). After the user's exact approval, it replaced R6 on the existing HackOS entry; the changed link and description persist after reload. The submitted R6 archive is preserved. See [the upgrade receipt](../../submission/UPGRADE-RECEIPT-2026-10-22.json) for hosted playback status.
+
+The hosted stream subsequently loaded at 1920×1080 and played muted, with readyState 4, positive playback time and no media error. Its transcoded duration was 148.010666 seconds. An earlier first load returned HLS errors before preparation completed; the later reload/playback succeeded. This is a playback-start check, not a full remote viewing or human listening review.
 
 The first 90 seconds retain the prior real repair/source demonstration and explicitly labeled synthetic cases, with corrected result crops and a headline visible from frame zero. A new 52-second chapter shows the real receipt form: an actual saved local review reproduces, an edited copy is rejected, and a labeled synthetic expired case separates historical consistency from present abstention. A new six-second closing connects receipt inspection and the qualified Cursor founder report, over the actual saved receipt result.
 
@@ -27,7 +29,7 @@ The current automated verdict is **WARN: zero failures, two warnings**, for a 2.
 
 ## Independent final review
 
-Across three rounds, five independent media critics inspected the supplied frames, text crops, story and measured audio. Both final blind comparisons prefer this cut over the previous version, and both reviewers would post it. They establish no blocker. One remaining should-fix concerns detailed result text at phone size; this is a 16:9 desktop technical demonstration. Publication approval explicitly requests acceptance of that limitation. The retained polish items are brief dark source-panel transitions and two short introductory narration spans measured at 235/201 wpm within slower contiguous sentences. No human listening or full mobile-video suitability is claimed. A working responsive product form does not prove phone readability of this video.
+Across three rounds, five independent media critics inspected the supplied frames, text crops, story and measured audio. Both final blind comparisons prefer this cut over the previous version, and both reviewers would post it. They establish no blocker. The user explicitly accepted the desktop-demo limitation in the publication approval: detailed result text is small on phones. That finding is now waived with the actual approval. The retained polish items are brief dark source-panel transitions and two short introductory narration spans measured at 235/201 wpm within slower contiguous sentences. No human listening or full mobile-video suitability is claimed. A working responsive product form does not prove phone readability of this video.
 
 ## Reproduce
 

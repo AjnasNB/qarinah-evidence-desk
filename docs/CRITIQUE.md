@@ -2,6 +2,8 @@
 
 ## Local refinement after submission
 
+The refinement was subsequently published at approved source `6bd93e0`, and its R7 movie/description replaced the existing entry after explicit user approval. The [upgrade receipt](submission/UPGRADE-RECEIPT-2026-10-22.json) records current persistence and playback checks; the critique below retains its evidence limits.
+
 The later local version adds replayable receipts: validate the normalized packet and source identities, reproduce the decision/claims/citations through a separate actual Desk/Meterless instance, then assess the saved packet at a displayed check time. Eighteen distinct negative mutations, rehashed-source disagreement, an unauthenticated rewritten control, expiry boundaries, CLI digest checks, source-specific Zetaris guidance and browser navigation are covered by the expanded 81-test suite. Real desktop recordings and a 390-pixel mobile check demonstrate the form. See [the source-backed evidence](validation/2026-10-22-receipt-replay.json).
 
 Independent focused review found and closed a transport-specific replay mismatch and a freshness-label problem. The earlier 74/100 review below remains a dated subjective assessment of the submitted prototype, not a new score for this extension. The improvement strengthens reviewer reproducibility. Customer demand, authenticated producers, user-task utility and total token savings remain unestablished. A consistently rewritten receipt can pass; hashes are not signatures. The [refinement plan](IDEA-REFINEMENT-2026-10-22.md) records the selected direction and experiments. No prize probability follows from passing tests.

@@ -52,6 +52,16 @@
       "failed": 0,
       "skipped": 0,
       "scope": "Actual npm test after native catalog verifier fix; the movie packet retains its original 46-test identity."
+    },
+    "receiptReplayUpgrade": {
+      "validationReceipt": "docs/validation/2026-10-22-receipt-replay.json",
+      "testsPassed": 81,
+      "typecheck": "passed",
+      "build": "passed",
+      "vendorIntegrity": "passed",
+      "filmedCaptureCommit": "79ace480758daf2dbee42608c43ec99aed4434f4",
+      "filmedTestsPassed": 80,
+      "authenticatedCI": false
     }
   },
   "sponsorEvidence": {
@@ -103,7 +113,9 @@
     "builder": "scripts/build-submission-deck.mjs",
     "pptx": ".local/submission/output/evidence-desk-review-r5.pptx",
     "pdf": ".local/submission/output/evidence-desk-review-r5.pdf",
-    "editor": "scripts/update-entry-deck.mjs"
+    "editor": "scripts/update-entry-deck.mjs",
+    "video": "showtime-out/qed-receipt-proof-20261022-193800/final-r7-ready.mp4",
+    "description": "docs/submission/HACKOS-DESCRIPTION-R7.txt"
   },
   "deckReview": {
     "revision": "r5",
@@ -141,6 +153,121 @@
     "uploadedFormat": "PDF"
   },
   "videoReview": {
+    "status": "reviewed-published-entry-r7",
+    "path": "showtime-out/qed-receipt-proof-20261022-193800/final-r7-ready.mp4",
+    "bytes": 46329060,
+    "sha256": "81c9e7fb09999f103f07fda2ce868298a464caa0a93592da64731556b2188966",
+    "durationSeconds": 148,
+    "frames": 4440,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "captions": "showtime-out/qed-receipt-proof-20261022-193800/final-r7-ready.srt",
+    "sourceCaptureCommits": [
+      "968764add439b8ea7e7b75f9989a91dd607ec0d3",
+      "79ace480758daf2dbee42608c43ec99aed4434f4"
+    ],
+    "realProductFootage": true,
+    "narration": "Generic local Kokoro af_heart",
+    "music": "Existing original 120 BPM project score",
+    "authenticLogo": true,
+    "finalIntegratedLufs": -14.02,
+    "finalTruePeakDbtp": -2.02,
+    "qa": "docs/video/r7/asset.json",
+    "independentReview": {
+      "rounds": 3,
+      "finalComparisonPreferredNewInBothOrders": true,
+      "wouldPostBoth": true,
+      "blockers": 0,
+      "remainingShouldFix": [
+        {
+          "id": "r3o1-S1",
+          "time": 37,
+          "issue": "Detailed result text is too small for phone viewing",
+          "disposition": "User explicitly accepted the desktop-demo limitation with the exact publication approval on 22 October 2026"
+        }
+      ],
+      "remainingPolish": [
+        "Contained one-frame dark source-panel resets",
+        "Two brief introductory caption spans measure 235/201 wpm within slower contiguous sentences"
+      ],
+      "humanListening": false,
+      "findings": "showtime-out/qed-receipt-proof-20261022-193800/review/round-3/VERDICT.md",
+      "userAcceptedDesktopLimit": true,
+      "openShouldFix": 0
+    },
+    "uploaded": true,
+    "destination": "Existing submitted HackOS entry",
+    "persistedAfterReload": true,
+    "hostedPlayback": {
+      "currentTimeSeconds": 25.422792,
+      "durationSeconds": 148.010666,
+      "height": 1080,
+      "mediaError": null,
+      "muted": true,
+      "observedAtUtc": "2026-10-22T15:45:23.383Z",
+      "paused": false,
+      "readyState": 4,
+      "width": 1920,
+      "started": true,
+      "sourceDurationSeconds": 148,
+      "durationToleranceSeconds": 0.1,
+      "scope": "DOM media state confirms muted playback start and loaded 1080p stream; no full remote viewing or human listening review claimed",
+      "transcodeNote": "First load before host preparation returned HLS errors; reload later loaded 148s and 1080p and played normally."
+    }
+  },
+  "blockingGates": [],
+  "limitations": [
+    "Underlying local observations are caller-declared, not independently authenticated CI.",
+    "Meterless uses its deterministic reference hash embedder, not learned semantic embeddings.",
+    "Finite synthetic regressions and body-byte measurements establish neither representative error rates nor provider-token savings.",
+    "Actual source transport passed; deployment authority, user impact and winning probability remain unestablished."
+  ],
+  "releaseChallenge": {
+    "receipt": "docs/validation/release-challenge.json",
+    "classification": "hand-authored synthetic regression; not blind evaluation",
+    "expectedMatches": 20,
+    "total": 20,
+    "falseReady": 0,
+    "nonReadyCases": 18,
+    "httpRequests": 83,
+    "requestBodyBytes": 21279,
+    "responseBodyBytes": 196794,
+    "providerCalls": 0,
+    "modelAttempts": 0,
+    "winningProbability": null
+  },
+  "qualityReview": {
+    "score": 74,
+    "maximum": 100,
+    "classification": "Independent subjective prototype rubric; not a win probability",
+    "impact": 20,
+    "technical": 17,
+    "innovation": 9,
+    "demo": 13,
+    "ux": 8,
+    "sponsors": 7
+  },
+  "hackosDraft": {
+    "saved": true,
+    "track": "Wildcard [Tinkerer]: Bring Your Own Project",
+    "description": "docs/submission/HACKOS-DESCRIPTION-R7.txt",
+    "descriptionCharacters": 1959,
+    "submissionStatus": "submitted",
+    "videoUploadSupported": true,
+    "deckUploadSupported": true,
+    "persistedAfterReload": true
+  },
+  "sourcePublication": {
+    "url": "https://github.com/AjnasNB/qarinah-evidence-desk",
+    "visibility": "PUBLIC",
+    "branch": "master",
+    "approvedAndPublishedCommit": "6bd93e0a6db0779ac78832004e21b1d1165c41e2",
+    "remoteCommitVerified": true,
+    "previousPublishedCommit": "e1d7d6f2bc204de1a91a1bdad077f1eb4bd8ef9b"
+  },
+  "submissionReceipt": "docs/submission/UPGRADE-RECEIPT-2026-10-22.json",
+  "previousVideoReview": {
     "status": "reviewed-entry-r6",
     "path": ".local/video/r6-entry/qarinah-evidence-r6.mp4",
     "captions": ".local/video/r6-entry/qarinah-evidence-r6.srt",
@@ -183,54 +310,6 @@
       "scope": "DOM media state confirms playback start; no full remote viewing or human listening review claimed"
     }
   },
-  "blockingGates": [],
-  "limitations": [
-    "Underlying local observations are caller-declared, not independently authenticated CI.",
-    "Meterless uses its deterministic reference hash embedder, not learned semantic embeddings.",
-    "Finite synthetic regressions and body-byte measurements establish neither representative error rates nor provider-token savings.",
-    "Actual source transport passed; deployment authority, user impact and winning probability remain unestablished."
-  ],
-  "releaseChallenge": {
-    "receipt": "docs/validation/release-challenge.json",
-    "classification": "hand-authored synthetic regression; not blind evaluation",
-    "expectedMatches": 20,
-    "total": 20,
-    "falseReady": 0,
-    "nonReadyCases": 18,
-    "httpRequests": 83,
-    "requestBodyBytes": 21279,
-    "responseBodyBytes": 196794,
-    "providerCalls": 0,
-    "modelAttempts": 0,
-    "winningProbability": null
-  },
-  "qualityReview": {
-    "score": 74,
-    "maximum": 100,
-    "classification": "Independent subjective prototype rubric; not a win probability",
-    "impact": 20,
-    "technical": 17,
-    "innovation": 9,
-    "demo": 13,
-    "ux": 8,
-    "sponsors": 7
-  },
-  "hackosDraft": {
-    "saved": true,
-    "track": "Wildcard [Tinkerer]: Bring Your Own Project",
-    "description": "docs/submission/HACKOS-DESCRIPTION.txt",
-    "descriptionCharacters": 1680,
-    "submissionStatus": "submitted",
-    "videoUploadSupported": true,
-    "deckUploadSupported": true,
-    "persistedAfterReload": true
-  },
-  "sourcePublication": {
-    "url": "https://github.com/AjnasNB/qarinah-evidence-desk",
-    "visibility": "PUBLIC",
-    "branch": "master",
-    "approvedAndPublishedCommit": "e1d7d6f2bc204de1a91a1bdad077f1eb4bd8ef9b",
-    "remoteCommitVerified": true
-  },
-  "submissionReceipt": "docs/submission/SUBMISSION-RECEIPT-2026-10-22.json"
+  "upgradeReceipt": "docs/submission/UPGRADE-RECEIPT-2026-10-22.json",
+  "previousSubmissionReceipt": "docs/submission/SUBMISSION-RECEIPT-2026-10-22.json"
 }

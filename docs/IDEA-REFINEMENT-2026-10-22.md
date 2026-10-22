@@ -1,5 +1,7 @@
 # Evidence Desk: product refinement
 
+Outcome after this plan: the user explicitly approved source `6bd93e0` and R7 publication, including the desktop-demo limitation. The existing HackOS entry's new video and exact description persist after reload. See [the upgrade receipt](submission/UPGRADE-RECEIPT-2026-10-22.json). The original planning statement below describes the state before that approved update.
+
 The submitted Wildcard entry remains at public commit `e1d7d6f`. This document describes a subsequent local improvement, not an updated competition submission. Prize probability is unknown. The current [official rubric](https://hackathon.genai.works/event/open-agent-hackathon-2026#rules) weights impact 30, technical execution 20, innovation 15, demo 15, UX 10 and sponsor use 10. A test pass rate cannot be substituted for a chance of winning.
 
 ## Intent and opportunity

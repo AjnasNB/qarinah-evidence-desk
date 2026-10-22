@@ -11,7 +11,7 @@
   },
   "oldSubmittedR6Preserved": true,
   "oldSubmittedR6Sha256": "c0bb774c0fe42d50e774a0d12962005d7d5d01b496bcb65be14e2949b7f0dcc8",
-  "purpose": "Proposed local update, not uploaded",
+  "purpose": "Approved upgrade uploaded to the existing submitted HackOS entry",
   "narrationNewChapter": {
     "words": 68,
     "dryAndMixedReadback": "Exact normalized match for dry voice and prior mixed chapter; revised picture retains the same voice/music timeline",
@@ -74,7 +74,7 @@
         "id": "r3o1-S1",
         "time": 37,
         "issue": "Detailed result text is too small for phone viewing",
-        "disposition": "Desktop technical demo; user acceptance requested with publication approval"
+        "disposition": "User explicitly accepted the desktop-demo limitation with the exact publication approval on 22 October 2026"
       }
     ],
     "remainingPolish": [
@@ -82,6 +82,27 @@
       "Two brief introductory caption spans measure 235/201 wpm within slower contiguous sentences"
     ],
     "humanListening": false,
-    "findings": "showtime-out/qed-receipt-proof-20261022-193800/review/round-3/VERDICT.md"
+    "findings": "showtime-out/qed-receipt-proof-20261022-193800/review/round-3/VERDICT.md",
+    "userAcceptedDesktopLimit": true,
+    "openShouldFix": 0
+  },
+  "uploaded": true,
+  "destination": "Existing submitted HackOS Wildcard entry",
+  "linkPersistedAfterReload": true,
+  "hostedPlayback": {
+    "currentTimeSeconds": 25.422792,
+    "durationSeconds": 148.010666,
+    "height": 1080,
+    "mediaError": null,
+    "muted": true,
+    "observedAtUtc": "2026-10-22T15:45:23.383Z",
+    "paused": false,
+    "readyState": 4,
+    "width": 1920,
+    "started": true,
+    "sourceDurationSeconds": 148,
+    "durationToleranceSeconds": 0.1,
+    "scope": "DOM media state confirms muted playback start and loaded 1080p stream; no full remote viewing or human listening review claimed",
+    "transcodeNote": "First load before host preparation returned HLS errors; reload later loaded 148s and 1080p and played normally."
   }
 }

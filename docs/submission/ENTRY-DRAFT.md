@@ -1,6 +1,6 @@
 # Qarinah Evidence Desk
 
-Submitted copy for the Open Agent Hackathon Wildcard route. **HackOS confirmed Submitted 1/1 after reload on 22 October 2026.** The approved source commit is public and the final video/PDF uploads persisted. See [the submission receipt](SUBMISSION-RECEIPT-2026-10-22.json). Actual Meterless and live Zetaris execution are verified. The founder reports running validation in Cursor during development; the retained machine receipt is from an earlier Codex run. The registered solo team and exact saved description are confirmed.
+Submitted project narrative for the Open Agent Hackathon Wildcard route. **HackOS confirmed Submitted 1/1 after reload on 22 October 2026.** The later approved R7 upgrade publishes source `6bd93e0`, replaces the video with the 148-second real demo and saves the exact [1,959-character description](HACKOS-DESCRIPTION-R7.txt), retaining the existing PDF. See [the current upgrade receipt](UPGRADE-RECEIPT-2026-10-22.json); the [initial submission receipt](SUBMISSION-RECEIPT-2026-10-22.json) remains historical. The narrative below describes the original workflow; v2 receipt replay is covered in [its guide](../RECEIPT-REPLAY.md). Actual Meterless and live Zetaris execution are verified. Cursor development validation remains founder-reported.
 
 ## Project description
 
