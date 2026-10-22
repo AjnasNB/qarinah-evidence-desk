@@ -1,5 +1,11 @@
 # Bounded package-cache audit
 
+## Current cleanup option
+
+During this 22 October checkpoint, Windows reported approximately 16.52 GiB free on C: and 4.81 GiB on D:. The old Docker data was already removed as authorized; its allocated Windows virtual disk remains about 44.77 GiB. The new Zetaris image pull is using that runtime, so resetting Docker would discard current setup work.
+
+Automatic approval review rejected deletion of the failed 61,655,552-byte archive with `blocked by policy`, despite the user's cleanup authorization. No equivalent deletion was retried. The optional manual failed-download target is `C:\Users\20cs0\AppData\Local\QarinahEvidenceDesk\artifacts\zetaris-ui-approved.tar`. It is distinct from the successful `zetaris-ui-retry.tar` and does not contain project source. The earlier VHD deletion was separately rejected. These are review blocks, not missing user permission.
+
 Read-only audit, 22 October 2026, approximately 12:34 IST. No deletion, package cleanup, app/browser control or configuration change was performed. Only this report was written. Exact-root Qarinah ensure and focused summary recall were completed; no relevant prior disk checkpoint was returned.
 
 Free space at the final observation: **C: 18,311,663,616 bytes (about 17.06 GiB); D: 5,541,740,544 bytes (about 5.16 GiB)**. These values can change while other work continues.

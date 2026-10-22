@@ -18,7 +18,7 @@ Prepare actual source packets using the existing capture/export workflow. Preser
 node --import tsx scripts/export-zetaris-handoff.ts '<absolute old packet.json>' '<absolute fresh packet.json>'
 ```
 
-Review the exported public-safe `handoffs.csv` and manifest under `.local/zetaris-source/`. Root must place that exact CSV at this driver-readable path, with a read-only bind where available:
+Review the exported public-safe `handoffs.csv` and manifest under `.local/zetaris-source/`. Root must place that exact CSV at this driver-readable path in the platform's existing shared customer-data volume; no additional host mount is required:
 
 ```text
 /home/zetaris/customer-data/shared/qarinah-evidence-desk/handoffs.csv
