@@ -1,0 +1,19 @@
+{
+  "repository": "https://github.com/Meterless/Meterless",
+  "commit": "70ca80fe88ad8d27288501e8dd08b091ed38c095",
+  "path": "engines/hmem/reference/src",
+  "license": "Apache-2.0",
+  "modified": false,
+  "gitBlobSha1": {
+    "conflictDetection.ts": "2d444ecb901fa7e8ccd0dbbd90090316cf90660b",
+    "dreaming.ts": "e2c1dd041746d3369a21a38250f4a521bbb333c4",
+    "embeddings.ts": "e9e6ae7f2adb4eabb4f47eeeb1268099a73f960a",
+    "index.ts": "7f20562365b4c3149836d09cdc914b1d076d8997",
+    "memoryMining.ts": "a3d27743c66720dc36636e6cf61e1b32b8f2d5f4",
+    "memoryRetrieval.ts": "5c1b924806c203945ceb859fd62f175ed5337674",
+    "memoryStore.ts": "92c49358c1745cc24cb73ec99892e053b639e22e",
+    "sleepCycle.ts": "6d651535d5eb26e03c31ead6e5c05ff39fc3b8bb",
+    "trustLedger.ts": "716880f548bf682d3e8898c63211b557e9b889a9",
+    "types.ts": "de7838f2dceb471ef60a6b31ac0679b0303ccc91"
+  }
+}

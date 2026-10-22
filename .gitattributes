@@ -1,0 +1,2 @@
+# Preserve exact upstream bytes so the Git-blob verification survives Windows checkout.
+/vendor/meterless-hmem/** -text

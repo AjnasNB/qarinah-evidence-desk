@@ -1,0 +1,16 @@
+Meterless H-MEM reference implementation
+Copyright 2026 Meterless
+Licensed under the Apache License, Version 2.0.
+
+Unmodified upstream TypeScript source is vendored in vendor/meterless-hmem/src.
+Source: https://github.com/Meterless/Meterless/tree/70ca80fe88ad8d27288501e8dd08b091ed38c095/engines/hmem/reference/src
+Pinned commit: 70ca80fe88ad8d27288501e8dd08b091ed38c095
+Upstream root license: vendor/meterless-hmem/LICENSE
+The reference package identifies itself as @meterless/hmem-reference 0.1.0,
+private, with zero runtime dependencies. It uses deterministic hash-based
+reference embeddings, not a learned embedding service. It is a reference
+implementation and is not represented here as a production storage system.
+
+Qarinah Evidence Desk's bounds, source adapters, citation verification,
+question-scoping policy and usage measurements are new application code.
+No upstream install scripts were executed to obtain this source.
