@@ -61,6 +61,7 @@ export async function complete(config, { execute, sleep = ms => new Promise(reso
     const deadline = clock() + 120 * 60_000;
     while (true) {
       const health = servicesFrom(await run('health', config.docker, [...compose, 'ps', '--format', 'json'], 20_000)); report.pollCount++; report.services = health;
+      await fs.writeFile(path.join(directory, 'progress.json'), JSON.stringify({ status: health.every(item => item.running && item.healthy) ? 'services-healthy' : 'waiting-for-services', checkedAt: new Date(clock()).toISOString(), intendedCommit, pollCount: report.pollCount, services: health }, null, 2) + '\n', { mode: 0o600 });
       if (health.every(item => item.running && item.healthy)) break;
       if (clock() + 30_000 > deadline) failure('HEALTH_WAIT_EXPIRED');
       await sleep(30_000);
@@ -105,9 +106,10 @@ export async function complete(config, { execute, sleep = ms => new Promise(reso
       } catch { report.recording = { status: 'failed', reason: 'RECORDING_UNCONFIRMED', reviewRequired: true }; }
       report.stage = 'complete';
     }
-  } catch (error) { report.failure = { stage: report.stage, code: error.safeCode || 'LOCAL_OPERATION_UNCONFIRMED' }; }
+  } catch (error) { if (report.status === 'passed') report.status = 'failed'; report.failure = { stage: report.stage, code: error.safeCode || 'LOCAL_OPERATION_UNCONFIRMED' }; }
   report.finishedAt = new Date(clock()).toISOString();
   const receipt = path.join(directory, 'orchestration.json'); await fs.writeFile(receipt, JSON.stringify(report, null, 2) + '\n', { mode: 0o600, flag: 'wx' });
+  await fs.writeFile(path.join(directory, 'progress.json'), JSON.stringify({ status: report.status, finishedAt: report.finishedAt, stage: report.stage, intendedCommit: report.intendedCommit, recording: report.recording ?? null, failure: report.failure ?? null, receipt }, null, 2) + '\n', { mode: 0o600 });
   return { status: report.status, receipt, stage: report.stage, failure: report.failure ?? null, recording: report.recording ?? null };
 }
 async function main() {
