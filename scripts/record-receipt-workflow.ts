@@ -91,7 +91,7 @@ try {
   const overflow = await mobilePage.evaluate(() => document.documentElement.scrollWidth > innerWidth);
   assert.equal(overflow, false); await mobilePage.screenshot({ path: path.join(out, 'mobile.png') }); await mobile.close();
   assert.equal(providerCalls, 0); assert.deepEqual(blocked, []); assert.deepEqual(pageErrors, []);
-  await fs.writeFile(path.join(out, 'recording.json'), JSON.stringify({ createdAt: new Date().toISOString(), app: 'isolated real loopback product server', sourceCommit: packet.revisions[0].commit, packetSha256: createHash('sha256').update(packetBytes).digest('hex'), actualReceiptBytes: Buffer.byteLength(JSON.stringify(receipt)), providerCalls, blocked, pageErrors, mobileOverflow: overflow, minimumRecordedSeconds: 52, shots, replies }, null, 2));
+  await fs.writeFile(path.join(out, 'recording.json'), JSON.stringify({ createdAt: new Date().toISOString(), app: 'isolated real loopback product server', sourceCommit: packet.revisions[0].commit, packetSha256: createHash('sha256').update(packetBytes).digest('hex'), actualReceiptBytes: Buffer.byteLength(JSON.stringify(receipt)), providerCalls, blocked, pageErrors, mobileOverflow: overflow, plannedDurationSeconds: 52, shots, replies }, null, 2));
   await fs.writeFile(path.join(root, '.local', 'receipt-demo', 'latest.json'), JSON.stringify({ out }));
   console.log(JSON.stringify({ out, sourceCommit: packet.revisions[0].commit, providerCalls, mobileOverflow: overflow }));
 } finally { await browser.close(); await new Promise<void>(resolve => server.close(() => resolve())); }
