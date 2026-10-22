@@ -20,11 +20,11 @@ Separate synthetic Atlas/Beacon support examples demonstrate consistent, conflic
 
 The latest validation receipt records a clean capture at `968764add439b8ea7e7b75f9989a91dd607ec0d3`: 46 tests passed, with no failures or skips, and build/typecheck passed. The preceding 40-test capture was reviewed in Chrome with four citations and zero provider attempts. The new repair interface separately passed seven actual localhost browser checks: the unchanged older packet abstained after expiry, repair links resolved, transitions cleared old plans and the mobile view stayed within its viewport.
 
-This verifies local rehearsals using caller-declared observations. It does not independently authenticate CI. Sources: `docs/validation/2026-10-22-repair.json`, the preceding `2026-10-22-bundled.json`, and `repair-ui.md`. The retained actual test/build logs match their capture hashes. The original `d0c2bce` 30-test receipt remains preserved for the dated film and r2 deck; the deck needs a final refresh after real sponsor verification.
+This verifies local rehearsals using caller-declared observations. It does not independently authenticate CI. Sources: `docs/validation/2026-10-22-repair.json`, the preceding `2026-10-22-bundled.json`, and `repair-ui.md`. The retained actual test/build logs match their capture hashes. Earlier captures, films and decks remain preserved. The current r4 deck uses the actual source evidence and distinguishes the filmed 46-test capture from the later 51-test suite.
 
 The live source check then registered the actual bounded CSV in Zetaris's native QARINAH file-store table. The unchanged old capture produced abstention with zero citations. Updating the same source with the separate genuine fresh capture and explicitly rereading it returned the expected clean revision and four matching source identities, followed by READY within those observations. Authentication, fixed SQL execution and cleanup were confirmed. Chrome demonstrated the stale repair plan and explicit reread, and a separate real source recording passed its assertions. The original observation times remained intact. See `docs/validation/2026-10-22-zetaris-live.json`.
 
-A local 96-second, 1080p/30 fps demo combines actual product recordings, the authentic logo, original 120 BPM instrumental, texture and clearly editorial motion graphics. The r4 edition adds a generic local synthetic narration at normal speed and ducks the original beat under speech. Full decode, exact duration, unchanged picture, speech timing, ASR, audio-level and BT.709 checks passed; an independent review cleared it as a dated local demo. It depicts the named `d0c2bce` capture, not the newer repair interface or proof that old observations remain current. Sponsor footage and an approved public video URL remain pending. No human listening review is claimed. See `docs/video/r4/QA.md`.
+The current r5 demo is exactly 96 seconds at 1080p/30 fps. It combines actual stale-to-fresh repair recordings, a separately verified real Zetaris source chapter, the authentic logo, original 120 BPM beat and a generic local synthetic explanation at normal speed. The beat ducks under the voice. All 2,880 frames and audio decode without errors; timing, captions, ASR and audio-level checks passed. Independent final review cleared it as a qualified dated product demonstration. Invented failure/missing cases remain explicitly labeled. The filmed capture remains the genuine 46-test `968764a` observation, separate from the later 51-test suite. An approved public video URL remains pending. No human listening review is claimed. See `docs/video/r5/QA.md`.
 
 Twenty hand-authored synthetic HTTP challenges matched all expected classifications, with zero false-ready results across 18 non-ready cases. Complete request/response bodies totalled 218,073 bytes across 83 requests, including audit reads. This finite regression set supplies no blind evaluation, user-impact result, representative error rate or token-savings claim. See `docs/BENCHMARK.md`.
 
@@ -49,8 +49,8 @@ Future work would add independently authenticated CI receipts, additional source
 | Zetaris | Actual native source registration, exact old/fresh reads and confirmed query cleanup |
 | Cursor development | Access blocked, CLI installed, actual use unverified |
 | NVIDIA | Optional, disabled, no inference receipt |
-| Deck | Local editable review deck and PDF |
-| Video | Reviewed local 96-second narrated edit; sponsor footage and public URL pending |
+| Deck | Reviewed local r4 editable deck and viewing PDF |
+| Video | Reviewed 96-second narrated actual repair/source demo; approved public URL pending |
 | GitHub source and README | Public entry source URL pending approval |
 | Final competition entry | Blocked, no submission |
 

@@ -16,9 +16,9 @@ The local Zetaris integration is verified. Source publication, video publication
 
 ## Media and review package
 
-The reviewed r4 narration adds a generic local synthetic voice over the original beat, with an exact 96-second duration. It preserves the earlier dated picture and clearly labels its pending sponsor status. A new r5 edit is being finished from current real repair recordings and a separate verified live Zetaris clip; r4 remains preserved. Generated media and private receipts stay outside Git.
+The final r5 film is exactly 96 seconds with actual current repair footage and a separate verified live Zetaris chapter. Generic local narration explains the workflow over the original beat. Full decode, timing, captions, ASR, all-frame checks and independent final review passed. Prior films remain preserved. See [film QA](video/r5/QA.md).
 
-The seven-slide local review deck is being refreshed from the earlier editable deck with the new verified source evidence. Public media and repository URLs remain empty until authorized publication.
+The final seven-slide r4 review deck is available as an editable PPTX and a viewing PDF. Native elements, geometry and font checks passed, with the changed final slide inspected. See [the package review](submission/REVIEW.md). Public media and repository URLs remain empty until authorized publication.
 
 ## Remaining gates
 
@@ -28,7 +28,7 @@ Official rule 5.1 requires Zetaris and Meterless integration and Cursor use duri
 
 Observations are caller-declared local captures, not independently authenticated CI. Original timestamps remain intact and expire after one hour. A new source read does not renew an old observation. No deployment authority, measured user impact, billed-token saving or winning probability is established.
 
-Next: finish and review the new video and deck, resolve Cursor access, then request the applicable approval for source/video publication and final submission. The event deadline is 27 October 2026 at 23:45 UTC, or 28 October at 05:15 IST. [Official rules](https://hackathon.genai.works/event/open-agent-hackathon-2026#rules)
+Next: resolve Cursor development evidence or obtain official clarification, then request the applicable approval for source/video publication and final submission. The event deadline is 27 October 2026 at 23:45 UTC, or 28 October at 05:15 IST. [Official rules](https://hackathon.genai.works/event/open-agent-hackathon-2026#rules)
 
 ## Runtime and privacy
 
