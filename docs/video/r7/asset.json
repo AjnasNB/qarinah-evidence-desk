@@ -1,0 +1,67 @@
+{
+  "asset": {
+    "path": "showtime-out/qed-receipt-proof-20261022-193800/final-r7-ready.mp4",
+    "bytes": 46329060,
+    "sha256": "81c9e7fb09999f103f07fda2ce868298a464caa0a93592da64731556b2188966",
+    "durationSeconds": 148,
+    "frames": 4440,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30
+  },
+  "oldSubmittedR6Preserved": true,
+  "oldSubmittedR6Sha256": "c0bb774c0fe42d50e774a0d12962005d7d5d01b496bcb65be14e2949b7f0dcc8",
+  "purpose": "Proposed local update, not uploaded",
+  "narrationNewChapter": {
+    "words": 68,
+    "dryAndMixedReadback": "Exact normalized match for dry voice and prior mixed chapter; revised picture retains the same voice/music timeline",
+    "engine": "installed local faster-whisper small.en",
+    "humanListening": false
+  },
+  "captions": {
+    "cues": 42,
+    "lastCueEndsAtSeconds": 146.154,
+    "sidecar": "showtime-out/qed-receipt-proof-20261022-193800/final-r7-ready.srt"
+  },
+  "narrationClosing": {
+    "words": 8,
+    "dryReadback": "Exact match after case/punctuation/whitespace normalization",
+    "humanListening": false
+  },
+  "camera": {
+    "initialBlankTrimSeconds": 0.24,
+    "finalFrameHoldSeconds": 0.4,
+    "originalPreserved": true
+  },
+  "finishing": {
+    "method": "Native timed ASS typography over actual frames; no CSS composition",
+    "hook": "Enlarged at frame zero",
+    "bridgeAtSeconds": [
+      115.23,
+      120.83
+    ],
+    "closing": "Verified existing public repository and explicit founder-report/synthetic-background qualifications"
+  },
+  "finalQa": {
+    "verdict": "WARN",
+    "failures": 0,
+    "warnings": [
+      {
+        "type": "still-inspection-hold",
+        "start": 136.067,
+        "end": 138.967,
+        "seconds": 2.9
+      },
+      {
+        "type": "closing-card-hold",
+        "start": 142,
+        "end": 148,
+        "seconds": 6
+      }
+    ],
+    "integratedLufs": -14.02,
+    "truePeakDbtp": -2.02,
+    "phoneReview": "partial",
+    "provenance": "Showtime final round-3 QA of final-r7-ready.mp4"
+  }
+}
