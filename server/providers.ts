@@ -12,6 +12,29 @@ export async function boundedResponse(response: Response, limit: number = LIMITS
   try { return { body: JSON.parse(new TextDecoder('utf8', { fatal: true }).decode(Buffer.concat(chunks))), bytes }; }
   catch { throw new DeskError(502, 'PROVIDER_JSON', 'The provider did not return valid JSON.'); }
 }
+export type BundledZetarisConfig = { origin: string; username: string; password: string };
+/** Bundled 2.4.3 verify.sh request contract. Result JSON still requires schema validation before ingestion. */
+export async function queryBundledZetaris(config: BundledZetarisConfig, key: QueryKey, fetcher: typeof fetch = fetch): Promise<{ body: unknown; bytes: number }> {
+  let origin: string;
+  try {
+    const url = new URL(config.origin);
+    if (!(url.protocol === 'https:' || url.protocol === 'http:' && ['localhost', '127.0.0.1', '[::1]'].includes(url.hostname)) || url.username || url.password || url.search || url.hash || url.pathname !== '/') throw new Error();
+    origin = url.origin;
+  } catch { throw new DeskError(503, 'ZETARIS_UI_CONFIG', 'Use a private Zetaris UI origin with HTTPS or loopback HTTP. No login was attempted.'); }
+  if (!Object.hasOwn(SQL, key)) throw new DeskError(400, 'QUERY_KEY', 'Choose a supported fixed query.');
+  if (typeof config.username !== 'string' || !config.username.trim() || Buffer.byteLength(config.username, 'utf8') > 2048 || typeof config.password !== 'string' || !config.password || Buffer.byteLength(config.password, 'utf8') > 4096) throw new DeskError(503, 'ZETARIS_UI_CONFIG', 'Private Zetaris login credentials are missing or unsupported. No login was attempted.');
+  try {
+    const signal = AbortSignal.timeout(20_000);
+    const login = await fetcher(origin + '/api/auth/login', { method: 'POST', redirect: 'manual', signal, headers: { 'content-type': 'application/json', 'x-request-id': randomUUID() }, body: JSON.stringify({ username: config.username, password: config.password }) });
+    const { body } = await boundedResponse(login, 32_768);
+    if (!body || typeof body !== 'object' || Array.isArray(body)) throw new DeskError(502, 'ZETARIS_AUTH_SHAPE', 'Zetaris login did not return the supported session metadata.');
+    const auth = body as Record<string, unknown>;
+    const tokens = ['idToken', 'token', 'accessToken'].flatMap(field => typeof auth[field] === 'string' ? [auth[field] as string] : []);
+    if (!Number.isSafeInteger(auth.orgId) || (auth.orgId as number) <= 0 || !tokens.length || new Set(tokens).size !== 1 || tokens[0].length > 16_384 || !/^[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]{8,}$/.test(tokens[0])) throw new DeskError(502, 'ZETARIS_AUTH_SHAPE', 'Zetaris login requires a named session token and an actual positive numeric organisation ID.');
+    const response = await fetcher(origin + '/api/proxy/query/sql/start', { method: 'POST', redirect: 'manual', signal, headers: { 'content-type': 'application/json', authorization: 'Bearer ' + tokens[0], 'x-org-id': String(auth.orgId), 'x-request-id': randomUUID() }, body: JSON.stringify({ select: SQL[key], pageLimit: 5 }) });
+    return await boundedResponse(response);
+  } catch (error) { if (error instanceof DeskError) throw error; throw new DeskError(502, 'ZETARIS_UI_UNAVAILABLE', 'The private Zetaris session or query did not complete within the supported deadline. No live evidence was accepted.'); }
+}
 export function zetarisConfigured(config: AppConfig): boolean {
   if (!config.zetarisUrl || !config.zetarisKey || !config.zetarisOrgId || !/^\d+$/.test(config.zetarisOrgId)) return false;
   try { const url = new URL(config.zetarisUrl); return (url.protocol === 'https:' || url.protocol === 'http:' && ['localhost', '127.0.0.1', '[::1]'].includes(url.hostname)) && !url.username && !url.password && !url.search && !url.hash && url.pathname.replace(/\/$/, '') .endsWith('/api/v1.0'); } catch { return false; }
