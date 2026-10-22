@@ -29,6 +29,8 @@ The default release recommendation is `hold`. An explicit local reviewer may run
 
 Paste the generated `packet.json` into Developer handoff, inspect the preview, select Import handoff, then review **What is the current release decision?** Imported provenance is caller-declared; this is not authenticated CI. Editing the question clears its result. Editing pasted JSON changes only the preview until Import handoff is selected; it does not replace the active snapshot. Unknown fields and malformed references are rejected by the backend.
 
+New local upgrade: export a v2 handoff receipt and open **Verify a saved release review** to reproduce its decision, source identities and citations through an isolated Desk/Meterless instance. Its recorded result is separate from the dated freshness assessment. The offline command is `npm run verify:receipt -- receipt.json`. See [replay scope and limitations](docs/RECEIPT-REPLAY.md). The published submission remains the earlier approved version until an update is authorized.
+
 Bounded Next steps identify stale, missing, failed or conflicting observations and link to their exact evidence. Fix failed checks at their source and capture real new results. The explicit import or source-reread action retrieves observations; it never changes outcomes, runs CI or grants deployment permission.
 
 Synthetic Atlas/Beacon cases remain available for clean, conflicting and missing support evidence. They are visibly labeled replay data, not live sponsor calls.

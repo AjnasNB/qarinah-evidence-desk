@@ -17,7 +17,7 @@ The first concrete developer workflow now imports explicit revision, CI and rele
 5. Handoff review is deterministic and makes no model request. Optional cited model excerpts apply only to the separate support/sample workflow when explicitly enabled.
 6. Inspect or download the receipt. Review current sources before any consequential action; readiness within an imported packet grants no release authority.
 
-Validation checkpoint: clean revision `d0c2bce` passed all 30 tests, build and typecheck. The real capture was imported and reviewed in Chrome with four citations and zero provider attempts. See [the receipt](docs/validation/2026-10-22-local.json). No live Zetaris query or Cursor-use evidence is established yet.
+Historical checkpoint: clean revision `d0c2bce` passed 30 tests, build and typecheck; that dated receipt remains preserved. Later real Zetaris source reads and the submitted entry are documented in [setup status](docs/SETUP-STATUS.md). Cursor development use is founder-reported. A subsequent local replay upgrade at `7cc1fdc` passes 80 tests and preserves a clean actual test/build capture. It retains the normalized observation packet and server review time so a recipient can independently reproduce the decision and citations, then assess expiry. See [the replay guide](docs/RECEIPT-REPLAY.md). It does not authenticate the producer or historical CI.
 
 ## Proof requirements
 
@@ -27,4 +27,4 @@ Validation checkpoint: clean revision `d0c2bce` passed all 30 tests, build and t
 - Model: provider usage fields remain null without a real provider receipt. Synthetic replay never counts as a live model call.
 - Video: real running-product recordings, edited with footage-based motion. No fabricated dashboard, synthetic cursor performance or CSS slideshow.
 
-The project is not submitted until required integrations, footage, publication and the actual submission receipt are verified. Winning probability and payment are unknown.
+The earlier Wildcard entry was submitted on 22 October 2026; its [receipt](docs/submission/SUBMISSION-RECEIPT-2026-10-22.json) identifies the exact public source and assets. Later local work is not automatically part of that entry. Winning probability and payment are unknown.
