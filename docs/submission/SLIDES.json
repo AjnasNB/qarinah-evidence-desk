@@ -1,0 +1,143 @@
+{
+  "title": "Qarinah Evidence Desk",
+  "status": "Local review draft, submission blocked",
+  "slides": [
+    {
+      "layout": "cover",
+      "title": "Qarinah\nEvidence Desk",
+      "subtitle": "Developer release handoff review",
+      "owner": "Cognifyr / Ajnas N B",
+      "disclosure": "Local draft. Required sponsor evidence remains pending.",
+      "notes": "Independent extension started 22 October 2026. Existing Qarinah concepts and brand assets predate the event. Sources: PRODUCT.md; public/brand/SOURCE.txt; THIRD-PARTY-NOTICES.txt."
+    },
+    {
+      "layout": "workflow",
+      "title": "Release handoff evidence",
+      "body": "A release recommendation needs a matching revision and supporting checks. The desk reviews observations the developer explicitly imports.",
+      "rows": [
+        [
+          "Observation",
+          "What the desk checks"
+        ],
+        [
+          "Git revision",
+          "Exact commit, reported working-tree state and freshness"
+        ],
+        [
+          "Tests and build",
+          "Current revision references, outcomes and explicit supersession"
+        ],
+        [
+          "Release statement",
+          "Referenced checks and unresolved conflicts"
+        ]
+      ],
+      "disclosure": "Imported statements retain their sources. They do not grant release authority.",
+      "notes": "Sources: server/handoff.ts; README.md. Only the exact current-release-decision question is supported for typed developer handoffs. Provenance is caller-declared."
+    },
+    {
+      "layout": "screenshot",
+      "title": "Actual local product review",
+      "caption": "Four cited observations. Zero provider attempts.",
+      "disclosure": "Actual local capture at d0c2bce. Supplied observations remain caller-declared.",
+      "notes": "Screenshot: .local/submission/assets/product-review.png, copied byte-for-byte from .local/video/20261022T073700734Z/03-real-review.png. Original screenshot shows the actual imported local packet. No provider or deployment action. Validation: docs/validation/2026-10-22-local.json, committed9fbf949. The slide crop preserves the result and its authority disclaimer."
+    },
+    {
+      "layout": "rules",
+      "title": "Release assessment rules",
+      "rows": [
+        [
+          "Current imported evidence",
+          "Result"
+        ],
+        [
+          "Clean revision, referenced tests/build pass, ready statement",
+          "Ready within imported evidence"
+        ],
+        [
+          "Dirty revision or a conclusive required-check failure",
+          "Hold"
+        ],
+        [
+          "Missing, stale, unknown or unresolved conflicting evidence",
+          "Abstain"
+        ]
+      ],
+      "disclosure": "30 tests passed. Build and typecheck passed at clean commit d0c2bce.",
+      "notes": "Source: docs/validation/2026-10-22-local.json. The assessment is deterministic. Readiness is conditional on required consistent evidence, and grants no authorization. Typed enum and malformed preview regressions are part of the current local suite."
+    },
+    {
+      "layout": "architecture",
+      "title": "Local architecture and stack",
+      "rows": [
+        [
+          "Component",
+          "Role and current state"
+        ],
+        [
+          "React / Vite",
+          "Preview and explicitly import chosen JSON"
+        ],
+        [
+          "Node.js / TypeScript",
+          "Validate references and assess release evidence"
+        ],
+        [
+          "Meterless H-MEM",
+          "Resolve sources through actual reference memory"
+        ],
+        [
+          "Zetaris adapter",
+          "Fixed read queries. Live verification pending."
+        ],
+        [
+          "NVIDIA Nemotron",
+          "Optional excerpt selection. Disabled."
+        ]
+      ],
+      "disclosure": "Developer handoff review stays local and deterministic. Imported statements remain caller-declared.",
+      "notes": "Sources: server/handoff.ts; server/desk.ts; server/providers.ts; src/HandoffPanel.jsx; package.json. Actual H-MEM reference uses deterministic hash embeddings. Zetaris has no successful live query and NVIDIA is disabled. Separate synthetic envelope benchmark:36,584 UTF-8 source bytes,789 first wrapped result,758 repeated. That benchmark excludes total workflow costs, provider billing and answer-quality comparison. See docs/TOKEN-OVERHEAD.md."
+    },
+    {
+      "layout": "sponsors",
+      "title": "Sponsor evidence status",
+      "rows": [
+        [
+          "Integration",
+          "Current state",
+          "Evidence limit"
+        ],
+        [
+          "Meterless H-MEM",
+          "Executed locally",
+          "Pinned reference with hash embeddings"
+        ],
+        [
+          "Zetaris",
+          "Pending",
+          "No successful live query yet"
+        ],
+        [
+          "Cursor",
+          "Pending",
+          "CLI installation only"
+        ],
+        [
+          "NVIDIA",
+          "Disabled",
+          "Optional model use, no inference receipt"
+        ]
+      ],
+      "disclosure": "Configuration and installation alone do not establish sponsor use.",
+      "notes": "Sources: PRODUCT.md; docs/validation/2026-10-22-local.json. Main task verified the intended Wildcard route requires Zetaris, Meterless and Cursor development evidence, with NVIDIA where it contributes. Official organizer: https://hackathon.genai.works/ . No independent live sponsor proof is supplied by this deck."
+    },
+    {
+      "layout": "close",
+      "title": "Future enhancements",
+      "body": "Authenticated CI receipts\nDeveloper observations retrieved from Zetaris\nHeld-out comparisons of total workflow cost, provider usage and answer quality",
+      "owner": "Cognifyr / Ajnas N B",
+      "disclosure": "Submission blocked. Sponsor proof and public links remain pending.",
+      "notes": "These are proposed future enhancements, not completed features. Sources: docs/CRITIQUE.md; docs/submission/metadata.review.json. Existing implementation accepts caller-declared local observations, supports fixed Zetaris sample reads only, and has no provider-token baseline or downstream task-quality comparison. Video and GitHub public entry links remain null. No release authority, publication or submission is claimed."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "qarinah.submission-assets.v1",
+  "assets": [
+    {
+      "path": ".local/submission/assets/product-review.png",
+      "formerDraftPath": "docs/submission/assets/product-review.png",
+      "kind": "actual-product-screenshot",
+      "source": ".local/video/20261022T073700734Z/03-real-review.png",
+      "sourceManifest": ".local/video/20261022T073700734Z/manifest.json",
+      "sha256": "b9b99a81490161d1339dcf82a344133f42872fe5d5aa92a6288ac4840c1af895",
+      "bytes": 92650,
+      "width": 1600,
+      "height": 900,
+      "change": "Byte-for-byte copy, subsequently moved into ignored local media storage. Native slide crop only.",
+      "privacyReview": "Inspected pixels: public-safe commit/observations, no credential, private account or authorization link visible.",
+      "claimBoundary": "Actual localhost product review, no sponsor/provider action."
+    },
+    {
+      "path": "public/brand/qarinah-mark.svg",
+      "kind": "existing-project-brand",
+      "provenance": "public/brand/SOURCE.txt",
+      "change": "Original bytes and proportions retained."
+    }
+  ]
+}

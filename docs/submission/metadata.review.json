@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "qarinah.submission-review.v1",
+  "asOf": "2026-10-22",
+  "destination": "local",
+  "projectTitle": "Qarinah Evidence Desk",
+  "tagline": "Inspect the evidence behind a developer release handoff.",
+  "event": "Open Agent Hackathon 2026",
+  "proposedRoute": "Wildcard existing-project extension",
+  "status": "blocked",
+  "readyToSubmit": false,
+  "published": false,
+  "submitted": false,
+  "team": { "name": "Cognifyr", "members": ["Ajnas N B"], "size": 1 },
+  "buildStartedOn": "2026-10-22",
+  "existingWorkDisclosed": true,
+  "aiAssistanceDisclosed": true,
+  "links": { "githubSource": null, "video": null, "liveDemo": null },
+  "localEvidence": {
+    "validationReceipt": "docs/validation/2026-10-22-local.json",
+    "validationReceiptCommit": "9fbf949",
+    "testedCommit": "d0c2bce75d8eba29a83fcfa2d1f9518a727cec94",
+    "workingTreeDirtyAtCapture": false,
+    "tests": { "passed": 30, "failed": 0, "skipped": 0 },
+    "build": "passed",
+    "typecheck": "passed",
+    "browserReview": { "source": "actual local packet through Chrome", "citedRecords": 4, "providerAttempts": 0 },
+    "authenticatedCI": false,
+    "deploymentAuthorization": false
+  },
+  "sponsorEvidence": {
+    "meterless": { "status": "executed-local-reference", "commit": "70ca80fe88ad8d27288501e8dd08b091ed38c095", "embedding": "deterministic hash reference" },
+    "zetaris": { "status": "live-query-pending", "successfulLiveQuery": false },
+    "cursor": { "status": "access-blocked-CLI-installed", "actualDevelopmentUseVerified": false },
+    "nvidia": { "status": "optional-disabled", "inferenceReceipt": null }
+  },
+  "benchmark": {
+    "kind": "synthetic-serialized-UTF8-bytes",
+    "sourceBytes": 36584,
+    "firstResultBytesIncludingWrapper": 789,
+    "repeatedResultBytesIncludingWrapper": 758,
+    "providerTokens": null,
+    "totalWorkflowSavings": null,
+    "answerQualityComparison": null
+  },
+  "deliverables": {
+    "entryDraft": "docs/submission/ENTRY-DRAFT.md",
+    "editableCopy": "docs/submission/SLIDES.json",
+    "builder": "scripts/build-submission-deck.mjs",
+    "pptx": ".local/submission/output/evidence-desk-review-r2.pptx",
+    "pdf": ".local/submission/output/evidence-desk-review-r2.pdf"
+  },
+  "deckReview": {
+    "revision": "r2",
+    "slides": 7,
+    "nativeTables": 4,
+    "nativeTextShapes": 20,
+    "pptxSha256": "5a122a79ca002dfe931599635812d2a357c18c7da6d4f02f58c4df9a2fecbb84",
+    "pdfSha256": "86c26ac88b9929690da5e116582763cbd2149fe346b2a8a5d86d110d441d4506",
+    "artifactToolReopen": "passed",
+    "packageLayoutAndFontChecks": "passed",
+    "visualReview": "Original seven slides inspected; r2 changed slides 5 and 7 inspected, final seven-slide import and native counts verified",
+    "visibleCoverage": { "problemAndApproach": [2, 3, 4], "technicalArchitectureAndStack": 5, "sponsorStatus": 6, "futureEnhancements": 7 },
+    "originalPptxPreserved": { "path": ".local/submission/output/evidence-desk-review.pptx", "sha256": "9a14e1707b781803008abe9e6b31930816a808089fec124e64e314d8420ecea5" },
+    "pdfFormat": "Image-page companion from slide renders; editable objects remain in PPTX",
+    "powerPointApplicationTest": "not performed"
+  },
+  "videoReview": {
+    "status": "local-draft-complete",
+    "path": ".local/video/20261022T073821010Z/qarinah-product-draft.mp4",
+    "durationSeconds": 108.066667,
+    "width": 1920,
+    "height": 1080,
+    "framesPerSecond": 30,
+    "sha256": "41f805e136f73453033ffccc1df615475083394de254b855afa0f4c8040be655",
+    "format": "silent captioned actual product footage",
+    "verification": "Main task reported full 3242-frame decode, black-frame scan and motion-keyframe review",
+    "publicUrl": null,
+    "remaining": ["Verified pending sponsor footage", "Approved public URL"],
+    "optionalNarrationPending": true
+  },
+  "blockingGates": [
+    "Verified live Zetaris use",
+    "Actual Cursor development evidence",
+    "Completion of sponsor footage and approved final public video URL",
+    "Approved GitHub source publication with README",
+    "Final review and action-specific submission approval"
+  ],
+  "limitations": [
+    "Local imported observations are caller-declared, not independently authenticated CI.",
+    "Meterless uses its reference hash embedder, not learned semantic embeddings.",
+    "Fixture bytes establish neither provider billing nor total savings.",
+    "No deployment, live sponsor success, award or winning probability is claimed."
+  ]
+}
