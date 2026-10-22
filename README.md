@@ -15,6 +15,8 @@ npm run dev
 
 Open http://127.0.0.1:5183/. The backend binds only 127.0.0.1:4318. For a production bundle, run `npm run build` followed by `npm start`, then open port 4318.
 
+For Cursor, open `qarinah-evidence-desk.code-workspace` and press **Ctrl+Shift+B** for the local validation task. Run/debug tasks, private context exclusions and an honest editor-evidence checklist are in [the Cursor guide](docs/CURSOR.md). Opening the workspace does not claim actual development use or restored account access.
+
 ## Review real local observations
 
 The following command runs this project's actual tests and build, records output hashes, and produces a packet and private logs in `.local/handoff/`. It reads the current Git revision and status. It does not upload anything or call a provider.
@@ -49,6 +51,7 @@ The full suite passed 51 tests after the native catalog verifier fix. The clean 
 Real bundled Zetaris authentication, native source registration, exact old/fresh source reads and query cleanup also passed. The old observations abstained; an explicit reread after the genuine source update returned the expected revision and four matching citations. No model attempt was made. See [the live verification receipt](docs/validation/2026-10-22-zetaris-live.json) and [local verification runbook](docs/runtime/LOCAL-ZETARIS-VERIFICATION.md). These observations do not independently authenticate CI. Cursor development evidence remains pending, so no event eligibility or submission is claimed.
 
 ```text
+npm run validate
 npm test
 npm run typecheck
 npm run build

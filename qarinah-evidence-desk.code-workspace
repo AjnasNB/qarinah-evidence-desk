@@ -1,0 +1,32 @@
+{
+  "folders": [{ "path": "." }],
+  "settings": {
+    "files.exclude": {
+      "**/.env.local": true,
+      "**/.local": true,
+      "**/.qarinah": true,
+      "**/.runtime": true,
+      "**/node_modules": true,
+      "**/dist": true
+    },
+    "search.exclude": {
+      "**/.env*": true,
+      "**/.local/**": true,
+      "**/.qarinah/**": true,
+      "**/.runtime/**": true,
+      "**/node_modules/**": true,
+      "**/dist/**": true,
+      "**/recordings/**": true,
+      "**/renders/**": true,
+      "**/*.mp4": true,
+      "**/*.wav": true
+    },
+    "files.watcherExclude": {
+      "**/.local/**": true,
+      "**/.qarinah/**": true,
+      "**/.runtime/**": true,
+      "**/node_modules/**": true,
+      "**/dist/**": true
+    }
+  }
+}
