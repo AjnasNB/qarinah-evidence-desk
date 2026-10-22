@@ -1,12 +1,12 @@
 # Submission readiness — 22 October 2026
 
-**Verdict: working local package; not yet submission-ready.** This audit made no external changes and reran no product tests. It compares the prepared entry, review metadata, validation receipts and focused source with the current official event page, including its embedded full rules.
+**Outcome: submitted on 22 October 2026.** The original audit below was followed by specifically approved source publication, direct video/PDF uploads and final submission. HackOS showed **Submitted 1/1** after reload. See [the outcome receipt](SUBMISSION-RECEIPT-2026-10-22.json). No additional product tests were needed because the published production code matches the last clean 51-test validation.
 
 ## Official route and dates
 
 [Open Agent Hackathon 2026](https://hackathon.genai.works/event/open-agent-hackathon-2026#rules) is open on the audit date. Registration ends **22 October 23:59 UTC / 23 October 05:29 IST**. Submissions end **27 October 23:45 UTC / 28 October 05:15 IST**. This is an October deadline, not February 28.
 
-The authenticated HackOS dashboard confirmed the registered **Cognifyr / Ajnas N B** solo team on 22 October. The Wildcard submission draft was created and saved with the prepared 1,680-character description. The hub shows one draft and zero submitted entries. No duplicate registration is needed.
+The authenticated HackOS dashboard confirmed the registered **Cognifyr / Ajnas N B** solo team on 22 October. The Wildcard submission contains the exact prepared 1,680-character description and now shows **Submitted 1/1**, preserved after reload. No duplicate registration was created.
 
 Rules 5–6 require Zetaris, Meterless, Cursor development use, a 1–4 minute demo, a deck, and GitHub source with setup/usage/dependency documentation. Explain each sponsor's contribution, with NVIDIA where useful. Deck coverage includes users, workflow, architecture/stack, sponsor distinction, visuals and future work. Colab is inapplicable here.
 
@@ -31,12 +31,12 @@ An authentic privacy-reviewed capture could corroborate the report if available,
 | Zetaris | Actual bounded native reads; old packet abstains, separate fresh packet returns four matched citations; cleanup confirmed | Retain exact source identities; do not relabel caller-declared observations as authenticated CI |
 | Cursor | Founder-reported validation task execution; no fresh observed editor receipt | Use the accurate disclosure above; do not add a screenshot, code-change or AI-use prerequisite |
 | Product validation | Clean filmed `968764a` capture: 46 tests/build/typecheck; later suite: 51 tests | Keep these identities distinct; do not relabel old capture as newest code |
-| Video | Reviewed local r6, 96 seconds; first 90s picture preserved, closing founder-report disclosure updated; zero decode errors | The actual form permits a direct video upload, avoiding a separate YouTube publication; approve the exact file and verify upload/processing |
-| Deck | Reviewed local seven-slide r5 PPTX/PDF; native layout preserved and changed slides 1/6/7 inspected | Attach the reviewed PDF, retaining editable PPTX as a companion |
-| Source | Local Git/README ready; entry GitHub URL remains null | Review publication scope, credentials/vendor licensing and reproducible setup; obtain specific push/publication approval |
-| Final entry | User requested submission; Wildcard draft saved; no submitted receipt | Complete GitHub source and video fields plus the deck upload; recheck the final result and actual form's terms/approval boundary |
+| Video | Reviewed r6 uploaded directly; 96 seconds; first 90s picture preserved; hosted player starts without media error | Complete; retain qualified capture and QA receipts |
+| Deck | Reviewed seven-slide r5 PDF uploaded; native layout preserved and changed slides 1/6/7 inspected | Complete; editable PPTX retained locally |
+| Source | Public AjnasNB/qarinah-evidence-desk; master verified at approved e1d7d6f | Complete; do not push later receipt commits without approval |
+| Final entry | Submitted 1/1 after reload; description and asset links persist | Complete; organizer judging and award remain pending |
 
-The latest user instruction requests submission. It is not recorded here as approval for an unspecified public-source or video publication action. This document is an evidence checklist, not new authorization.
+The user explicitly approved the exact public repository/commit, final media uploads and submission after reviewing the publication package. The receipt records the observed result; this document is not authorization for further external actions. The 14 unfinished board tasks were not falsely marked complete; the platform reported zero open requirements and accepted **Submit anyway**.
 
 ## Product fit and weaknesses
 
@@ -44,4 +44,4 @@ The strongest demonstration is the bounded repair journey: an old observation re
 
 The release path is deterministic, supports one exact question and reads a controlled local packet. It is not a general autonomous developer agent or independently authenticated CI. That narrow scope can reduce impact/innovation scores; explain the agent-workflow value rather than claim broader reasoning. Source authentication and representative developer task comparisons remain future work. The 20 hand-authored synthetic cases and byte measurements establish regression behavior and payload sizes, not user impact, total token savings or a winning probability.
 
-Prioritize approved source publication, verified asset uploads and completion of the saved draft over adding another feature. Cursor use has a truthful user-attested explanation; the remaining receipt limitation is not an invented mandatory gate. The entry is technically demonstrable, but publication and a completed submission are not yet established.
+Source publication, asset uploads and final submission are complete. Cursor use has a truthful user-attested explanation; the remaining receipt limitation is not an invented mandatory gate. The entry is technically demonstrable. No credible percentage for winning can be established from this evidence.

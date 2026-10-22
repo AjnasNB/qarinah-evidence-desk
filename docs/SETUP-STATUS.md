@@ -1,6 +1,6 @@
 # Local setup checkpoint — 22 October 2026
 
-The local Zetaris integration is verified. Source publication, video publication and competition submission have not occurred. Each requires the user's explicit approval.
+The local Zetaris integration is verified. After the user's specific approval, source commit `e1d7d6f2bc204de1a91a1bdad077f1eb4bd8ef9b` was published to [GitHub](https://github.com/AjnasNB/qarinah-evidence-desk), the final R6 video and R5 PDF were uploaded directly to HackOS, and the Wildcard entry was submitted. **Submitted 1/1** and both asset links persisted after reload. See [the submission receipt](submission/SUBMISSION-RECEIPT-2026-10-22.json).
 
 ## Verified product and source path
 
@@ -18,9 +18,9 @@ The local Zetaris integration is verified. Source publication, video publication
 
 The final r6 film is exactly 96 seconds with real dated repair footage and a separate verified live Zetaris chapter. Its first 90 seconds of picture match r5; only the closing Cursor disclosure and narration changed. Full decode, timing, captions, bounded closing ASR and independent final review passed. Audio measures −14.03 LUFS / −1.41 dBTP. Prior films remain preserved. See [film QA](video/r6/QA.md).
 
-The final seven-slide r5 review deck is available as an editable PPTX and a viewing PDF. Native elements, geometry and font checks passed; changed slides 1, 6 and 7 were inspected. See [the package review](submission/REVIEW.md). Source publication and the final direct HackOS uploads remain pending approval.
+The final seven-slide r5 review deck is available as an editable PPTX and a viewing PDF. Native elements, geometry and font checks passed; changed slides 1, 6 and 7 were inspected. See [the package review](submission/REVIEW.md). The approved PDF and video were uploaded directly to HackOS. The hosted video loaded and played muted with duration 95.999999 seconds, readyState 4 and no media error; this is a playback-start check, not a full remote viewing review.
 
-## Remaining gates
+## Eligibility disclosure and completed entry
 
 Cursor's only reply as of the 10:20 UTC inbox check was the AI Support Assistant escalation at 08:10:45 UTC, ticket T-I13133. No later inbox or authenticated account check was performed for this editor setup; restored AI access is not established.
 
@@ -32,10 +32,10 @@ Official rule 5.1 requires Zetaris and Meterless integration and Cursor use duri
 
 Observations are caller-declared local captures, not independently authenticated CI. Original timestamps remain intact and expire after one hour. A new source read does not renew an old observation. No deployment authority, measured user impact, billed-token saving or winning probability is established.
 
-Authenticated HackOS now confirms the registered Cognifyr / Ajnas N B solo team. A Wildcard draft with the prepared 1,680-character description was saved; the hub shows one draft and zero submitted entries. The actual form permits direct video and deck uploads, so YouTube publication is not required.
+Authenticated HackOS confirms the registered Cognifyr / Ajnas N B solo team. The Wildcard entry contains the exact prepared 1,680-character description, public source URL and uploaded video/PDF. The platform reported 14 unfinished board tasks and zero open requirements; the approved submission used **Submit anyway** without falsely marking those tasks complete. After reload, the hub still showed **Submitted 1/1**. YouTube publication was unnecessary.
 
-Next: obtain approval for the specific GitHub source publication and final media/deck uploads, then complete the requested submission and retain its confirmation. Registration closes 22 October at 23:59 UTC, or 23 October at 05:29 IST. The submission deadline is 27 October 2026 at 23:45 UTC, or 28 October at 05:15 IST. [Official rules](https://hackathon.genai.works/event/open-agent-hackathon-2026#rules)
+Submission was completed before the deadline of 27 October 2026 at 23:45 UTC, or 28 October at 05:15 IST. [Official rules](https://hackathon.genai.works/event/open-agent-hackathon-2026#rules). Receipt and outcome documentation remain local; any further push requires new approval. Organizer review and prize payment remain undecided.
 
 ## Runtime and privacy
 
-The application remains local on ports 5183/4318. Zetaris uses its approved local Docker installation. Credentials, registry configuration, vendor archives, Qarinah memory, caches, raw recordings and generated exports remain private or ignored. No card, paid service, public push, public upload or submission was used for this work. Earlier Docker cleanup and the rejected virtual-disk deletion are documented separately in [the disk audit](DISK-AUDIT.md).
+The application remains local on ports 5183/4318. Zetaris uses its approved local Docker installation. Credentials, registry configuration, vendor archives, Qarinah memory, caches, raw recordings and generated exports remain private or ignored. Only the specifically approved source push, HackOS asset uploads and submission were performed; no card or paid service was used. Earlier Docker cleanup and the rejected virtual-disk deletion are documented separately in [the disk audit](DISK-AUDIT.md).

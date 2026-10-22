@@ -1,6 +1,6 @@
 # Qarinah Evidence Desk
 
-Saved HackOS draft for the Open Agent Hackathon Wildcard route. **Awaiting approved source publication and final uploads.** No competition entry has been submitted. Actual Meterless and live Zetaris execution are verified. The founder reports running validation in Cursor during development; the retained machine receipt is from an earlier Codex run. The registered solo team and saved description are confirmed.
+Submitted copy for the Open Agent Hackathon Wildcard route. **HackOS confirmed Submitted 1/1 after reload on 22 October 2026.** The approved source commit is public and the final video/PDF uploads persisted. See [the submission receipt](SUBMISSION-RECEIPT-2026-10-22.json). Actual Meterless and live Zetaris execution are verified. The founder reports running validation in Cursor during development; the retained machine receipt is from an earlier Codex run. The registered solo team and exact saved description are confirmed.
 
 ## Project description
 
@@ -20,11 +20,11 @@ Separate synthetic Atlas/Beacon support examples demonstrate consistent, conflic
 
 The filmed validation receipt records a clean capture at `968764add439b8ea7e7b75f9989a91dd607ec0d3`: 46 tests passed, with no failures or skips, and build/typecheck passed. The later complete suite passed 51 tests. The preceding 40-test capture was reviewed in Chrome with four citations and zero provider attempts. The repair interface separately passed seven actual localhost browser checks: the unchanged older packet abstained after expiry, repair links resolved, transitions cleared old plans and the mobile view stayed within its viewport.
 
-This verifies local rehearsals using caller-declared observations. It does not independently authenticate CI. Sources: `docs/validation/2026-10-22-repair.json`, the preceding `2026-10-22-bundled.json`, and `repair-ui.md`. The retained actual test/build logs match their capture hashes. Earlier captures, films and decks remain preserved. The current r4 deck uses the actual source evidence and distinguishes the filmed 46-test capture from the later 51-test suite.
+This verifies local rehearsals using caller-declared observations. It does not independently authenticate CI. Sources: `docs/validation/2026-10-22-repair.json`, the preceding `2026-10-22-bundled.json`, and `repair-ui.md`. The retained actual test/build logs match their capture hashes. Earlier captures, films and decks remain preserved. The current r5 deck uses the actual source evidence and distinguishes the filmed 46-test capture from the later 51-test suite.
 
 The live source check then registered the actual bounded CSV in Zetaris's native QARINAH file-store table. The unchanged old capture produced abstention with zero citations. Updating the same source with the separate genuine fresh capture and explicitly rereading it returned the expected clean revision and four matching source identities, followed by READY within those observations. Authentication, fixed SQL execution and cleanup were confirmed. Chrome demonstrated the stale repair plan and explicit reread, and a separate real source recording passed its assertions. The original observation times remained intact. See `docs/validation/2026-10-22-zetaris-live.json`.
 
-The final r6 demo is exactly 96 seconds at 1080p/30 fps. It retains the first 90 seconds of r5's actual stale-to-fresh repair recordings, separately verified Zetaris chapter and labeled synthetic cases. Only the closing disclosure and narration changed to identify founder-reported Cursor validation. The authentic logo, original beat and generic local voice are retained. All 2,880 frames/audio decode without errors; captions, audio levels, bounded closing ASR and independent review passed. The filmed 46-test `968764a` observations remain separate from the later 51-test suite. No human listening review is claimed. Final direct upload awaits approval. See `docs/video/r6/QA.md`.
+The final r6 demo is exactly 96 seconds at 1080p/30 fps. It retains the first 90 seconds of r5's actual stale-to-fresh repair recordings, separately verified Zetaris chapter and labeled synthetic cases. Only the closing disclosure and narration changed to identify founder-reported Cursor validation. The authentic logo, original beat and generic local voice are retained. All 2,880 frames/audio decode without errors; captions, audio levels, bounded closing ASR and independent review passed. The filmed 46-test `968764a` observations remain separate from the later 51-test suite. No human listening review is claimed. The approved file was uploaded directly to HackOS and persisted after submission. Hosted playback started without a media error. See `docs/video/r6/QA.md`.
 
 Twenty hand-authored synthetic HTTP challenges matched all expected classifications, with zero false-ready results across 18 non-ready cases. Complete request/response bodies totalled 218,073 bytes across 83 requests, including audit reads. This finite regression set supplies no blind evaluation, user-impact result, representative error rate or token-savings claim. See `docs/BENCHMARK.md`.
 
@@ -49,10 +49,10 @@ Future work would add independently authenticated CI receipts, additional source
 | Zetaris | Actual native source registration, exact old/fresh reads and confirmed query cleanup |
 | Cursor development | Founder-reported validation task execution; disclose it accurately. No independent editor receipt or AI use is required by the published rules |
 | NVIDIA | Optional, disabled, no inference receipt |
-| Deck | Reviewed local r5 editable deck and viewing PDF; changed slides 1, 6 and 7 inspected |
-| Video | Reviewed 96-second r6 repair/source demo with founder-reported Cursor disclosure; direct upload pending approval |
-| GitHub source and README | Public entry source URL pending approval |
+| Deck | Reviewed r5 PDF uploaded to HackOS; editable PPTX retained locally; changed slides 1, 6 and 7 inspected |
+| Video | Reviewed 96-second r6 repair/source demo uploaded to HackOS; hosted playback started successfully |
+| GitHub source and README | Public AjnasNB/qarinah-evidence-desk, exact approved commit e1d7d6f |
 | Registration and team | Authenticated HackOS confirmed Cognifyr / Ajnas N B, one member |
-| Final competition entry | User requested submission; Wildcard draft saved with 1,680-character description. Source publication and final assets still await their specific approval; no entry submitted |
+| Final competition entry | Submitted with specific user approval; Submitted 1/1 and exact 1,680-character description persisted after reload |
 
 Rules, deadlines, the Cursor interpretation and concrete closure options were rechecked on 22 October 2026 in [the readiness audit](READINESS-2026-10-22.md). Source: [official event rules](https://hackathon.genai.works/event/open-agent-hackathon-2026#rules).
