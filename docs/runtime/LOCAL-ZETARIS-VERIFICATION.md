@@ -54,3 +54,20 @@ node --import tsx scripts/verify-local-zetaris.mjs --verify-source --csv-prepare
 Both source modes call the application's fixed `current-release` query and supported release question with `generate:false`. They compare returned source identities to the exact prepared latest packet and check the existing deterministic ready/hold/abstain result. Old, missing, conflicting or failed artifacts retain their original meaning. A matching result proves this selected packet was read, not authenticated CI or permission to deploy.
 
 Output is a small status and path to an ignored private receipt. The receipt retains fixed operation names, HTTP statuses, byte counts, CSV/packet hashes, original revision/time, source identities and an answer summary. It excludes auth tokens, user identity, raw provider errors and source detail. `passed` requires no recorded uncertainty; cleanup uncertainty produces `uncertain` and exit code 1. Runtime/provider failures are bounded, are not automatically retried, and do not manufacture success.
+
+## Guarded completion after the existing download
+
+Root may start this one-shot runner after reviewing and committing the intended source changes. Check input presence first; this mode reads no credentials and executes no child process:
+
+```powershell
+node scripts/complete-local-integration.mjs --check-only
+node scripts/complete-local-integration.mjs
+```
+
+It uses `%LOCALAPPDATA%/QarinahEvidenceDesk` by default; `--runtime-root <absolute directory>` can explicitly select the same local installation elsewhere. It uses the existing private Docker configuration, Docker Desktop Linux named pipe, vendor Compose/env and project loopback override. It never starts, cancels, restarts or pulls services. Only `compose ps --format json` is polled every 30 seconds, for at most 120 minutes; all four required services must be running and healthy. Authentication is not polled.
+
+At launch the runner requires a clean Git tree and pins the intended HEAD. Once healthy, it checks that the same revision is still clean, runs native Node/npm typecheck, then captures actual tests/build with `npm run evidence -- --recommendation=ready`. A change made during the wait stops the run. It verifies the new clean capture and exports it with the original `d0c2bce` packet, preserving old observation times. It creates the task's fixed directory in the existing driver shared volume, copies the public-safe CSV and verifies its SHA-256 inside the container. The existing registration verifier runs exactly once afterward. An existing read-only mount or permission error stops the run; no mount, ownership, grants or security settings are changed to bypass it.
+
+Every command is bounded and runs without a shell or visible window. Its output is retained only in bounded ignored private logs. The orchestration receipt stores safe stage/exit/path/hash data, never configuration contents or raw command output. Failed, timed-out, truncated or uncertain operations stop; no retry, drop, Git write, account action, model call or public action follows. A recorded ready recommendation is a local test observation, not a promise of a successful release or competition result. Syntax and mock checks do not establish live integration.
+
+If root explicitly supplies the existing `PLAYWRIGHT_MODULE` path when launching the runner, a confirmed integration is checkpointed first, then `record-live-integration.mjs --packet=<fresh packet>` runs once using native Node. Without that variable recording stays explicitly pending. A recording failure preserves the integration receipt and is reported separately; raw footage remains ignored and requires manual review/editing before any publication.
