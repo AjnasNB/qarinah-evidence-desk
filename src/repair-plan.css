@@ -1,0 +1,14 @@
+.repair-plan { margin-top: 20px; padding-top: 17px; border-top: 1px solid var(--line); }
+.repair-plan-heading, .repair-item-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.repair-plan h3 { font-size: 13px; }
+.repair-plan > p, .repair-plan li > p, .repair-plan-action > p { font-size: 12px; line-height: 1.7; color: var(--muted); margin-top: 9px; }
+.repair-plan ol { list-style: decimal; padding-left: 20px; margin-top: 14px; }
+.repair-plan li { padding: 12px 0; border-top: 1px solid var(--line); }
+.repair-item-heading strong { font-size: 12px; font-weight: 600; }
+.repair-item-heading > span { font-size: 10px; color: var(--amber); }
+.repair-evidence { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.repair-evidence:empty { display: none; }
+.repair-evidence code { font-size: 10px; overflow-wrap: anywhere; }
+.repair-plan-action { margin-top: 15px; }
+.repair-plan-action > .button { white-space: normal; min-height: 42px; }
+@media (max-width: 560px) { .repair-plan-action > .button { width: 100%; } .repair-evidence .citation { max-width: 100%; } }

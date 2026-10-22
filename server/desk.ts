@@ -5,6 +5,7 @@ import { demo, digest, emptyMetrics, jsonBytes, utf8 } from './evidence.ts';
 import { bundledZetarisConfigured, generate, modelBody, queryZetaris, SQL, SYSTEM, zetarisConfigured, zetarisProtocol, zetarisQueries } from './providers.ts';
 import { DeskError, HMEM_COMMIT, LIMITS, type Answer, type AppConfig, type DemoCase, type EvidenceRecord, type QueryKey, type Snapshot } from './types.ts';
 import { assessRelease, importHandoff, RELEASE_QUESTION } from './handoff.ts';
+import { repairPlan } from './repair.ts';
 
 const fileBytes = (file: string) => fs.existsSync(file) ? fs.statSync(file).size : 0;
 const sourceKey = (record: EvidenceRecord) => 'evidence:' + digest({ sourceId: record.sourceId, content: record.content, subject: record.subject ?? '', factKey: record.factKey ?? '', value: record.value ?? '', ...(record.handoff ? { handoff: record.handoff } : {}) });
@@ -107,7 +108,7 @@ export class EvidenceDesk {
       const metrics = emptyMetrics(snapshot.sourceResponseBytes);
       metrics.availableEvidenceBytes = jsonBytes(snapshot.sources); metrics.instructionBytes = utf8(SYSTEM); metrics.questionBytes = utf8(question);
       const result: Answer = { status: 'abstained', mode: 'retrieval-only', snapshotId, question, answer: '', claims: [], citations: [], excluded: [], conflicts: [], memories: [], trace: { strategy: 'withheld', reason: '' }, metrics };
-      const finish = (reason: string, message: string, status: Answer['status'] = 'abstained') => { result.status = status; result.reason = reason; result.answer = message; result.trace.reason = reason; metrics.selectionOverheadBytes = jsonBytes({ selectedIds: result.citations.map(record => record.id), excluded: result.excluded, conflicts: result.conflicts }); metrics.elapsedMs = Math.round(performance.now() - start); return result; };
+      const finish = (reason: string, message: string, status: Answer['status'] = 'abstained') => { result.status = status; result.reason = reason; result.answer = message; result.trace.reason = reason; if (snapshot.mode === 'handoff') result.repairPlan = repairPlan(snapshot, reason, result.releaseDecision, now); metrics.selectionOverheadBytes = jsonBytes({ selectedIds: result.citations.map(record => record.id), excluded: result.excluded, conflicts: result.conflicts }); metrics.elapsedMs = Math.round(performance.now() - start); return result; };
       if (Date.parse(snapshot.expiresAt) <= now) { result.excluded = snapshot.sources.map(record => ({ id: record.id, reason: 'stale-snapshot' })); return finish('stale-snapshot', 'This source snapshot expired. Refresh the evidence before answering.'); }
       this.storageRoom();
       if (snapshot.mode === 'handoff') {
