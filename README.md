@@ -40,7 +40,7 @@ Byte measurements describe serialized UTF-8 data. The full-context prompt is a c
 
 ## Validate
 
-The typed import and capture helper are implemented at `ff4acd0`. The earlier 19-test baseline passed; the expanded suite and clean-revision capture still require a fresh recorded run. Live Zetaris and Cursor-use evidence remain pending. The commands below are validation instructions, not a claim that this checkpoint has completed them.
+At clean revision `d0c2bce`, all 30 tests, the production build and typecheck passed. The actual capture packet was imported and reviewed in Chrome, returning four cited records and zero provider attempts. See [the local validation receipt](docs/validation/2026-10-22-local.json). Live Zetaris and Cursor-use evidence remain pending; local checks do not establish event eligibility.
 
 ```text
 npm test

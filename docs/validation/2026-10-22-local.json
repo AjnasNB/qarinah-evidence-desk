@@ -1,0 +1,34 @@
+{
+  "kind": "local-validation",
+  "commit": "d0c2bce75d8eba29a83fcfa2d1f9518a727cec94",
+  "workingTreeDirtyAtCapture": false,
+  "startedAt": "2026-10-22T07:29:47.054Z",
+  "tests": {
+    "command": "npm test",
+    "passed": 30,
+    "failed": 0,
+    "skipped": 0,
+    "outputSha256": "fd5ee86d7b822fc4ff3a0a3cb2801bce36b7a2f7a43f4f49237351ed78ba4a68",
+    "observedAt": "2026-10-22T07:29:48.531Z"
+  },
+  "build": {
+    "command": "npm run build",
+    "outcome": "passed",
+    "outputSha256": "e747663c8581e801c95b6b726a726934e902f8804760616fb2b81eda24c6055a",
+    "observedAt": "2026-10-22T07:29:49.700Z"
+  },
+  "typecheck": { "command": "npm run typecheck", "outcome": "passed" },
+  "packetSha256": "f05fe05042de026dc2885821a5bbabba08f247e71d351138058612e0a908735b",
+  "browserReview": {
+    "source": "actual local packet imported through Chrome",
+    "question": "What is the current release decision?",
+    "outcome": "ready within imported evidence",
+    "citedRecords": 4,
+    "providerAttempts": 0
+  },
+  "limitations": [
+    "Caller-declared local observations, not authenticated CI or deployment authorization.",
+    "Output hashes establish captured log identity, not independent reproduction.",
+    "No live Zetaris, NVIDIA or Cursor-use claim is established by this receipt."
+  ]
+}

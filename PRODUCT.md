@@ -17,7 +17,7 @@ The first concrete developer workflow now imports explicit revision, CI and rele
 5. Handoff review is deterministic and makes no model request. Optional cited model excerpts apply only to the separate support/sample workflow when explicitly enabled.
 6. Inspect or download the receipt. Review current sources before any consequential action; readiness within an imported packet grants no release authority.
 
-Implementation checkpoint: `ff4acd0` includes the typed handoff import and local capture helper. The initial 19-test baseline is historical; the expanded suite/build receipt and clean-revision capture are pending a fresh recorded run. No live Zetaris query or Cursor-use evidence is established yet.
+Validation checkpoint: clean revision `d0c2bce` passed all 30 tests, build and typecheck. The real capture was imported and reviewed in Chrome with four citations and zero provider attempts. See [the receipt](docs/validation/2026-10-22-local.json). No live Zetaris query or Cursor-use evidence is established yet.
 
 ## Proof requirements
 
