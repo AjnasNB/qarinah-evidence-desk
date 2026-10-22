@@ -18,9 +18,9 @@ Separate synthetic Atlas/Beacon support examples demonstrate consistent, conflic
 
 ## Verified local result
 
-The committed validation receipt records a clean capture at `d0c2bce75d8eba29a83fcfa2d1f9518a727cec94`: 30 tests passed, with no failures or skips, and build/typecheck passed. The actual packet was imported and reviewed through Chrome. The result cited four observations and made zero provider attempts.
+The current committed validation receipt records a clean capture at `dee93876a5a108ff711aa25f2021705fa618cb34`: 40 tests passed, with no failures or skips, and build/typecheck passed. Chrome reviewed the actual new packet with four citations; a separate API cross-check confirmed zero provider attempts. Re-importing the unchanged older capture after its observations expired correctly produced abstention.
 
-This verifies a local rehearsal using caller-declared observations. It does not independently authenticate CI or reproduce captured logs. Source: `docs/validation/2026-10-22-local.json`, committed in `9fbf949`.
+This verifies a local rehearsal using caller-declared observations. It does not independently authenticate CI or reproduce captured logs. Source: `docs/validation/2026-10-22-bundled.json`, committed in `69e29c6`. The original `d0c2bce` 30-test receipt remains preserved for the dated film and r2 deck; the deck needs a final refresh after real sponsor verification.
 
 A revised local 96-second, 1080p/30 fps demo combines actual product recordings, the authentic logo, original 120 BPM instrumental, texture and clearly editorial motion graphics. Full decode, motion, audio-level and BT.709 checks passed; an independent visual review cleared the earlier timing/disclosure issues. It is a dated demonstration of the named `d0c2bce` capture, not footage of the newer backend or proof that old observations remain current. Sponsor footage and an approved public video URL remain pending. No narration or human listening review is claimed. See `docs/video/r3/QA.md`.
 

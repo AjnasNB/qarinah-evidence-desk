@@ -26,24 +26,25 @@
     "liveDemo": null
   },
   "localEvidence": {
-    "validationReceipt": "docs/validation/2026-10-22-local.json",
-    "validationReceiptCommit": "9fbf949",
-    "testedCommit": "d0c2bce75d8eba29a83fcfa2d1f9518a727cec94",
+    "validationReceipt": "docs/validation/2026-10-22-bundled.json",
+    "validationReceiptCommit": "69e29c6",
+    "testedCommit": "dee93876a5a108ff711aa25f2021705fa618cb34",
     "workingTreeDirtyAtCapture": false,
     "tests": {
-      "passed": 30,
+      "passed": 40,
       "failed": 0,
       "skipped": 0
     },
     "build": "passed",
     "typecheck": "passed",
     "browserReview": {
-      "source": "actual local packet through Chrome",
+      "source": "actual fresh local packet through Chrome",
       "citedRecords": 4,
-      "providerAttempts": 0
+      "separateApiProviderAttempts": 0
     },
     "authenticatedCI": false,
-    "deploymentAuthorization": false
+    "deploymentAuthorization": false,
+    "historicalReceipt": "docs/validation/2026-10-22-local.json"
   },
   "sponsorEvidence": {
     "meterless": {
@@ -106,7 +107,8 @@
       "sha256": "9a14e1707b781803008abe9e6b31930816a808089fec124e64e314d8420ecea5"
     },
     "pdfFormat": "Image-page companion from slide renders; editable objects remain in PPTX",
-    "powerPointApplicationTest": "not performed"
+    "powerPointApplicationTest": "not performed",
+    "evidenceStatus": "Historical r2 deck based on d0c2bce local rehearsal; refresh after live sponsor verification before final submission."
   },
   "videoReview": {
     "status": "reviewed-dated-local-demonstration",
