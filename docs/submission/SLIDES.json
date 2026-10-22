@@ -1,7 +1,7 @@
 {
   "title": "Qarinah Evidence Desk",
-  "status": "Local review draft, Cursor evidence and public links pending",
-  "templatePptx": ".local/submission/output/evidence-desk-review-r3.pptx",
+  "status": "Submission review draft with founder-reported Cursor validation",
+  "templatePptx": ".local/submission/output/evidence-desk-review-r4.pptx",
   "screenshotPath": ".local/submission/assets-r3/live-release-review.png",
   "slides": [
     {
@@ -9,8 +9,8 @@
       "title": "Qarinah\nEvidence Desk",
       "subtitle": "Developer release handoff review",
       "owner": "Cognifyr / Ajnas N B",
-      "disclosure": "Local review draft. Cursor evidence and public links remain pending.",
-      "notes": "Independent extension started 22 October 2026. Existing Qarinah concepts and brand assets predate the event. Actual local Zetaris and Meterless use is now evidenced. Cursor remains pending. Sources: PRODUCT.md; public/brand/SOURCE.txt; THIRD-PARTY-NOTICES.txt; docs/validation/2026-10-22-zetaris-live.json."
+      "disclosure": "Submission review draft. Cursor validation is founder-reported.",
+      "notes": "Independent extension started 22 October 2026. Existing Qarinah concepts and brand predate the event. Actual local Zetaris and Meterless execution is evidenced. The founder reports running the project validation task in Cursor during development. Most implementation used Codex. No Cursor AI session is claimed. Sources: docs/submission/READINESS-2026-10-22.md; docs/validation/2026-10-22-zetaris-live.json; public/brand/SOURCE.txt; THIRD-PARTY-NOTICES.txt."
     },
     {
       "layout": "workflow",
@@ -127,8 +127,8 @@
         ],
         [
           "Cursor",
-          "Pending",
-          "No completed development session"
+          "Founder reported",
+          "Local validation; no Cursor AI session"
         ],
         [
           "NVIDIA",
@@ -136,16 +136,16 @@
           "No model inference or token receipt"
         ]
       ],
-      "disclosure": "Required Cursor development evidence remains pending. No eligibility claim.",
-      "notes": "Source: docs/validation/2026-10-22-zetaris-live.json records actual probe, old registration and fresh source verification, confirmed cleanup and real browser recording. Actual H-MEM integration is separately evidenced in the app. Cursor installation and access attempts do not establish completed development use. NVIDIA remains optional and disabled. The main task verified the intended Wildcard route requires Zetaris, Meterless and Cursor evidence. Official organizer: https://hackathon.genai.works/ . This local deck does not establish eligibility, public availability or submission."
+      "disclosure": "Most implementation used Codex. Cursor validation is founder-reported.",
+      "notes": "Actual Zetaris and Meterless evidence: docs/validation/2026-10-22-zetaris-live.json. The founder reports running the project validation task in Cursor during development. This direct report is the source for Cursor use. Most implementation was assisted by Codex. The retained machine validation receipt comes from an earlier Codex terminal run, not an independently observed Cursor session. No Cursor AI session is claimed. Literal event rules require Cursor development use and an explanation, not a particular proof format or AI use. Sources: docs/submission/READINESS-2026-10-22.md; docs/submission/HACKOS-DESCRIPTION.txt; docs/validation/2026-10-22-cursor-workspace.json. NVIDIA remains disabled. The deck grants no eligibility guarantee, release authority or publication/submission permission."
     },
     {
       "layout": "close",
       "title": "Review package and next steps",
-      "body": "Reviewed 96-second narrated repair film\nVerified Zetaris read in its source chapter\nFuture work: authenticated CI and workflow cost comparisons",
+      "body": "96-second narrated repair demonstration\nVerified Zetaris read in its source chapter\nFuture work: authenticated CI and workflow cost comparisons",
       "owner": "Cognifyr / Ajnas N B",
-      "disclosure": "Submission remains blocked by Cursor evidence and public links.",
-      "notes": "The final 96-second narrated repair film passed independent review as a qualified dated product demonstration. Its separate verified Zetaris chapter runs at 58–66 seconds. Actual old/fresh local review footage remains distinct from labeled synthetic failure/missing cases. The filmed 46-test capture at 968764a is separate from the later 51-test suite at 289c624. Final MP4 SHA-256: 9183bb9f53f83b1d31923e1118bbfb3d31488c6fd20485e03c1261cb50f5331a. Source: .local/video/r5-repair/review/FINDINGS.md; docs/video/r5/QA.md; docs/validation/2026-10-22-repair.json; docs/validation/2026-10-22-zetaris-live.json. Machine QA: zero failures/warnings and a phone-typography information note. No subjective human listening or physical-phone test is claimed. Authenticated CI and held-out workflow/provider/quality comparisons remain proposed. Cursor development remains pending. Review grants no publication/submission permission or release authority, eligibility, prize, impact or winning probability."
+      "disclosure": "Most implementation used Codex. No Cursor AI session is claimed.",
+      "notes": "The 96-second product demonstration retains actual old/fresh review footage, a separately verified Zetaris chapter and clearly labeled synthetic failure/missing cases. Its updated ending reports founder-attested Cursor validation. Most implementation used Codex and no Cursor AI session is claimed. The filmed 46-test capture at 968764a remains distinct from the later 51-test verifier suite at 289c624. Sources: docs/submission/READINESS-2026-10-22.md; docs/validation/2026-10-22-repair.json; docs/validation/2026-10-22-zetaris-live.json. Authenticated CI and workflow/provider/quality comparisons remain future work. No authenticated-CI, production-readiness, token-saving, impact or winning-probability claim is made."
     }
   ]
 }
