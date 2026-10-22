@@ -1,4 +1,4 @@
-const base = (import.meta.env.VITE_API_BASE || '').replace(/\/$/, '');
+const base = (import.meta.env?.VITE_API_BASE || '').replace(/\/$/, '');
 
 export async function request(path, body) {
   const controller = new AbortController();
@@ -26,8 +26,21 @@ export const bytes = (value) => new TextEncoder().encode(value).length;
 export const number = (value) => Number.isFinite(value) ? new Intl.NumberFormat().format(value) : 'Unknown';
 export const byteLabel = (value) => Number.isFinite(value) ? `${number(value)} B` : 'Not measured';
 export function timeLabel(value) {
-  const date = new Date(value);
-  return Number.isNaN(date.getTime()) ? 'Unknown time' : new Intl.DateTimeFormat(undefined, { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', timeZoneName: 'short' }).format(date);
+  if (typeof value !== 'string' && typeof value !== 'number') return 'Unknown time';
+  try {
+    const date = new Date(value);
+    return Number.isNaN(date.getTime()) ? 'Unknown time' : new Intl.DateTimeFormat(undefined, { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', timeZoneName: 'short' }).format(date);
+  } catch {
+    return 'Unknown time';
+  }
+}
+
+export function resultLabel(result) {
+  if (result?.status === 'answered') {
+    if (result.mode === 'retrieval-only' && ['ready', 'hold'].includes(result.releaseDecision)) return 'Deterministic release review';
+    return result.mode === 'nemotron' ? 'Model-assisted answer' : 'Evidence review';
+  }
+  return { retrieved: 'Retrieved evidence', abstained: 'Answer withheld', unavailable: 'Provider unavailable' }[result?.status] || 'Review complete';
 }
 
 export function createReceipt(snapshot, answer, metrics, runtime) {
@@ -40,6 +53,7 @@ export function createReceipt(snapshot, answer, metrics, runtime) {
     runtime: runtime ? { memory: runtime.memory, zetaris: runtime.zetaris, nemotron: runtime.nemotron, limits: runtime.limits } : null,
     notes: [
       'Synthetic mode is a local replay; it is not a verified sponsor or model call.',
+      'Imported handoff statements are supplied evidence, not independent CI verification or authorization to release.',
       'Byte metrics measure serialized UTF-8 payloads. They are not provider token estimates.',
       'Full-context metrics are counterfactual comparisons, not a second executed request.',
       'Only a provider usage receipt establishes actual token counts. Configured does not mean verified.',

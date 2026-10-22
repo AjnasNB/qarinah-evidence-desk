@@ -1,0 +1,12 @@
+Qarinah official brand asset
+
+Official project page: https://qarinah.io/
+Original asset: https://qarinah.io/assets/qarinah-mark.svg
+Retrieved: 2026-10-22T06:54:49.234684+00:00
+Local file: qarinah-mark.svg
+SHA-256: 2a822527d0a41a2bdc24625cf78641f6caf7206ea5007bbfb20bb2214cd9d84b
+
+The official page uses this exact asset in its header, footer and SVG favicon.
+Downloaded directly from the public asset URL without modifying its bytes,
+paths, colors, title or description. Used for the project owner's Qarinah
+Evidence Desk header and favicon. No generated or redrawn substitute.
