@@ -29,10 +29,12 @@ Paste the generated `packet.json` into Developer handoff, inspect the preview, s
 
 Synthetic Atlas/Beacon cases remain available for clean, conflicting and missing support evidence. They are visibly labeled replay data, not live sponsor calls.
 
+For the bundled Zetaris platform, **Investigate handoff** reads the fixed latest developer packet, prepares the release question and clears the earlier review. It does not run CI or deploy. A successful connection probe does not mark this separate handoff query verified. Review timestamps and a historical-result cue make expired observations visible without silently fetching new data. See [source preparation and configuration](docs/ZETARIS-HANDOFF.md).
+
 ## Integrations and limits
 
 - **Meterless:** actual pinned H-MEM add/query/persistence/audit operations. The upstream reference uses deterministic hash embeddings, not a learned semantic model.
-- **Zetaris:** fixed, bounded read-only queries. Set the three Zetaris settings in ignored `.env.local` only after a local runtime is running and the actual API version has been verified. Configuration and an account login alone do not establish a successful query.
+- **Zetaris:** fixed, bounded read-only queries. The bundled 2.4.3 UI session and modern REST API modes have separate configuration and response validation. Put credentials only in ignored `.env.local`. The bundled handoff path preserves original timestamps and exposes query cleanup uncertainty. Configuration and an account login alone do not establish a successful query.
 - **NVIDIA:** optional, disabled by default. When explicitly enabled with existing credits, only selected question/evidence data is sent. Returned excerpts must match current citations. Handoff review itself is deterministic and makes no model request.
 - **Cursor:** required event development evidence is tracked separately. This repository does not claim that Codex work is Cursor work.
 

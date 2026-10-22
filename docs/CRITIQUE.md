@@ -1,5 +1,17 @@
 # Product critique
 
+## Current judgment
+
+The strongest scope is a developer's release handoff: inspect the current revision and referenced checks, explain the recommendation, and withhold it when evidence expires or disagrees. React/Vite and a local Node service fit this prototype. Meterless supplies actual bounded memory and audit operations; its reference hash embedder is disclosed. Zetaris should supply a real developer source rather than an unrelated connection sample. Cursor is a required development tool for this event, not a server dependency.
+
+The new fixed handoff query and explicit Investigate action connect that workflow in code. Forty local tests cover the provider contract and assessment, including secret redaction, malformed packets and cleanup errors. Live authentication, source registration and query cleanup remain unverified while vendor images download. These tests are not live sponsor evidence.
+
+One actual ageing check at 08:29:51 UTC on 22 October re-imported the unchanged 07:29:47 capture. The running service abstained with `missing-current-revision`, excluded all four records as `stale-source`, and made zero provider attempts. The UI now timestamps reviews and marks historical results rather than presenting an earlier ready result as current.
+
+The main limitations are substantive: observations are caller-declared, the source currently carries a bounded packet rather than independently authenticated CI, only one release question is supported, and total workflow/token savings are unmeasured. The product is a useful scoped prototype. A claim of general autonomous reasoning, authenticated release approval, proven savings or near-certain prize success would exceed the evidence.
+
+Submission should wait for authentic Zetaris execution and actual Cursor development evidence, then a new recorded integration segment. Existing local footage remains a historical demonstration of its named build.
+
 Initial review: 22 October 2026, before the developer-handoff extension. The initial 19 tests, typecheck and build passed. Those checks cover local code and mocked provider contracts; no authenticated live Zetaris query or real model inference is established here. Optional model generation is currently disabled.
 
 ## Follow-up implementation
