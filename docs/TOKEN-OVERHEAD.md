@@ -24,6 +24,14 @@ This comparison excludes selection work, full-artifact retrieval/storage, surrou
 
 These fixture numbers do not measure the developer handoff capture/import workflow. A clean-revision rehearsal at `d0c2bce` passed 30 tests and the production build, then returned four citations in Chrome. The end-to-end overhead comparison remains pending; no workflow saving is inferred from the older benchmark.
 
+## Complete HTTP body measurement
+
+The later [20-case release challenge](BENCHMARK.md) measured the real serialized localhost import, review and memory-audit bodies, including wrappers and provenance: 21,279 request bytes plus 196,794 response bytes, or 218,073 bytes across 83 HTTP requests. It matched all expected classifications and made no provider request. These are synthetic regression tasks; headers, browser assets, startup, disk storage and human work are excluded. This is an absolute observed body cost, with no executed baseline, billed-token total or savings percentage.
+
+The result illustrates why a selected-context counter alone cannot describe overall overhead. Citation and audit bodies remain part of the workflow even when no model is called. A future compact agent interface should retain stable evidence IDs, freshness, exclusions and errors, and fetch a particular full artifact when needed; its benefit still needs a complete task comparison.
+
+During setup, bounded orchestration projects long download logs into the latest per-layer status instead of replaying the entire log into model context. Focused Qarinah recalls and specialist file pointers similarly avoid repeated history. These are operating choices, not measured account-token or billing savings. Logs and source artifacts remain available locally for targeted investigation.
+
 ## Qarinah checkpoint and recall
 
 The operator reported that a manual source checkpoint and cited summary became retrievable after rebuilding a stale derived index. At the initial review observation, the exact workspace was initialized and `context.doctor` reported `ok:true`, two ledger events and a current derived index. This verifies that observed state, not automatic hook capture, today's event count or the earlier rebuild operation itself.
