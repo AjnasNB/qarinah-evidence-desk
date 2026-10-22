@@ -4,9 +4,10 @@ import { HMEM } from '../vendor/meterless-hmem/src/index.ts';
 import { demo, digest, emptyMetrics, jsonBytes, utf8 } from './evidence.ts';
 import { generate, modelBody, queryZetaris, SYSTEM, zetarisConfigured } from './providers.ts';
 import { DeskError, HMEM_COMMIT, LIMITS, type Answer, type AppConfig, type DemoCase, type EvidenceRecord, type QueryKey, type Snapshot } from './types.ts';
+import { assessRelease, importHandoff, RELEASE_QUESTION } from './handoff.ts';
 
 const fileBytes = (file: string) => fs.existsSync(file) ? fs.statSync(file).size : 0;
-const sourceKey = (record: EvidenceRecord) => 'evidence:' + digest({ sourceId: record.sourceId, content: record.content, subject: record.subject ?? '', factKey: record.factKey ?? '', value: record.value ?? '' });
+const sourceKey = (record: EvidenceRecord) => 'evidence:' + digest({ sourceId: record.sourceId, content: record.content, subject: record.subject ?? '', factKey: record.factKey ?? '', value: record.value ?? '', ...(record.handoff ? { handoff: record.handoff } : {}) });
 const normalize = (value: string) => value.normalize('NFKC').toLowerCase().replace(/\s+/g, ' ').trim();
 const ownKeys = (value: unknown, keys: string[]) => value !== null && typeof value === 'object' && !Array.isArray(value) && Object.keys(value).every(key => keys.includes(key));
 export function questionIntent(question: string): { subject?: string; factKey?: string } {
@@ -54,14 +55,30 @@ export class EvidenceDesk {
     catch { throw new DeskError(503, 'BUDGET_UNAVAILABLE', 'The model-attempt reservation could not be stored. No model request was made.'); }
   }
   status() {
-    return { name: 'Qarinah Evidence Desk', version: '0.1.0', memory: { engine: 'Meterless H-MEM reference', commit: HMEM_COMMIT, embedding: 'deterministic 64-dimensional hash reference (not learned embeddings)', records: this.hmem.store.all().length, maxRecords: LIMITS.memories }, zetaris: { configured: zetarisConfigured(this.config), verified: Boolean(this.lastZetarisRead), lastVerifiedAt: this.lastZetarisRead }, nemotron: { configured: Boolean(this.config.nemotronKey), enabled: this.config.allowNemotron && Boolean(this.config.nemotronKey), model: this.config.nemotronModel }, limits: LIMITS };
+    return { name: 'Qarinah Evidence Desk', version: '0.1.0', memory: { engine: 'Meterless H-MEM reference', commit: HMEM_COMMIT, embedding: 'deterministic 64-dimensional hash reference (not learned embeddings)', records: this.hmem.store.all().length, maxRecords: LIMITS.memories }, zetaris: { configured: zetarisConfigured(this.config), verified: Boolean(this.lastZetarisRead), lastVerifiedAt: this.lastZetarisRead }, nemotron: { configured: Boolean(this.config.nemotronKey), enabled: this.config.allowNemotron && Boolean(this.config.nemotronKey), model: this.config.nemotronModel }, handoff: { format: 'qarinah-handoff-v1', question: RELEASE_QUESTION, maxRevisions: 3, maxCI: 6, maxReleases: 3, localOnly: true }, limits: LIMITS };
   }
   private save(snapshot: Snapshot): Snapshot {
     this.storageRoom();
     const existing = new Set(this.hmem.store.all().map(memory => memory.source));
     const fresh = snapshot.sources.filter(record => !existing.has(sourceKey(record)));
     if (existing.size + fresh.length > LIMITS.memories) throw new DeskError(409, 'MEMORY_CAPACITY', 'The bounded memory record limit was reached. No old source was removed.');
-    for (const record of fresh) this.hmem.add({ content: record.content, source: sourceKey(record), type: 'factual', layer: 'working', confidence: 1, provenance: { origin: 'document', learnedAt: this.clock(), label: record.sourceId, refs: [record.id, record.hash] }, tags: ['evidence', 'project:' + (record.subject ?? 'source')] });
+    for (const record of fresh) {
+      const added = this.hmem.add({ content: record.content, source: sourceKey(record), type: 'factual', layer: 'working', confidence: 1, provenance: { origin: 'document', learnedAt: this.clock(), label: record.sourceId, refs: [record.id, record.hash] }, tags: ['evidence', 'project:' + (record.subject ?? 'source')] });
+      // Imported detail text must not create an implicit supersession through
+      // upstream correction-language heuristics. Only validated refs may do so.
+      if (record.handoff && added.supersedes) this.hmem.store.update(added.id, { supersedes: undefined });
+    }
+    if (snapshot.mode === 'handoff') {
+      const bySource = new Map(this.hmem.store.all().map(memory => [memory.source, memory]));
+      for (const record of snapshot.sources) {
+        const successor = bySource.get(sourceKey(record))!;
+        const predecessors = (record.handoff?.supersedes ?? []).map(id => snapshot.sources.find(source => source.handoff?.observationId === id)!).map(source => bySource.get(sourceKey(source))!);
+        if (predecessors.length) {
+          if (successor.supersedes !== predecessors[0].id) this.hmem.store.update(successor.id, { supersedes: predecessors[0].id, derivedFrom: predecessors.map(memory => memory.id) });
+          for (const prior of predecessors) if (prior.supersededBy !== successor.id) this.hmem.store.update(prior.id, { supersededBy: successor.id });
+        }
+      }
+    }
     snapshot.memoryCount = this.hmem.store.all().length;
     this.snapshots.set(snapshot.id, snapshot);
     while (this.snapshots.size > LIMITS.snapshotCount) this.snapshots.delete(this.snapshots.keys().next().value!);
@@ -74,6 +91,9 @@ export class EvidenceDesk {
   async querySource(input: unknown) {
     if (!ownKeys(input, ['queryKey']) || !['probe', 'taxi-zones', 'reasons'].includes((input as { queryKey: string }).queryKey)) throw new DeskError(400, 'QUERY_KEY', 'Choose a supported fixed read-only query.');
     return this.serial(async () => { this.storageRoom(); const start = performance.now(); const value = this.save(await queryZetaris(this.config, (input as { queryKey: QueryKey }).queryKey, this.clock(), this.fetcher)); this.lastZetarisRead = value.createdAt; const metrics = emptyMetrics(value.sourceResponseBytes, 1); metrics.availableEvidenceBytes = jsonBytes(value.sources); metrics.elapsedMs = Math.round(performance.now() - start); return { snapshot: value, metrics }; });
+  }
+  async importHandoff(input: unknown) {
+    return this.serial(() => { const start = performance.now(); const value = this.save(importHandoff(input, this.clock())); const metrics = emptyMetrics(value.sourceResponseBytes); metrics.availableEvidenceBytes = jsonBytes(value.sources); metrics.elapsedMs = Math.round(performance.now() - start); return { snapshot: value, metrics }; });
   }
   async answer(input: unknown): Promise<Answer> {
     if (!ownKeys(input, ['snapshotId', 'question', 'generate'])) throw new DeskError(400, 'ANSWER_INPUT', 'Use a snapshot, question and optional generation flag.');
@@ -89,6 +109,26 @@ export class EvidenceDesk {
       const finish = (reason: string, message: string, status: Answer['status'] = 'abstained') => { result.status = status; result.reason = reason; result.answer = message; result.trace.reason = reason; metrics.selectionOverheadBytes = jsonBytes({ selectedIds: result.citations.map(record => record.id), excluded: result.excluded, conflicts: result.conflicts }); metrics.elapsedMs = Math.round(performance.now() - start); return result; };
       if (Date.parse(snapshot.expiresAt) <= now) { result.excluded = snapshot.sources.map(record => ({ id: record.id, reason: 'stale-snapshot' })); return finish('stale-snapshot', 'This source snapshot expired. Refresh the evidence before answering.'); }
       this.storageRoom();
+      if (snapshot.mode === 'handoff') {
+        const review = assessRelease(snapshot, question, now);
+        result.excluded = review.excluded; result.conflicts = review.conflicts;
+        result.trace.strategy = 'deterministic release rules + Meterless source resolution; no model';
+        const retrieval = review.selected.length ? this.hmem.query(question, { topN: LIMITS.memories, threshold: 0 }) : undefined;
+        const bySource = new Map(retrieval?.memories.map(item => [item.memory.source, item]) ?? []);
+        for (const record of review.selected) {
+          const found = bySource.get(sourceKey(record));
+          if (!found || found.memory.content !== record.content) return finish('unresolvable-handoff-memory', 'Abstained: a required source could not be resolved through this workspace memory.');
+          result.memories.push({ id: found.memory.id, content: found.memory.content, source: record.sourceId, relevance: Number(found.relevance.toFixed(4)) });
+        }
+        if (review.selected.length > LIMITS.recalledMemories || jsonBytes(review.selected) > LIMITS.contextBytes) return finish('handoff-context-bound', 'Abstained: required release evidence does not fit the bounded packet.');
+        result.citations = review.selected;
+        const selectedBody = modelBody(question, review.selected, this.config.nemotronModel), fullBody = modelBody(question, snapshot.sources, this.config.nemotronModel);
+        metrics.selectedEvidenceBytes = jsonBytes(review.selected); metrics.memoryContextBytes = jsonBytes(JSON.parse(selectedBody.messages[1].content).evidence); metrics.promptBytes = jsonBytes(selectedBody.messages); metrics.fullContextPromptBytes = jsonBytes(fullBody.messages); metrics.fullContextRequestBytes = jsonBytes(fullBody);
+        if (!review.decision) return finish(review.reason, review.message);
+        result.releaseDecision = review.decision;
+        result.claims = [{ text: review.message, citationIds: review.selected.map(record => record.id) }];
+        return finish(review.reason, review.message, 'answered');
+      }
       const intent = questionIntent(question);
       const current = snapshot.sources.filter(record => {
         const { id, hash, ...original } = record;
