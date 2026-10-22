@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { EvidenceDesk } from './desk.ts';
 import { DeskError, LIMITS } from './types.ts';
+import { verifyReceipt } from './receipt.ts';
 
 function reply(response: ServerResponse, status: number, value: unknown) {
   const body = JSON.stringify(value);
@@ -32,6 +33,7 @@ export function createDeskServer(desk: EvidenceDesk, distDir = desk.config.distD
         if (request.method === 'POST' && url.pathname === '/api/demo/load') return reply(response, 200, await desk.loadDemo(await body(request)));
         if (request.method === 'POST' && url.pathname === '/api/source/query') return reply(response, 200, await desk.querySource(await body(request)));
         if (request.method === 'POST' && url.pathname === '/api/handoff/import') return reply(response, 200, await desk.importHandoff(await body(request)));
+        if (request.method === 'POST' && url.pathname === '/api/receipt/verify') return reply(response, 200, await verifyReceipt(await body(request)));
         if (request.method === 'POST' && url.pathname === '/api/answer') return reply(response, 200, await desk.answer(await body(request)));
         if (request.method === 'GET' && /^\/api\/audit\/mem-\d{1,8}$/.test(url.pathname)) return reply(response, 200, desk.audit(url.pathname.split('/').at(-1)!));
         throw new DeskError(404, 'NOT_FOUND', 'That API route was not found.');

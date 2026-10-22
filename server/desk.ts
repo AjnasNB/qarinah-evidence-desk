@@ -107,7 +107,7 @@ export class EvidenceDesk {
       if (!snapshot) throw new DeskError(404, 'SNAPSHOT_NOT_FOUND', 'The snapshot is unavailable or was evicted. Load a fresh source set.');
       const metrics = emptyMetrics(snapshot.sourceResponseBytes);
       metrics.availableEvidenceBytes = jsonBytes(snapshot.sources); metrics.instructionBytes = utf8(SYSTEM); metrics.questionBytes = utf8(question);
-      const result: Answer = { status: 'abstained', mode: 'retrieval-only', snapshotId, question, answer: '', claims: [], citations: [], excluded: [], conflicts: [], memories: [], trace: { strategy: 'withheld', reason: '' }, metrics };
+      const result: Answer = { status: 'abstained', mode: 'retrieval-only', snapshotId, question, reviewedAt: new Date(now).toISOString(), answer: '', claims: [], citations: [], excluded: [], conflicts: [], memories: [], trace: { strategy: 'withheld', reason: '' }, metrics };
       const finish = (reason: string, message: string, status: Answer['status'] = 'abstained') => { result.status = status; result.reason = reason; result.answer = message; result.trace.reason = reason; if (snapshot.mode === 'handoff') result.repairPlan = repairPlan(snapshot, reason, result.releaseDecision, now); metrics.selectionOverheadBytes = jsonBytes({ selectedIds: result.citations.map(record => record.id), excluded: result.excluded, conflicts: result.conflicts }); metrics.elapsedMs = Math.round(performance.now() - start); return result; };
       if (Date.parse(snapshot.expiresAt) <= now) { result.excluded = snapshot.sources.map(record => ({ id: record.id, reason: 'stale-snapshot' })); return finish('stale-snapshot', 'This source snapshot expired. Refresh the evidence before answering.'); }
       this.storageRoom();

@@ -45,7 +45,8 @@ export function resultLabel(result) {
 
 export function createReceipt(snapshot, answer, metrics, runtime) {
   return {
-    schema: 'qarinah.evidence-desk.receipt.v1',
+    schema: snapshot?.handoffPacket && answer?.reviewedAt ? 'qarinah.evidence-desk.receipt.v2' : 'qarinah.evidence-desk.receipt.v1',
+    reviewPolicy: snapshot?.handoffPacket && answer?.reviewedAt ? 'qarinah-release-review-v1' : null,
     exportedAt: new Date().toISOString(),
     snapshot,
     answer,

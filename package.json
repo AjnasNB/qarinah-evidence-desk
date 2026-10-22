@@ -12,6 +12,7 @@
     "build": "vite build",
     "typecheck": "tsc --project tsconfig.json",
     "evidence": "node scripts/capture-handoff.mjs",
+    "verify:receipt": "node --import tsx scripts/verify-receipt.ts",
     "test": "node scripts/test.mjs",
     "validate": "node scripts/validate.mjs"
   },
