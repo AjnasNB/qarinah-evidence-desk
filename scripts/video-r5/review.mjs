@@ -1,0 +1,15 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { spawnSync } from 'node:child_process';
+import assert from 'node:assert/strict';
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
+const out = path.join(root, '.local/video/r5-repair'), review = path.join(out, 'review');
+await fs.mkdir(review, { recursive: true });
+const final = path.join(out, 'qarinah-evidence-r5.mp4');
+const run = args => { const r = spawnSync(process.env.FFMPEG || 'ffmpeg', ['-hide_banner', '-nostdin', '-loglevel', 'error', ...args], { encoding: 'utf8', windowsHide: true, maxBuffer: 2e6 }); assert.equal(r.status, 0, r.stderr?.slice(-1000) || r.error?.message); };
+const frames = [0, 6.3, 8.7, 9.2, 18.5, 22, 27, 30.3, 32.7, 33.3, 36, 44.5, 49, 53, 58.5, 59.8, 60.3, 63, 65.5, 66.3, 68.7, 69.3, 73, 78.3, 80.7, 81.3, 85, 90.5, 95.3];
+for (const at of frames) run(['-y', '-ss', String(at), '-i', final, '-frames:v', '1', path.join(review, `frame-${String(at).replace('.', '-')}.png`)]);
+run(['-y', '-i', final, '-filter_complex', '[0:a]showwavespic=s=1600x240:colors=0xA9E2B5|0xE9BD7A:split_channels=1[w]', '-map', '[w]', '-frames:v', '1', path.join(review, 'waveform.png')]);
+await fs.writeFile(path.join(review, 'frames.json'), JSON.stringify({ final, timestamps: frames, method: 'Actual encoded-video frames; not recreated UI or a manual every-frame review.' }, null, 2) + '\n');
+console.log(JSON.stringify({ review, extracted: frames.length }));

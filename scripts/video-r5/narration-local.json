@@ -1,0 +1,17 @@
+{
+  "engine": "kokoro", "voice": "af_heart", "speed": 1.0, "gap": 0.35, "tail": 0.8, "lufs": -16,
+  "lines": [
+    { "id": "01-overview", "at": 0.5, "text": "Qarinah Evidence Desk checks a release claim against inspectable source observations." },
+    { "id": "02-old-input", "at": 6.4, "text": "First, import the original local packet. Its observations are now stale." },
+    { "id": "02-old-result", "at": 12.2, "text": "The desk withholds readiness. Rereading old evidence does not renew its timestamps." },
+    { "id": "03-repair", "at": 18.4, "text": "Next steps identify what needs refreshing, with links to the original sources. They request genuine new observations, preserving the old timestamps." },
+    { "id": "04-fresh-import", "at": 30.4, "text": "Now import a separate, actual capture from the clean tested revision." },
+    { "id": "04-fresh-result", "at": 35.8, "text": "The evidence is complete: ready within this packet, with four citations. This is not deployment permission." },
+    { "id": "05-citation", "at": 44.4, "text": "Open the test citation to inspect exact text, time, and hash." },
+    { "id": "05-audit", "at": 50.6, "text": "Then inspect retained memory provenance. This reference uses deterministic hash embeddings." },
+    { "id": "06-context", "at": 58.4, "text": "Context includes overhead, measured in bytes. No model request was sent; actual token usage is unknown." },
+    { "id": "07-synthetic-failure", "at": 66.4, "text": "This failure replay is synthetic. Its invented tests fail, so the desk holds and asks for source fixes." },
+    { "id": "08-synthetic-missing", "at": 78.4, "text": "This missing build replay is also synthetic. The desk abstains and asks for the required evidence, instead of guessing readiness." },
+    { "id": "09-limits", "at": 90.4, "text": "Live sponsor evidence remains pending. No submission is claimed." }
+  ]
+}
