@@ -10,28 +10,60 @@
   "readyToSubmit": false,
   "published": false,
   "submitted": false,
-  "team": { "name": "Cognifyr", "members": ["Ajnas N B"], "size": 1 },
+  "team": {
+    "name": "Cognifyr",
+    "members": [
+      "Ajnas N B"
+    ],
+    "size": 1
+  },
   "buildStartedOn": "2026-10-22",
   "existingWorkDisclosed": true,
   "aiAssistanceDisclosed": true,
-  "links": { "githubSource": null, "video": null, "liveDemo": null },
+  "links": {
+    "githubSource": null,
+    "video": null,
+    "liveDemo": null
+  },
   "localEvidence": {
     "validationReceipt": "docs/validation/2026-10-22-local.json",
     "validationReceiptCommit": "9fbf949",
     "testedCommit": "d0c2bce75d8eba29a83fcfa2d1f9518a727cec94",
     "workingTreeDirtyAtCapture": false,
-    "tests": { "passed": 30, "failed": 0, "skipped": 0 },
+    "tests": {
+      "passed": 30,
+      "failed": 0,
+      "skipped": 0
+    },
     "build": "passed",
     "typecheck": "passed",
-    "browserReview": { "source": "actual local packet through Chrome", "citedRecords": 4, "providerAttempts": 0 },
+    "browserReview": {
+      "source": "actual local packet through Chrome",
+      "citedRecords": 4,
+      "providerAttempts": 0
+    },
     "authenticatedCI": false,
     "deploymentAuthorization": false
   },
   "sponsorEvidence": {
-    "meterless": { "status": "executed-local-reference", "commit": "70ca80fe88ad8d27288501e8dd08b091ed38c095", "embedding": "deterministic hash reference" },
-    "zetaris": { "status": "live-query-pending", "successfulLiveQuery": false },
-    "cursor": { "status": "access-blocked-CLI-installed", "actualDevelopmentUseVerified": false },
-    "nvidia": { "status": "optional-disabled", "inferenceReceipt": null }
+    "meterless": {
+      "status": "executed-local-reference",
+      "commit": "70ca80fe88ad8d27288501e8dd08b091ed38c095",
+      "embedding": "deterministic hash reference"
+    },
+    "zetaris": {
+      "status": "live-query-pending",
+      "successfulLiveQuery": false,
+      "adapter": "bundled-2.4.3-fixed-current-release-40-local-tests"
+    },
+    "cursor": {
+      "status": "support-escalated-access-not-restored",
+      "actualDevelopmentUseVerified": false
+    },
+    "nvidia": {
+      "status": "optional-disabled",
+      "inferenceReceipt": null
+    }
   },
   "benchmark": {
     "kind": "synthetic-serialized-UTF8-bytes",
@@ -59,24 +91,46 @@
     "artifactToolReopen": "passed",
     "packageLayoutAndFontChecks": "passed",
     "visualReview": "Original seven slides inspected; r2 changed slides 5 and 7 inspected, final seven-slide import and native counts verified",
-    "visibleCoverage": { "problemAndApproach": [2, 3, 4], "technicalArchitectureAndStack": 5, "sponsorStatus": 6, "futureEnhancements": 7 },
-    "originalPptxPreserved": { "path": ".local/submission/output/evidence-desk-review.pptx", "sha256": "9a14e1707b781803008abe9e6b31930816a808089fec124e64e314d8420ecea5" },
+    "visibleCoverage": {
+      "problemAndApproach": [
+        2,
+        3,
+        4
+      ],
+      "technicalArchitectureAndStack": 5,
+      "sponsorStatus": 6,
+      "futureEnhancements": 7
+    },
+    "originalPptxPreserved": {
+      "path": ".local/submission/output/evidence-desk-review.pptx",
+      "sha256": "9a14e1707b781803008abe9e6b31930816a808089fec124e64e314d8420ecea5"
+    },
     "pdfFormat": "Image-page companion from slide renders; editable objects remain in PPTX",
     "powerPointApplicationTest": "not performed"
   },
   "videoReview": {
-    "status": "local-draft-complete",
-    "path": ".local/video/20261022T073821010Z/qarinah-product-draft.mp4",
-    "durationSeconds": 108.066667,
+    "status": "reviewed-dated-local-demonstration",
+    "path": ".local/video/r3-20261022/revision-2/qarinah-evidence-r3.mp4",
+    "durationSeconds": 96,
     "width": 1920,
     "height": 1080,
-    "framesPerSecond": 30,
-    "sha256": "41f805e136f73453033ffccc1df615475083394de254b855afa0f4c8040be655",
-    "format": "silent captioned actual product footage",
-    "verification": "Main task reported full 3242-frame decode, black-frame scan and motion-keyframe review",
-    "publicUrl": null,
-    "remaining": ["Verified pending sponsor footage", "Approved public URL"],
-    "optionalNarrationPending": true
+    "fps": 30,
+    "sha256": "e44724db42a06d3a3f5f0df07cafb41ad0a425c52dc75d361e028e2b642b2ef1",
+    "bytes": 32756111,
+    "sourceCaptureCommit": "d0c2bce75d8eba29a83fcfa2d1f9518a727cec94",
+    "realProductFootage": true,
+    "silent": false,
+    "narration": false,
+    "music": "Original local 120 BPM instrumental",
+    "authenticLogo": true,
+    "colour": "BT.709",
+    "finalIntegratedLufs": -18.09,
+    "finalTruePeakDbtp": -1.36,
+    "fullDecode": "passed",
+    "checkedVideoFrames": 2880,
+    "independentReview": "ship as dated local demonstration; newest backend and live sponsor evidence not filmed",
+    "qa": "docs/video/r3/QA.md",
+    "publicUrl": null
   },
   "blockingGates": [
     "Verified live Zetaris use",

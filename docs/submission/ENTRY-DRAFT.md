@@ -14,7 +14,7 @@ The local capture helper runs this project's tests and build, records their outp
 
 The backend stores sourced observations through the actual pinned Meterless H-MEM reference implementation. Review resolves selected evidence against the active snapshot and exposes citations, exclusions and memory audit history. Supplied observation text remains untrusted data. Import and handoff review execute no source instructions and make no model request.
 
-Separate synthetic Atlas/Beacon support examples demonstrate consistent, conflicting and missing evidence. Fixed Zetaris query adapters exist, but a live authenticated Zetaris query has not yet succeeded. Optional NVIDIA excerpt selection remains disabled. Cursor access is blocked, with the CLI installed but no verified development use.
+Separate synthetic Atlas/Beacon support examples demonstrate consistent, conflicting and missing evidence. The new Investigate handoff action reads a fixed developer packet through the bundled Zetaris adapter, preserving its original times and provenance. Forty local tests pass, including mocked provider contracts, but a live authenticated Zetaris query has not yet succeeded. Optional NVIDIA excerpt selection remains disabled. Cursor support acknowledged escalation; account access and actual development use remain unverified.
 
 ## Verified local result
 
@@ -22,7 +22,7 @@ The committed validation receipt records a clean capture at `d0c2bce75d8eba29a83
 
 This verifies a local rehearsal using caller-declared observations. It does not independently authenticate CI or reproduce captured logs. Source: `docs/validation/2026-10-22-local.json`, committed in `9fbf949`.
 
-A local 108.07-second, 1080p/30 fps silent captioned video draft now uses actual product footage. The main task verified its complete frame decode and reviewed motion keyframes. Sponsor footage and an approved public video URL remain pending. Narration is optional.
+A revised local 96-second, 1080p/30 fps demo combines actual product recordings, the authentic logo, original 120 BPM instrumental, texture and clearly editorial motion graphics. Full decode, motion, audio-level and BT.709 checks passed; an independent visual review cleared the earlier timing/disclosure issues. It is a dated demonstration of the named `d0c2bce` capture, not footage of the newer backend or proof that old observations remain current. Sponsor footage and an approved public video URL remain pending. No narration or human listening review is claimed. See `docs/video/r3/QA.md`.
 
 A separate synthetic observation-envelope benchmark measured 36,584 UTF-8 source bytes against 789 bytes for the first complete serialized result wrapper and 758 for a repeated result. These are fixture byte measurements. Total workflow cost, provider-token savings and downstream task quality remain unmeasured.
 
