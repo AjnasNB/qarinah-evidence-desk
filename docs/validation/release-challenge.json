@@ -1,0 +1,1300 @@
+{
+  "schema": "qarinah.release-challenge-result.v1",
+  "startedAt": "2026-10-22T09:51:45.318Z",
+  "finishedAt": "2026-10-22T09:51:45.873Z",
+  "classification": "hand-authored synthetic regression challenge; not blind held-out evaluation or user study",
+  "syntheticClock": "2026-10-22T12:00:00.000Z",
+  "commit": "fbf9e727fa3eabacf9bc8d7a200d866f0216be18",
+  "workingTreeDirtyAtRun": true,
+  "nodeVersion": "v24.15.0",
+  "sourceIdentity": {
+    "sha256": "8e9b3da3bab00f5b6ba26f2632c098f999dfb38d3f26211be33b6155bb750df9",
+    "files": [
+      {
+        "file": "server/desk.ts",
+        "sha256": "d880af6c1913437789bdfdfbfc3b02eb7e25c5b7ae790775c90b82d62b145caa"
+      },
+      {
+        "file": "server/evidence.ts",
+        "sha256": "1055ad0036d18aa714cd2f488d4121db108fa381e536ec844cb105c51e82bacb"
+      },
+      {
+        "file": "server/handoff.ts",
+        "sha256": "8c81cc690270071564df3e4fee949cba0309b999e5bd5780efc83f2c13c1fef5"
+      },
+      {
+        "file": "server/http.ts",
+        "sha256": "dbad4e976ec56f4064b08d55c048d1f379c31c4167eb3767b7a95fcba942107b"
+      },
+      {
+        "file": "server/index.ts",
+        "sha256": "f154a9d00871e029fd7f6d48f89bee5721ffb06edb3348538850ae822fff87bb"
+      },
+      {
+        "file": "server/providers.ts",
+        "sha256": "e107443901ca05a7c1fd64960b5254ceccec84c6c443ef685549f84ba0f094ce"
+      },
+      {
+        "file": "server/repair.ts",
+        "sha256": "3c5ed5bb2113be0210baa40f6fffdda406b5dbc6b38192076d0c91f4dfe8d8ff"
+      },
+      {
+        "file": "server/types.ts",
+        "sha256": "6040c3811f9678cd7ba663ac0aa0b79eb8fd26b332db497d4a172c960bb4172c"
+      },
+      {
+        "file": "vendor/meterless-hmem/src/conflictDetection.ts",
+        "sha256": "432e8b86ed0b5883d435e5ab4a12160d1f40d194cbdb4c119d3b710cbb0301a3"
+      },
+      {
+        "file": "vendor/meterless-hmem/src/dreaming.ts",
+        "sha256": "d12594d667ec068690c6b81e020cd62ade91671316a1ab9b529259304aceb009"
+      },
+      {
+        "file": "vendor/meterless-hmem/src/embeddings.ts",
+        "sha256": "89433327ee1075a8049bc8518cdf5cabf51ad67802e192266841cdee727b6d10"
+      },
+      {
+        "file": "vendor/meterless-hmem/src/index.ts",
+        "sha256": "9c481889afcdd70086d3bb3470842fa2330215e4d7760d826d103accdf8c1cdf"
+      },
+      {
+        "file": "vendor/meterless-hmem/src/memoryMining.ts",
+        "sha256": "6072693d654ea1c34a9adbf6ce80101eeb1eeb56273d264f6ceb4859ffde6562"
+      },
+      {
+        "file": "vendor/meterless-hmem/src/memoryRetrieval.ts",
+        "sha256": "4fe120b1b64fe7225b9b28fda59514c114de9e885d22c5bf0aa035788b6d629d"
+      },
+      {
+        "file": "vendor/meterless-hmem/src/memoryStore.ts",
+        "sha256": "a1eac8de8c0fde0e503e1212f3cb98295a661c2a8bad93ad82e51985885e6fd0"
+      },
+      {
+        "file": "vendor/meterless-hmem/src/sleepCycle.ts",
+        "sha256": "3ce0d4f3233d0ad7c133a2cbaf39b6122467022e0aa378a160a0d463e2264cef"
+      },
+      {
+        "file": "vendor/meterless-hmem/src/trustLedger.ts",
+        "sha256": "263253dd3342c488ce773d7e728d77aec983c1833873602b59ce1a6c7999e20e"
+      },
+      {
+        "file": "vendor/meterless-hmem/src/types.ts",
+        "sha256": "becb504870a67646a20a421ffe04d8732db63418393423d2186c074b182f54c7"
+      }
+    ]
+  },
+  "sourceIdentityAfterSha256": "8e9b3da3bab00f5b6ba26f2632c098f999dfb38d3f26211be33b6155bb750df9",
+  "fixture": {
+    "path": "tests/fixtures/release-challenge.json",
+    "sha256": "691d6e3304967371067b9583a87a059f9f09dd160c1a94e2a6633fd3826c2b5a"
+  },
+  "runner": {
+    "path": "scripts/benchmark-release.ts",
+    "sha256": "be6137d149f016af74261226097fb3e9acd90909f46c4800514cb5590f5a3e83"
+  },
+  "runtime": {
+    "harness": "real local HTTP import/review/audit routes, isolated actual EvidenceDesk and Meterless H-MEM instance per case",
+    "hmemCommit": "70ca80fe88ad8d27288501e8dd08b091ed38c095",
+    "clock": "injected fixed clock; expiry case advances the clock after import",
+    "providerAccess": "no credentials configured; provider fetch is a counting fail-closed stub",
+    "question": "What is the current release decision?",
+    "generateRequested": true
+  },
+  "summary": {
+    "falseReady": 0,
+    "nonReadyChallenges": 18,
+    "passed": 20,
+    "failed": 0,
+    "total": 20,
+    "sourceStable": true,
+    "providerCalls": 0,
+    "modelAttempts": 0,
+    "providerUsage": null,
+    "httpRequests": 83,
+    "requestBodyBytes": 21279,
+    "responseBodyBytes": 196794,
+    "totalBodyBytes": 218073,
+    "workflowLatencyMs": {
+      "median": 15.929,
+      "p95": 23.071,
+      "max": 50.539
+    }
+  },
+  "results": [
+    {
+      "id": "clean-control",
+      "expected": "ready",
+      "actual": "ready",
+      "passed": true,
+      "rationale": "Complete conclusive clean current evidence is the positive control.",
+      "reason": "release-ready-within-imported-evidence",
+      "falseReady": false,
+      "citations": 4,
+      "memoryAuditCount": 4,
+      "providerCalls": 0,
+      "modelAttempts": 0,
+      "providerUsage": null,
+      "initializationMs": 28.928,
+      "workflowMs": 50.539,
+      "requestBodyBytes": 1027,
+      "responseBodyBytes": 14485,
+      "totalBodyBytes": 15512,
+      "exchanges": [
+        {
+          "step": "import",
+          "status": 200,
+          "requestBodyBytes": 907,
+          "responseBodyBytes": 3863,
+          "roundTripMs": 36.149,
+          "requestSha256": "e9baa13a4b33931ff56ddb904285f7976175167b45332569caa9ae46721a28c0",
+          "responseSha256": "759afb365a8920d7a69a8e2c81e6cdac93eb073db288a3658458b47473882559"
+        },
+        {
+          "step": "review",
+          "status": 200,
+          "requestBodyBytes": 120,
+          "responseBodyBytes": 5510,
+          "roundTripMs": 7.038,
+          "requestSha256": "a9b67c104b53d8cb61a85ff1ffa5630490e34a17fdc5db61734019aca6813a86",
+          "responseSha256": "1e8f098271b86ca855bbedd25474b56bbc365d46265b7f18616ddb29669ed2c8"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1177,
+          "roundTripMs": 1.809,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "9ce8e551bae3a03165c86dadb4adecef1f6b50ca67eadf968c3a894a63432860"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1449,
+          "roundTripMs": 0.994,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "c04a6cc7db5d58676881d9157dca2442d3d73ab93c9a8b8df919fa74ed07ad64"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1243,
+          "roundTripMs": 0.935,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "977281fdf6e7c6607c7387ebb7959de2f3471ec2840b51e5788db4e615c2379b"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1243,
+          "roundTripMs": 1.005,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "c91ebafec5cf546ceda3843427a64fd534d2b9fb39c063e2a5861a8cda8ca31e"
+        }
+      ]
+    },
+    {
+      "id": "failed-current-tests",
+      "expected": "hold",
+      "actual": "hold",
+      "passed": true,
+      "rationale": "Typed failed tests override an otherwise ready statement.",
+      "reason": "release-held",
+      "falseReady": false,
+      "citations": 4,
+      "memoryAuditCount": 4,
+      "providerCalls": 0,
+      "modelAttempts": 0,
+      "providerUsage": null,
+      "initializationMs": 3.126,
+      "workflowMs": 16.763,
+      "requestBodyBytes": 1027,
+      "responseBodyBytes": 14451,
+      "totalBodyBytes": 15478,
+      "exchanges": [
+        {
+          "step": "import",
+          "status": 200,
+          "requestBodyBytes": 907,
+          "responseBodyBytes": 3862,
+          "roundTripMs": 8.733,
+          "requestSha256": "99560e78b7557764a58cae9044438bd96ed312e2866e89ce9864c334ab4ea9f0",
+          "responseSha256": "6598492790f5bbcac13758a70b5e4485c9c032513ca242e0a72a1a8951ad7b99"
+        },
+        {
+          "step": "review",
+          "status": 200,
+          "requestBodyBytes": 120,
+          "responseBodyBytes": 5477,
+          "roundTripMs": 3.922,
+          "requestSha256": "c89e39a863b84725e51b1460796d7d166b42cddccbc57a04da0c28c821610fd8",
+          "responseSha256": "be9dd2a00a068c75206077aecc0e972f7b9e1946e31a05f45ccee670a8ba95c1"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1177,
+          "roundTripMs": 0.932,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "9ce8e551bae3a03165c86dadb4adecef1f6b50ca67eadf968c3a894a63432860"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1449,
+          "roundTripMs": 0.684,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "c04a6cc7db5d58676881d9157dca2442d3d73ab93c9a8b8df919fa74ed07ad64"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1243,
+          "roundTripMs": 0.512,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "2ec1fc3bd8bac417bfe221683f1aa495a0968ee980047a52d6aa8ef3932040ab"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1243,
+          "roundTripMs": 0.534,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "c91ebafec5cf546ceda3843427a64fd534d2b9fb39c063e2a5861a8cda8ca31e"
+        }
+      ]
+    },
+    {
+      "id": "dirty-current-revision",
+      "expected": "hold",
+      "actual": "hold",
+      "passed": true,
+      "rationale": "Successful checks do not erase a reported dirty current tree.",
+      "reason": "release-held",
+      "falseReady": false,
+      "citations": 4,
+      "memoryAuditCount": 4,
+      "providerCalls": 0,
+      "modelAttempts": 0,
+      "providerUsage": null,
+      "initializationMs": 2.024,
+      "workflowMs": 15.929,
+      "requestBodyBytes": 1026,
+      "responseBodyBytes": 14473,
+      "totalBodyBytes": 15499,
+      "exchanges": [
+        {
+          "step": "import",
+          "status": 200,
+          "requestBodyBytes": 906,
+          "responseBodyBytes": 3861,
+          "roundTripMs": 7.855,
+          "requestSha256": "7d8f151242f9f921b9efee6222efad5f554dc97884c1a861ebcc1267f91a1e8d",
+          "responseSha256": "a21e254ba29bbacadd5367116bf7d706767fe680445a0e82df125c234be25abd"
+        },
+        {
+          "step": "review",
+          "status": 200,
+          "requestBodyBytes": 120,
+          "responseBodyBytes": 5500,
+          "roundTripMs": 3.674,
+          "requestSha256": "62f56ed0821b5a1683a9bbd21d5bec3a587c97e8965e8cd4eebe6f0d3545923b",
+          "responseSha256": "b99c363a3813c48f8a1a5f02fa37f774280983d4d7a75133a3e7373abbc3edb1"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1177,
+          "roundTripMs": 0.736,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "a7fc1cff34a6bce8101ab83d9d8c4f7f0e9b08ed6311c74099b9cea355e52eb3"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1449,
+          "roundTripMs": 0.535,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "c04a6cc7db5d58676881d9157dca2442d3d73ab93c9a8b8df919fa74ed07ad64"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1243,
+          "roundTripMs": 1.099,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "977281fdf6e7c6607c7387ebb7959de2f3471ec2840b51e5788db4e615c2379b"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1243,
+          "roundTripMs": 0.522,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "c91ebafec5cf546ceda3843427a64fd534d2b9fb39c063e2a5861a8cda8ca31e"
+        }
+      ]
+    },
+    {
+      "id": "explicit-hold",
+      "expected": "hold",
+      "actual": "hold",
+      "passed": true,
+      "rationale": "A conclusive hold recommendation must not become ready just because tests passed.",
+      "reason": "release-held",
+      "falseReady": false,
+      "citations": 4,
+      "memoryAuditCount": 4,
+      "providerCalls": 0,
+      "modelAttempts": 0,
+      "providerUsage": null,
+      "initializationMs": 2.121,
+      "workflowMs": 15.319,
+      "requestBodyBytes": 1026,
+      "responseBodyBytes": 14485,
+      "totalBodyBytes": 15511,
+      "exchanges": [
+        {
+          "step": "import",
+          "status": 200,
+          "requestBodyBytes": 906,
+          "responseBodyBytes": 3859,
+          "roundTripMs": 7.027,
+          "requestSha256": "9fb0f36da3858f107b63b1594efb1089863986f7aee8f17140b6eeda5b9b0cfb",
+          "responseSha256": "6d40ce56b58bf4960ea970f8bef55c2d2175c77ced76085bae16568ab8a2d01b"
+        },
+        {
+          "step": "review",
+          "status": 200,
+          "requestBodyBytes": 120,
+          "responseBodyBytes": 5516,
+          "roundTripMs": 3.785,
+          "requestSha256": "8210a3812f0d25840165c14a4534708e495358b5f75195c09997afec2b0c8542",
+          "responseSha256": "c8ace71f3d3fb726ca5b548d2bab01d2780726d129dd779c7860928a182bccc4"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1177,
+          "roundTripMs": 0.857,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "9ce8e551bae3a03165c86dadb4adecef1f6b50ca67eadf968c3a894a63432860"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1447,
+          "roundTripMs": 0.663,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "69d54b4b72d1f7cd1af86a22869497b78254cf99c84fc7b2f68b44c25b597bef"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1243,
+          "roundTripMs": 0.711,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "977281fdf6e7c6607c7387ebb7959de2f3471ec2840b51e5788db4e615c2379b"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1243,
+          "roundTripMs": 0.536,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "c91ebafec5cf546ceda3843427a64fd534d2b9fb39c063e2a5861a8cda8ca31e"
+        }
+      ]
+    },
+    {
+      "id": "missing-build",
+      "expected": "abstain",
+      "actual": "abstain",
+      "passed": true,
+      "rationale": "A referenced current build cannot be inferred from tests alone.",
+      "reason": "missing-required-artifact",
+      "falseReady": false,
+      "citations": 3,
+      "memoryAuditCount": 3,
+      "providerCalls": 0,
+      "modelAttempts": 0,
+      "providerUsage": null,
+      "initializationMs": 2.005,
+      "workflowMs": 16.048,
+      "requestBodyBytes": 841,
+      "responseBodyBytes": 11179,
+      "totalBodyBytes": 12020,
+      "exchanges": [
+        {
+          "step": "import",
+          "status": 200,
+          "requestBodyBytes": 721,
+          "responseBodyBytes": 3215,
+          "roundTripMs": 7.378,
+          "requestSha256": "1e9a1fb9b681378216c55cff9eeb1172d71006b8c4f7a1fe6122411eb4df3361",
+          "responseSha256": "5e1c9c63cde5c4f82c4027f03a34f42a01491c7913fa1df4a2397b4853effc1b"
+        },
+        {
+          "step": "review",
+          "status": 200,
+          "requestBodyBytes": 120,
+          "responseBodyBytes": 4115,
+          "roundTripMs": 3.746,
+          "requestSha256": "59a03c5cbbd239889345dbd3b62711f2650f84806bca27fa0ba4a49426572a60",
+          "responseSha256": "dc349e3727cb2d5b9cbd47d5f08a4bfc0fe13e96c0a988966db9baa545bea8b5"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1177,
+          "roundTripMs": 1.236,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "9ce8e551bae3a03165c86dadb4adecef1f6b50ca67eadf968c3a894a63432860"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1429,
+          "roundTripMs": 1.125,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "f750a0af5cb11e8a51b7e53715af40171b878a1d321eff20f35d5ab23efbc7d4"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1243,
+          "roundTripMs": 0.885,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "977281fdf6e7c6607c7387ebb7959de2f3471ec2840b51e5788db4e615c2379b"
+        }
+      ]
+    },
+    {
+      "id": "old-passing-build-wrong-revision",
+      "expected": "abstain",
+      "actual": "abstain",
+      "passed": true,
+      "rationale": "A valid old-revision passing build is irrelevant to the current release.",
+      "reason": "missing-required-artifact",
+      "falseReady": false,
+      "citations": 3,
+      "memoryAuditCount": 3,
+      "providerCalls": 0,
+      "modelAttempts": 0,
+      "providerUsage": null,
+      "initializationMs": 2.328,
+      "workflowMs": 21.816,
+      "requestBodyBytes": 1140,
+      "responseBodyBytes": 12550,
+      "totalBodyBytes": 13690,
+      "exchanges": [
+        {
+          "step": "import",
+          "status": 200,
+          "requestBodyBytes": 1020,
+          "responseBodyBytes": 4452,
+          "roundTripMs": 11.457,
+          "requestSha256": "f206eef67620490f4199f42aa31e3df593828958901ae293f920b60e69878328",
+          "responseSha256": "d2d23feffafa77484fd52d8004ee0143900fd5f1feadaa6d437e77ad5d4a4fb9"
+        },
+        {
+          "step": "review",
+          "status": 200,
+          "requestBodyBytes": 120,
+          "responseBodyBytes": 4249,
+          "roundTripMs": 4.412,
+          "requestSha256": "d99ca7ecd555d7a6a1ead907b8b5ba65b6b3390ca21af5323570f311ab1e81cb",
+          "responseSha256": "590d1d375fd72ac3113cf39e17fd9a5bf4b5660ae8b8302ab909bb9f1b203517"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1177,
+          "roundTripMs": 1.469,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "9ce8e551bae3a03165c86dadb4adecef1f6b50ca67eadf968c3a894a63432860"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1429,
+          "roundTripMs": 1.229,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "d5495ab63c30e8fcbb465647fcdd113a71bb29435b743321215e828674f1480f"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1243,
+          "roundTripMs": 1.03,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "2692488bcaf6c9a2802aaec050673ecb1a8d249504f9f6abe62cfdaf98820cc6"
+        }
+      ]
+    },
+    {
+      "id": "stale-current-revision",
+      "expected": "abstain",
+      "actual": "abstain",
+      "passed": true,
+      "rationale": "A current revision observation older than the one-hour evidence window cannot support readiness.",
+      "reason": "missing-current-revision",
+      "falseReady": false,
+      "citations": 0,
+      "memoryAuditCount": 0,
+      "providerCalls": 0,
+      "modelAttempts": 0,
+      "providerUsage": null,
+      "initializationMs": 2.977,
+      "workflowMs": 12.834,
+      "requestBodyBytes": 1027,
+      "responseBodyBytes": 5174,
+      "totalBodyBytes": 6201,
+      "exchanges": [
+        {
+          "step": "import",
+          "status": 200,
+          "requestBodyBytes": 907,
+          "responseBodyBytes": 3862,
+          "roundTripMs": 10.335,
+          "requestSha256": "23305e90431796dc853090ecd30f654f14c7992dcac9cd664da32e7ce34f93c7",
+          "responseSha256": "97d9ac6b99b2021598c166abcee790b067005078847912b2e0519102819fdf48"
+        },
+        {
+          "step": "review",
+          "status": 200,
+          "requestBodyBytes": 120,
+          "responseBodyBytes": 1312,
+          "roundTripMs": 1.604,
+          "requestSha256": "3f2a9cd2b1843fea9446893182c5fdbc1f74f5832ad7963481627fd3db12c4eb",
+          "responseSha256": "734a2da8fed47906483fd7d95c3fa99db2881cfa1d969b447751003aae9a77a5"
+        }
+      ]
+    },
+    {
+      "id": "stale-build",
+      "expected": "abstain",
+      "actual": "abstain",
+      "passed": true,
+      "rationale": "A stale build is missing usable evidence even when its typed outcome is passed.",
+      "reason": "missing-required-artifact",
+      "falseReady": false,
+      "citations": 3,
+      "memoryAuditCount": 3,
+      "providerCalls": 0,
+      "modelAttempts": 0,
+      "providerUsage": null,
+      "initializationMs": 2.075,
+      "workflowMs": 13.302,
+      "requestBodyBytes": 1027,
+      "responseBodyBytes": 11972,
+      "totalBodyBytes": 12999,
+      "exchanges": [
+        {
+          "step": "import",
+          "status": 200,
+          "requestBodyBytes": 907,
+          "responseBodyBytes": 3862,
+          "roundTripMs": 7.082,
+          "requestSha256": "b1ba8d0dc2bb3529b20bb7728f81b022786d4be11a5344bb04292b013ab87267",
+          "responseSha256": "8acc81c793455febfdc0bbcd3607c35ec34eb6c9413dfeafb30065592967ecd7"
+        },
+        {
+          "step": "review",
+          "status": 200,
+          "requestBodyBytes": 120,
+          "responseBodyBytes": 4241,
+          "roundTripMs": 2.858,
+          "requestSha256": "0aaaec31bcdff2a472151b111a5658b222e7e671417e4aa08471223fc8097788",
+          "responseSha256": "32ac5c4ea93a59e01c1fbbf059520019de91433d0026054365b0731a791fb238"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1177,
+          "roundTripMs": 0.679,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "9ce8e551bae3a03165c86dadb4adecef1f6b50ca67eadf968c3a894a63432860"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1449,
+          "roundTripMs": 0.626,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "c04a6cc7db5d58676881d9157dca2442d3d73ab93c9a8b8df919fa74ed07ad64"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1243,
+          "roundTripMs": 0.498,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "977281fdf6e7c6607c7387ebb7959de2f3471ec2840b51e5788db4e615c2379b"
+        }
+      ]
+    },
+    {
+      "id": "future-observation",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "rationale": "An observation more than the documented 60-second clock-skew allowance in the future is invalid.",
+      "reason": "HANDOFF_TIME",
+      "falseReady": false,
+      "citations": 0,
+      "memoryAuditCount": 0,
+      "providerCalls": 0,
+      "modelAttempts": 0,
+      "providerUsage": null,
+      "initializationMs": 1.911,
+      "workflowMs": 3.345,
+      "requestBodyBytes": 907,
+      "responseBodyBytes": 116,
+      "totalBodyBytes": 1023,
+      "exchanges": [
+        {
+          "step": "import",
+          "status": 400,
+          "requestBodyBytes": 907,
+          "responseBodyBytes": 116,
+          "roundTripMs": 2.937,
+          "requestSha256": "b542cca1f92e90a48a6f23b751ddb2439ce08b8fca3e46f4790dc26197a0a9f1",
+          "responseSha256": "dc0875eb313d42a3c9b3092862ce42dff673405a30d0c8e59e901d35aa209afb"
+        }
+      ]
+    },
+    {
+      "id": "conflicting-tests",
+      "expected": "abstain",
+      "actual": "abstain",
+      "passed": true,
+      "rationale": "Two current test outcomes disagree without an explicit supersession.",
+      "reason": "conflicting-handoff-evidence",
+      "falseReady": false,
+      "citations": 1,
+      "memoryAuditCount": 1,
+      "providerCalls": 0,
+      "modelAttempts": 0,
+      "providerUsage": null,
+      "initializationMs": 2.186,
+      "workflowMs": 13.365,
+      "requestBodyBytes": 1217,
+      "responseBodyBytes": 8157,
+      "totalBodyBytes": 9374,
+      "exchanges": [
+        {
+          "step": "import",
+          "status": 200,
+          "requestBodyBytes": 1097,
+          "responseBodyBytes": 4519,
+          "roundTripMs": 8.26,
+          "requestSha256": "135a6d1edaa7ea83c0ab37e0e0400e0ace13a1518187b915ba40700c2af81fde",
+          "responseSha256": "87a361797a3b100a4aa44f349a9f88047dc2768158add44e07fe30bb7e6d596a"
+        },
+        {
+          "step": "review",
+          "status": 200,
+          "requestBodyBytes": 120,
+          "responseBodyBytes": 2461,
+          "roundTripMs": 3.339,
+          "requestSha256": "724445e24c2daec2ac67230c7c0a6d79559536e64fd7d689eca203de0c0d2de4",
+          "responseSha256": "b5180eae298e8d813ed5656eb4260fffe85db02f3b2eddadb86052aae3845363"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1177,
+          "roundTripMs": 0.711,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "9ce8e551bae3a03165c86dadb4adecef1f6b50ca67eadf968c3a894a63432860"
+        }
+      ]
+    },
+    {
+      "id": "explicitly-superseded-failure",
+      "expected": "ready",
+      "actual": "ready",
+      "passed": true,
+      "rationale": "A later passing test can explicitly supersede an earlier same-revision failure; history must remain auditable.",
+      "reason": "release-ready-within-imported-evidence",
+      "falseReady": false,
+      "citations": 4,
+      "memoryAuditCount": 4,
+      "providerCalls": 0,
+      "modelAttempts": 0,
+      "providerUsage": null,
+      "initializationMs": 1.947,
+      "workflowMs": 20.337,
+      "requestBodyBytes": 1235,
+      "responseBodyBytes": 15927,
+      "totalBodyBytes": 17162,
+      "exchanges": [
+        {
+          "step": "import",
+          "status": 200,
+          "requestBodyBytes": 1115,
+          "responseBodyBytes": 4521,
+          "roundTripMs": 10.77,
+          "requestSha256": "a52a6db53b3e96a0224807a0750f2d1c80e403899ae03aab30f308a371e54618",
+          "responseSha256": "65468303210cb17a603bb8bd0b07e212718b4e68c58bae3054823f2bda7b2383"
+        },
+        {
+          "step": "review",
+          "status": 200,
+          "requestBodyBytes": 120,
+          "responseBodyBytes": 5597,
+          "roundTripMs": 4.53,
+          "requestSha256": "a7459fcd6eb0ab20d9b0ea81544331fb065597440244ec9379f3c1be0220e4fb",
+          "responseSha256": "2dfd4e684631b8fb394f0b5e9bbcc8a329765791b828f5930d3be9414b22e60e"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1177,
+          "roundTripMs": 0.822,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "9ce8e551bae3a03165c86dadb4adecef1f6b50ca67eadf968c3a894a63432860"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1449,
+          "roundTripMs": 0.651,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "3da922ec13760111fade66e3d575e2f23e475c170baca0c93e692117f4bd7259"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1940,
+          "roundTripMs": 0.705,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "e9c35a6c4e92b6fe2b37415d5b0b37a093d364ee2c023c6c465dbbf6964eb66f"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1243,
+          "roundTripMs": 0.76,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "c91ebafec5cf546ceda3843427a64fd534d2b9fb39c063e2a5861a8cda8ca31e"
+        }
+      ]
+    },
+    {
+      "id": "conflicting-recommendations",
+      "expected": "abstain",
+      "actual": "abstain",
+      "passed": true,
+      "rationale": "Current hold and ready statements without explicit lineage cannot be resolved by choosing the convenient one.",
+      "reason": "conflicting-handoff-evidence",
+      "falseReady": false,
+      "citations": 1,
+      "memoryAuditCount": 1,
+      "providerCalls": 0,
+      "modelAttempts": 0,
+      "providerUsage": null,
+      "initializationMs": 1.905,
+      "workflowMs": 21.765,
+      "requestBodyBytes": 1257,
+      "responseBodyBytes": 8306,
+      "totalBodyBytes": 9563,
+      "exchanges": [
+        {
+          "step": "import",
+          "status": 200,
+          "requestBodyBytes": 1137,
+          "responseBodyBytes": 4643,
+          "roundTripMs": 14.443,
+          "requestSha256": "2acc8ea20bada8956e5c6ec31d28eb68d55c06ecde777c8b06bd8901e3cc1a9b",
+          "responseSha256": "6506fc66a32eb1204040c0579404f396e1b62c944a67259be962db53dfba8a2b"
+        },
+        {
+          "step": "review",
+          "status": 200,
+          "requestBodyBytes": 120,
+          "responseBodyBytes": 2486,
+          "roundTripMs": 4.726,
+          "requestSha256": "764cabe307ba4c294299df70f75d4026aa9fd276e2b10c745bbea0eea2fe9570",
+          "responseSha256": "56d8e2c7b79ecbfb1089129466a8fe667e2e35118cfbc72f5d3c42503646c59e"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1177,
+          "roundTripMs": 1.014,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "9ce8e551bae3a03165c86dadb4adecef1f6b50ca67eadf968c3a894a63432860"
+        }
+      ]
+    },
+    {
+      "id": "hold-supersedes-ready",
+      "expected": "hold",
+      "actual": "hold",
+      "passed": true,
+      "rationale": "Explicit lineage must work in the conservative direction too, retaining the superseded ready statement.",
+      "reason": "release-held",
+      "falseReady": false,
+      "citations": 4,
+      "memoryAuditCount": 4,
+      "providerCalls": 0,
+      "modelAttempts": 0,
+      "providerUsage": null,
+      "initializationMs": 2.095,
+      "workflowMs": 19.535,
+      "requestBodyBytes": 1305,
+      "responseBodyBytes": 16108,
+      "totalBodyBytes": 17413,
+      "exchanges": [
+        {
+          "step": "import",
+          "status": 200,
+          "requestBodyBytes": 1185,
+          "responseBodyBytes": 4674,
+          "roundTripMs": 11.795,
+          "requestSha256": "7a033bb13d345dd8787914d705cdafe38bc3a4827c14d2be7a737aff7474376a",
+          "responseSha256": "da3bb8e35379f08fd00be19b4e2341c176fb36002f3a2b1e4fbdcded13212805"
+        },
+        {
+          "step": "review",
+          "status": 200,
+          "requestBodyBytes": 120,
+          "responseBodyBytes": 5570,
+          "roundTripMs": 3.269,
+          "requestSha256": "1c6df6710e6b8974b7029fb7e75260d9122dcf136afc70c2232a4d606e3b0d68",
+          "responseSha256": "b61e1c81cc975ff340408c33f0ce95c64729919fec6e058e4b69481a1c900b74"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1177,
+          "roundTripMs": 0.912,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "9ce8e551bae3a03165c86dadb4adecef1f6b50ca67eadf968c3a894a63432860"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 2201,
+          "roundTripMs": 0.676,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "c0bf42cada0cf4e99bb9df322fbe6c8cbb1a644f3ff0c75d500abe0e2e53a8ba"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1243,
+          "roundTripMs": 0.645,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "977281fdf6e7c6607c7387ebb7959de2f3471ec2840b51e5788db4e615c2379b"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1243,
+          "roundTripMs": 0.649,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "c91ebafec5cf546ceda3843427a64fd534d2b9fb39c063e2a5861a8cda8ca31e"
+        }
+      ]
+    },
+    {
+      "id": "unknown-build-outcome",
+      "expected": "abstain",
+      "actual": "abstain",
+      "passed": true,
+      "rationale": "Unknown is not successful completion.",
+      "reason": "incomplete-handoff-evidence",
+      "falseReady": false,
+      "citations": 4,
+      "memoryAuditCount": 4,
+      "providerCalls": 0,
+      "modelAttempts": 0,
+      "providerUsage": null,
+      "initializationMs": 2.163,
+      "workflowMs": 16.627,
+      "requestBodyBytes": 1028,
+      "responseBodyBytes": 14016,
+      "totalBodyBytes": 15044,
+      "exchanges": [
+        {
+          "step": "import",
+          "status": 200,
+          "requestBodyBytes": 908,
+          "responseBodyBytes": 3865,
+          "roundTripMs": 7.729,
+          "requestSha256": "8c70df573d643a153775f3bf7096275fc34b71de791d240cc9f2ab915c85a3c0",
+          "responseSha256": "d534c2fa2184241113e90f06e6669c628a8ee53c265ec3c234713beb99660ecd"
+        },
+        {
+          "step": "review",
+          "status": 200,
+          "requestBodyBytes": 120,
+          "responseBodyBytes": 5037,
+          "roundTripMs": 2.927,
+          "requestSha256": "1bb8af219087545360508790ecfb6f5cf99b2074b75d1f10ad3e54dcdc242b00",
+          "responseSha256": "cc46f6b7cf6e268c0dedb9bb5bd381ea8fc8ceabd03b0c6680705d274e7215aa"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1177,
+          "roundTripMs": 1.607,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "9ce8e551bae3a03165c86dadb4adecef1f6b50ca67eadf968c3a894a63432860"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1449,
+          "roundTripMs": 0.902,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "c04a6cc7db5d58676881d9157dca2442d3d73ab93c9a8b8df919fa74ed07ad64"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1243,
+          "roundTripMs": 1.055,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "977281fdf6e7c6607c7387ebb7959de2f3471ec2840b51e5788db4e615c2379b"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1245,
+          "roundTripMs": 0.753,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "f49bc22b018531e7c728c9fddaf143afd4d15f184cb67a96c753fea63a074671"
+        }
+      ]
+    },
+    {
+      "id": "cancelled-build",
+      "expected": "abstain",
+      "actual": "abstain",
+      "passed": true,
+      "rationale": "Cancelled checks do not provide a conclusive passing or failing result.",
+      "reason": "incomplete-handoff-evidence",
+      "falseReady": false,
+      "citations": 4,
+      "memoryAuditCount": 4,
+      "providerCalls": 0,
+      "modelAttempts": 0,
+      "providerUsage": null,
+      "initializationMs": 2.199,
+      "workflowMs": 17.517,
+      "requestBodyBytes": 1030,
+      "responseBodyBytes": 14034,
+      "totalBodyBytes": 15064,
+      "exchanges": [
+        {
+          "step": "import",
+          "status": 200,
+          "requestBodyBytes": 910,
+          "responseBodyBytes": 3871,
+          "roundTripMs": 9.149,
+          "requestSha256": "8416984507a9c0ae4494fceddcb81b515a7977d3d7b58d071231ed67c2327c39",
+          "responseSha256": "6a614b5a87ffeb4ee4ec9f863b471622365924a6af23e154162448d80f858208"
+        },
+        {
+          "step": "review",
+          "status": 200,
+          "requestBodyBytes": 120,
+          "responseBodyBytes": 5045,
+          "roundTripMs": 3.598,
+          "requestSha256": "92e6a45af900b14774d14d2d67a0c20fcda412fb7c1b63433bcdcb96884d04ff",
+          "responseSha256": "6a8b737bb900cc1787826af8c5bc467c6110a7b2f6e9866302c92ef5d05debd1"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1177,
+          "roundTripMs": 0.882,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "9ce8e551bae3a03165c86dadb4adecef1f6b50ca67eadf968c3a894a63432860"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1449,
+          "roundTripMs": 0.719,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "c04a6cc7db5d58676881d9157dca2442d3d73ab93c9a8b8df919fa74ed07ad64"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1243,
+          "roundTripMs": 0.703,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "977281fdf6e7c6607c7387ebb7959de2f3471ec2840b51e5788db4e615c2379b"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1249,
+          "roundTripMs": 0.738,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "e25be3c65ca10ca0f6f556b8cc6bdbbff140d11658096beb9ff9d66408f3dad4"
+        }
+      ]
+    },
+    {
+      "id": "unknown-ci-reference",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "rationale": "A release cannot cite an identifier absent from the packet.",
+      "reason": "HANDOFF_REFERENCE",
+      "falseReady": false,
+      "citations": 0,
+      "memoryAuditCount": 0,
+      "providerCalls": 0,
+      "modelAttempts": 0,
+      "providerUsage": null,
+      "initializationMs": 2.283,
+      "workflowMs": 3.132,
+      "requestBodyBytes": 920,
+      "responseBodyBytes": 123,
+      "totalBodyBytes": 1043,
+      "exchanges": [
+        {
+          "step": "import",
+          "status": 400,
+          "requestBodyBytes": 920,
+          "responseBodyBytes": 123,
+          "roundTripMs": 2.944,
+          "requestSha256": "1f6c6035d9eb51317ab7aaa72854f37a1032ef4a2ff42c949e88a36a4fd2a62e",
+          "responseSha256": "bc758b126a5837270d266e17b2c12e79bca4d2ffb88a900b6d5a3a4373f8b925"
+        }
+      ]
+    },
+    {
+      "id": "array-instead-of-enum",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "rationale": "An array containing failed must not be string-coerced into a supported typed outcome.",
+      "reason": "HANDOFF_CI",
+      "falseReady": false,
+      "citations": 0,
+      "memoryAuditCount": 0,
+      "providerCalls": 0,
+      "modelAttempts": 0,
+      "providerUsage": null,
+      "initializationMs": 2.156,
+      "workflowMs": 2.828,
+      "requestBodyBytes": 909,
+      "responseBodyBytes": 122,
+      "totalBodyBytes": 1031,
+      "exchanges": [
+        {
+          "step": "import",
+          "status": 400,
+          "requestBodyBytes": 909,
+          "responseBodyBytes": 122,
+          "roundTripMs": 2.653,
+          "requestSha256": "2448b18a2c23de437448f404b4d101c9af100a83ad73a9b7b8c4b87f72232cc3",
+          "responseSha256": "77808e29f5043db30113fd00c2eed947d0a902b6be296d2fa68a182d63b593be"
+        }
+      ]
+    },
+    {
+      "id": "cyclic-supersession",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "rationale": "Mutual supersession destroys a usable ordering and must be rejected before persistence.",
+      "reason": "HANDOFF_SUPERSESSION",
+      "falseReady": false,
+      "citations": 0,
+      "memoryAuditCount": 0,
+      "providerCalls": 0,
+      "modelAttempts": 0,
+      "providerUsage": null,
+      "initializationMs": 2.482,
+      "workflowMs": 4.364,
+      "requestBodyBytes": 1145,
+      "responseBodyBytes": 90,
+      "totalBodyBytes": 1235,
+      "exchanges": [
+        {
+          "step": "import",
+          "status": 400,
+          "requestBodyBytes": 1145,
+          "responseBodyBytes": 90,
+          "roundTripMs": 3.992,
+          "requestSha256": "4ca6fbcfe14e2be01e7a47eb595e22a98c034bda837b9376eed4a3d07aae3975",
+          "responseSha256": "e89f83bfd2ae632934e45f6e7c6242116db5d5ab9b53f3768e8a820d2ea12fbb"
+        }
+      ]
+    },
+    {
+      "id": "hostile-detail-is-inert",
+      "expected": "hold",
+      "actual": "hold",
+      "passed": true,
+      "rationale": "Untrusted prose requesting commands, network access or a ready answer must not override the typed failing outcome.",
+      "reason": "release-held",
+      "falseReady": false,
+      "citations": 4,
+      "memoryAuditCount": 4,
+      "providerCalls": 0,
+      "modelAttempts": 0,
+      "providerUsage": null,
+      "initializationMs": 2.46,
+      "workflowMs": 23.071,
+      "requestBodyBytes": 1158,
+      "responseBodyBytes": 15109,
+      "totalBodyBytes": 16267,
+      "exchanges": [
+        {
+          "step": "import",
+          "status": 200,
+          "requestBodyBytes": 1038,
+          "responseBodyBytes": 3995,
+          "roundTripMs": 11.263,
+          "requestSha256": "1f375b28d6985724cb7920597cbb9b5be91ae9a8e0cc886604f1586a19d5b4ab",
+          "responseSha256": "1b1d6c68a7ce0c06ef34b400cbf382e5bf72e1904fb7fc4e8ccaffdfe6ad5631"
+        },
+        {
+          "step": "review",
+          "status": 200,
+          "requestBodyBytes": 120,
+          "responseBodyBytes": 5740,
+          "roundTripMs": 5.667,
+          "requestSha256": "48e5158e294bd244a7f50e5beb5dbf8b333e48e6d01994baf19acd49f9fd6df5",
+          "responseSha256": "1283a05ddc4612e57d6c39fa6065242c3acbaccffa070c7e52d32591fa4fb6e1"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1177,
+          "roundTripMs": 1.099,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "9ce8e551bae3a03165c86dadb4adecef1f6b50ca67eadf968c3a894a63432860"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1449,
+          "roundTripMs": 0.971,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "c04a6cc7db5d58676881d9157dca2442d3d73ab93c9a8b8df919fa74ed07ad64"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1505,
+          "roundTripMs": 0.955,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "3829f3efb643da598444fb1d35f81f301e364573338eaac722339b8bd414ba48"
+        },
+        {
+          "step": "memory-audit",
+          "status": 200,
+          "requestBodyBytes": 0,
+          "responseBodyBytes": 1243,
+          "roundTripMs": 0.953,
+          "requestSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "responseSha256": "c91ebafec5cf546ceda3843427a64fd534d2b9fb39c063e2a5861a8cda8ca31e"
+        }
+      ]
+    },
+    {
+      "id": "snapshot-expires-before-review",
+      "expected": "abstain",
+      "actual": "abstain",
+      "passed": true,
+      "rationale": "A once-valid imported snapshot cannot remain current after its one-hour expiry.",
+      "reason": "stale-snapshot",
+      "falseReady": false,
+      "citations": 0,
+      "memoryAuditCount": 0,
+      "providerCalls": 0,
+      "modelAttempts": 0,
+      "providerUsage": null,
+      "initializationMs": 2.886,
+      "workflowMs": 13.091,
+      "requestBodyBytes": 1027,
+      "responseBodyBytes": 5917,
+      "totalBodyBytes": 6944,
+      "exchanges": [
+        {
+          "step": "import",
+          "status": 200,
+          "requestBodyBytes": 907,
+          "responseBodyBytes": 3862,
+          "roundTripMs": 8.443,
+          "requestSha256": "e9baa13a4b33931ff56ddb904285f7976175167b45332569caa9ae46721a28c0",
+          "responseSha256": "b5eb361a73bd78cffa7d2ec0765b3858a07485d39790722927537428ad712c63"
+        },
+        {
+          "step": "review",
+          "status": 200,
+          "requestBodyBytes": 120,
+          "responseBodyBytes": 2055,
+          "roundTripMs": 2.919,
+          "requestSha256": "1919ec96f4e8c47fa0603b473ee76a9c9bce613884a2378dd8a969168d38b49b",
+          "responseSha256": "e499eebc5e84f8a5d8c9cd7dada1bbebfb315f403f9855dc6d11fd8c42cbb41d"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Expected labels were hand-authored before execution from the documented policy; the author could inspect production source. These are synthetic regression cases, not blind held-out data or independent CI facts.",
+    "One sequential run, one fresh desk per case. Initialization is reported separately; workflow latency starts before import and includes review, required source-resolution audit requests and local harness checks. It is not a user-task completion time.",
+    "Body bytes are measured from the complete actual serialized HTTP request/response bodies, including JSON wrappers, citations, metadata, measurements and queried memory audits. HTTP headers, TCP framing, UI assets, process startup, memory disk I/O and benchmark output files are excluded. This is not total workflow storage or network cost.",
+    "Internal prompt/evidence counters are not substituted for complete body measurements. No baseline, provider token count, token savings, cost savings, model quality or sponsor execution is established.",
+    "Raw synthetic packets/responses, runtime ledgers and harness diagnostics remain under ignored .local/release-challenge/. Only sanitized fixture definitions and aggregate/per-case measurements are public-safe source artifacts."
+  ]
+}
