@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "qarinah.hackos-upgrade.v1",
+  "observedAtUtc": "2026-10-22T15:37:38.680Z",
+  "status": "approved-source-published-entry-update-in-progress",
+  "event": "Open Agent Hackathon 2026",
+  "source": {
+    "url": "https://github.com/AjnasNB/qarinah-evidence-desk",
+    "branch": "master",
+    "approvedAndPublishedCommit": "6bd93e0a6db0779ac78832004e21b1d1165c41e2",
+    "previousPublicCommit": "e1d7d6f2bc204de1a91a1bdad077f1eb4bd8ef9b",
+    "remoteCommitVerified": true
+  },
+  "approval": {
+    "scope": "User approved exact source push and existing-entry video/description replacement, including desktop-demo limitation",
+    "newEntry": false,
+    "newTerms": false,
+    "paidService": false
+  },
+  "video": {
+    "path": "showtime-out/qed-receipt-proof-20261022-193800/final-r7-ready.mp4",
+    "bytes": 46329060,
+    "sha256": "81c9e7fb09999f103f07fda2ce868298a464caa0a93592da64731556b2188966",
+    "seconds": 148
+  },
+  "description": {
+    "path": "docs/submission/HACKOS-DESCRIPTION-R7.txt",
+    "characters": 1959
+  },
+  "entrySaveConfirmed": false,
+  "fullAssetUrls": "Retained privately outside Git",
+  "receiptPublishing": "Local publication receipt; no subsequent push authorized"
+}
