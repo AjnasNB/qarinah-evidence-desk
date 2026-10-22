@@ -1,0 +1,10 @@
+{
+  "engine": "kokoro",
+  "voice": "af_heart",
+  "speed": 1,
+  "tail": 0.6,
+  "lufs": -16,
+  "lines": [
+    { "id": "receipts-and-development", "at": 0.3, "text": "Inspect these receipts. The founder reported Cursor validation." }
+  ]
+}

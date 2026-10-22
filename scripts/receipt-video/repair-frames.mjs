@@ -1,0 +1,35 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { spawnSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
+import assert from 'node:assert/strict';
+
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
+const job = path.resolve(root, process.argv[2] || '');
+assert(job.startsWith(path.join(root, 'showtime-out') + path.sep));
+const out = path.join(job, 'repaired-r6');
+await fs.mkdir(out, { recursive: true });
+await fs.copyFile(path.join(root, '.local/video/r6-entry/edl.json'), path.join(out, 'edl.json'));
+let code = await fs.readFile(path.join(root, 'scripts/video-r5/edit.mjs'), 'utf8');
+assert.equal(createHash('sha256').update(code).digest('hex'), 'bac5b85c9365bec53538a45273790c8370ceb8a61ef34aa0ae43b920d73f4ab0');
+code = code.replace("const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');", `const root = ${JSON.stringify(root)};`)
+  .replace("const out = path.join(root, '.local/video/r5-repair'), assets = path.join(out, 'assets');", `const out = ${JSON.stringify(out)}, assets = path.join(out, 'assets');`);
+const cue = code.split('\n').find(line => line.trim().startsWith('event(') && line.includes('${scene.cue}'));
+assert(cue);
+code = code.replace(cue, "  if (scene.index === 0) text(scene.cue, 60, 970, 36, accent, '\\\\b1', 0, d); else " + cue.trim());
+const marker = '  const parts = [`[0:v]';
+assert(code.includes(marker));
+code = code.replace(marker, "  if (scene.index === 3) { base.splice(0, 4, 170, scene.crop.y, 1430, 715); closer.splice(0, 4, ...base); }\n  if (scene.index === 4) { base.splice(0, 4, 140, scene.crop.y, 1160, 796); closer.splice(0, 4, ...base); }\n" + marker);
+code = code.replace('for (const scene of plan.scenes) {', 'for (const scene of plan.scenes.filter(scene => [0, 3, 4].includes(scene.index))) {');
+const end = code.indexOf("await fs.writeFile(path.join(out, 'concat.txt')"); assert(end > 0);
+code = code.slice(0, end);
+await fs.writeFile(path.join(out, 'render.mjs'), code);
+const render = spawnSync(process.execPath, [path.join(out, 'render.mjs'), '--render'], { encoding: 'utf8', windowsHide: true, maxBuffer: 5e6 });
+assert.equal(render.status, 0, render.stderr.slice(-2000));
+const parts = Array.from({ length: 8 }, (_, index) => path.join([0, 3, 4].includes(index) ? out : path.join(root, '.local/video/r6-entry'), `picture-${index}.mp4`));
+await fs.writeFile(path.join(out, 'concat.txt'), parts.map(file => `file '${file.replaceAll('\\', '/')}'`).join('\n'));
+const run = args => { const result = spawnSync('ffmpeg', ['-hide_banner', '-nostdin', '-y', ...args], { encoding: 'utf8', windowsHide: true, maxBuffer: 5e6 }); assert.equal(result.status, 0, result.stderr.slice(-2000)); };
+run(['-f', 'concat', '-safe', '0', '-i', path.join(out, 'concat.txt'), '-an', '-c:v', 'copy', '-t', '90', path.join(out, 'picture-90.mp4')]);
+run(['-i', path.join(out, 'picture-90.mp4'), '-i', path.join(root, '.local/video/r6-entry/qarinah-evidence-r6.mp4'), '-map', '0:v:0', '-map', '1:a:0', '-t', '90', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', path.join(job, 'repaired-source-90.mp4')]);
+console.log(JSON.stringify({ repaired: [0, 3, 4], originalR6Unchanged: true, result: path.join(job, 'repaired-source-90.mp4') }));
