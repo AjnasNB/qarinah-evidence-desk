@@ -36,6 +36,17 @@
       "kind": "existing-project-brand",
       "provenance": "public/brand/SOURCE.txt",
       "change": "Original bytes and proportions retained."
+    },
+    {
+      "path": ".local/video/r5-repair/qarinah-evidence-r5.mp4",
+      "kind": "related-reviewed-product-film",
+      "sourceReview": ".local/video/r5-repair/review/FINDINGS.md",
+      "qa": "docs/video/r5/QA.md",
+      "sha256": "9183bb9f53f83b1d31923e1118bbfb3d31488c6fd20485e03c1261cb50f5331a",
+      "bytes": 29761979,
+      "durationSeconds": 96,
+      "change": "Referenced in slide 7 only. Film bytes are unchanged and the film is not embedded in the PPTX.",
+      "claimBoundary": "Qualified dated product demonstration with a separate verified Zetaris chapter at 58–66 seconds, actual local repair journey and labeled synthetic failure/missing cases. Cursor remains pending. Independent review does not grant publication or submission permission."
     }
   ]
 }

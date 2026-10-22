@@ -1,7 +1,7 @@
 {
   "title": "Qarinah Evidence Desk",
   "status": "Local review draft, Cursor evidence and public links pending",
-  "templatePptx": ".local/submission/output/evidence-desk-review-r2.pptx",
+  "templatePptx": ".local/submission/output/evidence-desk-review-r3.pptx",
   "screenshotPath": ".local/submission/assets-r3/live-release-review.png",
   "slides": [
     {
@@ -142,10 +142,10 @@
     {
       "layout": "close",
       "title": "Review package and next steps",
-      "body": "96-second narrated repair film in review\nSeparate actual Zetaris source recording\nFuture work: authenticated CI and workflow cost comparisons",
+      "body": "Reviewed 96-second narrated repair film\nVerified Zetaris read in its source chapter\nFuture work: authenticated CI and workflow cost comparisons",
       "owner": "Cognifyr / Ajnas N B",
       "disclosure": "Submission remains blocked by Cursor evidence and public links.",
-      "notes": "The new film preserves the 96-second original score and narrated format. Actual old/fresh local review footage is separate from labeled synthetic failure/missing cases. The 46-test source capture at 968764a differs from the later 51-test suite at 289c624. A passed actual Zetaris recording supplies the reserved source chapter, subject to final encode and independent review. Sources: docs/video/r5/README.md; docs/validation/2026-10-22-repair.json; docs/validation/2026-10-22-zetaris-live.json. Authenticated CI and held-out workflow/provider/quality comparisons remain proposed. No release authority, publication, submission, prize or winning probability is claimed."
+      "notes": "The final 96-second narrated repair film passed independent review as a qualified dated product demonstration. Its separate verified Zetaris chapter runs at 58–66 seconds. Actual old/fresh local review footage remains distinct from labeled synthetic failure/missing cases. The filmed 46-test capture at 968764a is separate from the later 51-test suite at 289c624. Final MP4 SHA-256: 9183bb9f53f83b1d31923e1118bbfb3d31488c6fd20485e03c1261cb50f5331a. Source: .local/video/r5-repair/review/FINDINGS.md; docs/video/r5/QA.md; docs/validation/2026-10-22-repair.json; docs/validation/2026-10-22-zetaris-live.json. Machine QA: zero failures/warnings and a phone-typography information note. No subjective human listening or physical-phone test is claimed. Authenticated CI and held-out workflow/provider/quality comparisons remain proposed. Cursor development remains pending. Review grants no publication/submission permission or release authority, eligibility, prize, impact or winning probability."
     }
   ]
 }
