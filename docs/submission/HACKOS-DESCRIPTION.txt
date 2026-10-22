@@ -1,0 +1,11 @@
+Qarinah Evidence Desk makes a developer agent's release recommendation inspectable before a human acts on it. Software teams can review a chosen Git revision, test/build observations and release statement, then ask: What is the current release decision?
+
+Typed checks expose stale evidence, dirty revisions, failed checks, conflicting observations and missing references. The desk holds or abstains when the packet cannot support readiness. Bounded next steps link back to exact observations; an explicit reread preserves original timestamps and never runs CI or deploys.
+
+Zetaris supplies real bounded source queries with validated results and confirmed cleanup. The actual pinned Meterless H-MEM reference retains sourced memory and audit lineage, using its disclosed deterministic hash embedder. Optional NVIDIA generation is disabled; release review sends no model request.
+
+The founder reports running the project's validation task in Cursor during development. Most implementation was assisted by Codex; the retained machine validation receipt is from a separate Codex terminal run. No Cursor AI session is claimed.
+
+New extension work began on 22 October 2026. Existing Qarinah concepts, branding and vendor code are attributed. The full local suite passes 51 tests; the dated real demo preserves its separate 46-test capture and shows a live Zetaris read plus labeled synthetic failure/missing cases. Observations are caller-declared, not authenticated CI or release authorization. Byte measurements include overhead; provider-token savings and user impact remain unmeasured.
+
+Next: authenticated CI receipts, more source connectors and held-out developer task evaluation.

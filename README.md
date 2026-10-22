@@ -40,7 +40,7 @@ For the bundled Zetaris platform, **Investigate handoff** reads the fixed latest
 - **Meterless:** actual pinned H-MEM add/query/persistence/audit operations. The upstream reference uses deterministic hash embeddings, not a learned semantic model.
 - **Zetaris:** fixed, bounded read-only queries. The bundled 2.4.3 UI session and modern REST API modes have separate configuration and response validation. Put credentials only in ignored `.env.local`. The bundled handoff path preserves original timestamps and exposes query cleanup uncertainty. Configuration and an account login alone do not establish a successful query.
 - **NVIDIA:** optional, disabled by default. When explicitly enabled with existing credits, only selected question/evidence data is sent. Returned excerpts must match current citations. Handoff review itself is deterministic and makes no model request.
-- **Cursor:** required event development evidence is tracked separately. This repository does not claim that Codex work is Cursor work.
+- **Cursor:** the founder reports running the project's validation task in Cursor during development. Most implementation was assisted by Codex; the retained validation receipt is from a separate Codex terminal run. No Cursor AI session is claimed. See [the usage disclosure](docs/submission/READINESS-2026-10-22.md).
 
 Byte measurements describe serialized UTF-8 data. The full-context prompt is a counterfactual comparison, not an executed baseline. Provider token counts remain unknown without a usage receipt. See [the overhead report](docs/TOKEN-OVERHEAD.md) and [critique](docs/CRITIQUE.md).
 
@@ -48,7 +48,7 @@ Byte measurements describe serialized UTF-8 data. The full-context prompt is a c
 
 The full suite passed 51 tests after the native catalog verifier fix. The clean movie capture at `968764a` passed 46 tests, the production build and typecheck. Chrome and the actual recording demonstrated stale repair guidance followed by a separate fresh capture with four citations. See [the capture receipt](docs/validation/2026-10-22-repair.json); earlier receipts remain preserved.
 
-Real bundled Zetaris authentication, native source registration, exact old/fresh source reads and query cleanup also passed. The old observations abstained; an explicit reread after the genuine source update returned the expected revision and four matching citations. No model attempt was made. See [the live verification receipt](docs/validation/2026-10-22-zetaris-live.json) and [local verification runbook](docs/runtime/LOCAL-ZETARIS-VERIFICATION.md). These observations do not independently authenticate CI. Cursor development evidence remains pending, so no event eligibility or submission is claimed.
+Real bundled Zetaris authentication, native source registration, exact old/fresh source reads and query cleanup also passed. The old observations abstained; an explicit reread after the genuine source update returned the expected revision and four matching citations. No model attempt was made. See [the live verification receipt](docs/validation/2026-10-22-zetaris-live.json) and [local verification runbook](docs/runtime/LOCAL-ZETARIS-VERIFICATION.md). These observations do not independently authenticate CI. Cursor use is disclosed as founder-reported activity; the organizer determines eligibility. No competition submission is claimed.
 
 ```text
 npm run validate

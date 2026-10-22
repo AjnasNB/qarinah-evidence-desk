@@ -35,7 +35,7 @@ The idea is relevant to the developer workflow theme, with inspectable provenanc
 
 ## Remaining gates and highest-value improvements
 
-1. Resolve Cursor access through official support or obtain official eligibility clarification. Rule 5.1 requires Cursor use during development; installing its CLI or building here does not establish that use. The product itself has no Cursor server dependency.
+1. Explain Cursor use accurately: the founder reported running this project's validation task in Cursor during development. Most implementation used Codex, and the retained machine receipt comes from a separate Codex terminal run. Rules 5.1 and 6.4 require development use and an explanation; they do not prescribe an AI session, screenshot or new code change. The report is accepted as user-attested activity, without claiming independent capture or restored AI access. The product has no Cursor server dependency.
 2. Use the reviewed real-footage demo and deck, retain exact capture identities, then review approved public source/video links and submission fields. Local media and receipts alone are not a submitted entry.
 3. Add independently authenticated, revision-bound CI observations, retaining precise source identity and authority boundaries.
 4. Compare representative developer handoffs against a full-context workflow. Measure complete requests, wrappers, retrieval, audit reads, failures, retries and actual provider usage alongside correct outcomes. Include real developers before claiming user impact.

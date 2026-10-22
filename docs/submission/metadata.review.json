@@ -6,16 +6,17 @@
   "tagline": "Inspect the evidence behind a developer release handoff.",
   "event": "Open Agent Hackathon 2026",
   "proposedRoute": "Wildcard existing-project extension",
-  "status": "blocked",
+  "status": "draft-saved-awaiting-approved-source-and-assets",
   "readyToSubmit": false,
   "published": false,
   "submitted": false,
   "team": {
-    "name": "Cognifyr",
+    "name": "Cognifyr / Ajnas N B",
     "members": [
       "Ajnas N B"
     ],
-    "size": 1
+    "size": 1,
+    "registrationVerified": true
   },
   "buildStartedOn": "2026-10-22",
   "existingWorkDisclosed": true,
@@ -72,13 +73,15 @@
       "authenticatedCI": false
     },
     "cursor": {
-      "status": "workspace-prepared-user-reported-validation-pass",
+      "status": "user-attested-validation-during-development",
       "actualDevelopmentUseVerified": false,
       "guide": "docs/CURSOR.md",
       "receipt": "docs/validation/2026-10-22-cursor-workspace.json",
       "userReportedTaskPassed": true,
       "editorRunReceiptObserved": false,
-      "accountRestorationConfirmed": false
+      "accountRestorationConfirmed": false,
+      "useDisclosure": "The founder reports running the project validation task in Cursor during development. Most implementation used Codex. The retained machine receipt is from an earlier Codex terminal run; no Cursor AI session is claimed.",
+      "requiredIndependentCapture": false
     },
     "nvidia": {
       "status": "optional-disabled",
@@ -161,9 +164,9 @@
     "publicUrl": null
   },
   "blockingGates": [
-    "Actual Cursor development evidence or official clarification",
-    "Approved public source and final video URLs",
-    "Final review and action-specific submission approval"
+    "Approved public GitHub source and final video/deck uploads",
+    "Required source/video fields completed and verified",
+    "Final submission confirmation"
   ],
   "limitations": [
     "Underlying local observations are caller-declared, not independently authenticated CI.",
@@ -195,5 +198,14 @@
     "demo": 13,
     "ux": 8,
     "sponsors": 7
+  },
+  "hackosDraft": {
+    "saved": true,
+    "track": "Wildcard [Tinkerer]: Bring Your Own Project",
+    "description": "docs/submission/HACKOS-DESCRIPTION.txt",
+    "descriptionCharacters": 1680,
+    "submissionStatus": "draft",
+    "videoUploadSupported": true,
+    "deckUploadSupported": true
   }
 }

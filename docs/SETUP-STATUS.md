@@ -28,11 +28,13 @@ The installed Cursor 3.17.19 now has a project workspace, manual Node tasks, an 
 
 The user subsequently reported **Task passed** in response to running validation inside Cursor. This is recorded as user-reported editor execution. No fresh editor-run receipt was present in the local validation directory at the follow-up check; the captured receipt remains the earlier Codex terminal execution. Neither editor AI account restoration nor independently captured Cursor development use is claimed. The final video and deck remain dated demonstrations and were not rewritten to assert eligibility.
 
-Official rule 5.1 requires Zetaris and Meterless integration and Cursor use during development. Cursor is a development requirement, not a server dependency. Work can continue here; eligibility still needs genuine Cursor development use or official clarification.
+Official rule 5.1 requires Zetaris and Meterless integration and Cursor use during development; rule 6.4 asks how Cursor was used. No independent screenshot, code change or AI session is specified. The founder's direct task-pass report is accepted as user-attested development activity and disclosed without claiming a retained Cursor-run receipt. It is not an additional blocking gate merely because a later UI relaunch failed. The organizer determines final eligibility. Cursor is a development tool, not a server dependency.
 
 Observations are caller-declared local captures, not independently authenticated CI. Original timestamps remain intact and expire after one hour. A new source read does not renew an old observation. No deployment authority, measured user impact, billed-token saving or winning probability is established.
 
-Next: resolve Cursor development evidence or obtain official clarification, then request the applicable approval for source/video publication and final submission. The event deadline is 27 October 2026 at 23:45 UTC, or 28 October at 05:15 IST. [Official rules](https://hackathon.genai.works/event/open-agent-hackathon-2026#rules)
+Authenticated HackOS now confirms the registered Cognifyr / Ajnas N B solo team. A Wildcard draft with the prepared 1,680-character description was saved; the hub shows one draft and zero submitted entries. The actual form permits direct video and deck uploads, so YouTube publication is not required.
+
+Next: obtain approval for the specific GitHub source publication and final media/deck uploads, then complete the requested submission and retain its confirmation. Registration closes 22 October at 23:59 UTC, or 23 October at 05:29 IST. The submission deadline is 27 October 2026 at 23:45 UTC, or 28 October at 05:15 IST. [Official rules](https://hackathon.genai.works/event/open-agent-hackathon-2026#rules)
 
 ## Runtime and privacy
 

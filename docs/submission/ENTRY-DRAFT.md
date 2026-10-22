@@ -1,6 +1,6 @@
 # Qarinah Evidence Desk
 
-Local review draft for the Open Agent Hackathon Wildcard route. **Submission remains blocked.** This package has not been published or submitted. Live Zetaris execution is verified. Required Cursor development evidence, the final video URL and public source publication remain pending.
+Local review draft for the Open Agent Hackathon Wildcard route. **Not ready to submit.** This package has not been published or submitted. Actual Meterless and live Zetaris execution are verified. The founder reports running validation in Cursor during development. The retained machine receipt is from an earlier Codex run. Approved public source/video links and completion of the event workspace fields remain pending.
 
 ## Project description
 
@@ -14,7 +14,7 @@ The local capture helper runs this project's tests and build, records their outp
 
 The backend stores sourced observations through the actual pinned Meterless H-MEM reference implementation. Review resolves selected evidence against the active snapshot and exposes citations, exclusions and memory audit history. Supplied observation text remains untrusted data. Import and handoff review execute no source instructions and make no model request.
 
-Separate synthetic Atlas/Beacon support examples demonstrate consistent, conflicting and missing evidence. Investigate handoff reads a fixed developer packet through the bundled Zetaris adapter, preserving its original times and provenance. Bounded next steps distinguish missing or stale observations from source failures and conflicts. Rereading cannot repair CI; failed checks require genuine source work and new results. The complete local suite passes 51 tests, including mocked provider and native catalog contracts. Real authenticated Zetaris reads, exact source matching and query cleanup also passed. Optional NVIDIA excerpt selection remains disabled. Cursor support acknowledged escalation; account access and actual development use remain unverified.
+Separate synthetic Atlas/Beacon support examples demonstrate consistent, conflicting and missing evidence. Investigate handoff reads a fixed developer packet through the bundled Zetaris adapter, preserving its original times and provenance. Bounded next steps distinguish missing or stale observations from source failures and conflicts. Rereading cannot repair CI; failed checks require genuine source work and new results. The complete local suite passes 51 tests, including mocked provider and native catalog contracts. Real authenticated Zetaris reads, exact source matching and query cleanup also passed. Optional NVIDIA excerpt selection remains disabled. The founder reports running the project's validation task in Cursor during development. Most implementation was assisted by Codex. The retained machine receipt comes from an earlier Codex terminal run; no Cursor AI session is claimed.
 
 ## Verified local result
 
@@ -47,11 +47,12 @@ Future work would add independently authenticated CI receipts, additional source
 | Local product and validation | Captured and documented |
 | Meterless | Actual reference H-MEM execution and audit history |
 | Zetaris | Actual native source registration, exact old/fresh reads and confirmed query cleanup |
-| Cursor development | Access blocked, CLI installed, actual use unverified |
+| Cursor development | Founder-reported validation task execution; disclose it accurately. No independent editor receipt or AI use is required by the published rules |
 | NVIDIA | Optional, disabled, no inference receipt |
 | Deck | Reviewed local r4 editable deck and viewing PDF |
 | Video | Reviewed 96-second narrated actual repair/source demo; approved public URL pending |
 | GitHub source and README | Public entry source URL pending approval |
-| Final competition entry | Blocked, no submission |
+| Registration and team | Authenticated HackOS confirmed Cognifyr / Ajnas N B, one member |
+| Final competition entry | User requested submission; Wildcard draft saved with 1,680-character description. Source publication and final assets still await their specific approval; no entry submitted |
 
-The main task verified the intended route requires Zetaris, Meterless and Cursor development evidence, with NVIDIA where it contributes. Recheck the final published requirements before submission. Official rules: [Open Agent Hackathon](https://hackathon.genai.works/event/open-agent-hackathon-2026#rules).
+Rules, deadlines, the Cursor interpretation and concrete closure options were rechecked on 22 October 2026 in [the readiness audit](READINESS-2026-10-22.md). Source: [official event rules](https://hackathon.genai.works/event/open-agent-hackathon-2026#rules).
