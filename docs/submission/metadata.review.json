@@ -72,8 +72,13 @@
       "authenticatedCI": false
     },
     "cursor": {
-      "status": "support-escalated-access-not-restored",
-      "actualDevelopmentUseVerified": false
+      "status": "workspace-prepared-user-reported-validation-pass",
+      "actualDevelopmentUseVerified": false,
+      "guide": "docs/CURSOR.md",
+      "receipt": "docs/validation/2026-10-22-cursor-workspace.json",
+      "userReportedTaskPassed": true,
+      "editorRunReceiptObserved": false,
+      "accountRestorationConfirmed": false
     },
     "nvidia": {
       "status": "optional-disabled",

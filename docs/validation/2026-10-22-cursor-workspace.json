@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "qarinah.editor-validation.v1",
+  "startedAt": "2026-10-22T11:37:52.824Z",
+  "completedAt": "2026-10-22T11:37:56.359Z",
+  "revision": "c87a8a997fe8e51374bde822f2b11fc14c60845d",
+  "dirty": false,
+  "revisionUnchanged": true,
+  "workingTreeStatusUnchanged": true,
+  "nodeVersion": "v24.15.0",
+  "checks": [
+    {
+      "name": "tests",
+      "command": [
+        "node",
+        "scripts/test.mjs"
+      ],
+      "passed": true,
+      "exitCode": 0,
+      "elapsedMs": 1213,
+      "outputSha256": "6938739730255e10049c095fc6b66bc67150aa6072d1c256c7ca033b5ab38e2f",
+      "outputBytes": 5595,
+      "retainedBytes": 5595,
+      "truncated": false
+    },
+    {
+      "name": "typecheck",
+      "command": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "--project",
+        "tsconfig.json"
+      ],
+      "passed": true,
+      "exitCode": 0,
+      "elapsedMs": 1230,
+      "outputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "outputBytes": 0,
+      "retainedBytes": 0,
+      "truncated": false
+    },
+    {
+      "name": "build",
+      "command": [
+        "node",
+        "node_modules/vite/bin/vite.js",
+        "build"
+      ],
+      "passed": true,
+      "exitCode": 0,
+      "elapsedMs": 758,
+      "outputSha256": "a15319664200ec865299f2e4fc7a39d7808d6cb3728735a9521175112dada286",
+      "outputBytes": 351,
+      "retainedBytes": 351,
+      "truncated": false
+    },
+    {
+      "name": "vendor",
+      "command": [
+        "node",
+        "scripts/verify-vendor.mjs"
+      ],
+      "passed": true,
+      "exitCode": 0,
+      "elapsedMs": 97,
+      "outputSha256": "379278a5669bf5829d29929a8928d149aa8d0fa032b4cfe3fe36bfac2f1552b9",
+      "outputBytes": 86,
+      "retainedBytes": 86,
+      "truncated": false
+    }
+  ],
+  "passed": true,
+  "actualCursorDevelopmentUseVerified": false,
+  "note": "Local validation only. A terminal receipt does not identify the editor or authenticate CI. Same-status source edits during execution are not detected.",
+  "installation": {
+    "version": "3.17.19",
+    "existingQarinahMcpEntryVerified": true,
+    "cursorSideMcpSessionVerified": false
+  },
+  "executionHost": "Codex local terminal; the Cursor task itself has not yet been observed",
+  "testSummary": {
+    "passed": 51,
+    "failed": 0,
+    "skipped": 0
+  },
+  "review": {
+    "independentConfigurationReview": "One replay-question mismatch in the guide corrected; no other material configuration issue found.",
+    "desktopControlUsed": false,
+    "accountRestored": null,
+    "publicActionsPerformed": false
+  },
+  "editorLaunch": {
+    "installedCliStatusVerified": true,
+    "workspaceFolderIdentified": "qarinah-evidence-desk",
+    "displayedWindow": "Cursor Agents",
+    "classicEditorRequested": true,
+    "classicEditorWindowIndependentlyVerified": false
+  },
+  "userReport": {
+    "wording": "Task passed",
+    "source": "Direct user response in this chat to the request to run Qarinah: validate inside Cursor",
+    "newEditorValidationReceiptObserved": false,
+    "qualification": "User-reported editor execution; the captured machine receipt above remains the earlier Codex terminal run.",
+    "recordedAtUtc": "2026-10-22T11:40:52Z"
+  }
+}

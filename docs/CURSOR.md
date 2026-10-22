@@ -7,10 +7,12 @@ Cursor is the event's development editor requirement. It is not a service, serve
 Open `qarinah-evidence-desk.code-workspace` in Cursor, or run this from the project root:
 
 ```text
-cursor --new-window "qarinah-evidence-desk.code-workspace"
+cursor --classic --new-window "qarinah-evidence-desk.code-workspace"
 ```
 
 Review any workspace trust prompt yourself. No task runs on folder open. No extension installation, global setting change, account login or new MCP permission is configured by this repository. Node 22.12+ must be on the editor's PATH; restart the editor after installing Node if a task cannot find it. Existing dependencies are needed; for a fresh checkout use `npm ci --ignore-scripts`.
+
+The installed 3.17.19 CLI supports `--classic` to request the editor for this launch without changing your default window preference. If an Agents window appears instead, choose **Ctrl+Shift+P → Open IDE**, then open this workspace. [Cursor's editor/Agents window guidance](https://cursor.com/docs/agent/agents-window).
 
 The installed editor was identified as Cursor 3.17.19 on 22 October 2026. Its existing user-level Qarinah MCP entry points to the installed Node runtime and `qarinah.mjs mcp --auto-init`, without environment credentials. That configuration was inspected without changing it; it does not establish a successful Cursor-side MCP session. Do not copy the user's global configuration into this repository.
 
@@ -29,7 +31,7 @@ The ordinary editor and local tasks can be used independently of AI chat access.
 
 If the existing localhost preview is running, reuse it at `http://127.0.0.1:5183/`. Otherwise run **Qarinah: dev** from Run Task. It starts UI and API on 5183/4318. Stop that task before launching **Qarinah: debug API (stop dev first)** with F5, because both API processes need port 4318. The debugger serves the built frontend on `http://127.0.0.1:4318/`; run validation first to create it. The backend reads the existing ignored `.env.local` itself; never attach that file to chat. No debugger session has been claimed by providing a launch configuration.
 
-For a quick product check, load the visibly labeled replay case, ask **What is the current release decision?**, and inspect the outcome and exact citations. For a real Zetaris handoff use [the live verification runbook](runtime/LOCAL-ZETARIS-VERIFICATION.md). Observations expire after one hour: recapture real checks when necessary, preserving timestamps. A reread alone does not refresh old evidence. Do not restart or replace the existing Docker services just to use Cursor.
+For a quick product check, load the visibly labeled **Clean evidence** replay case, ask **What is the Atlas upload limit?**, and inspect the answer and exact citations. This is a synthetic support example. To exercise the release reviewer, capture and explicitly import a developer handoff as described in the README, then ask **What is the current release decision?** For a real Zetaris handoff use [the live verification runbook](runtime/LOCAL-ZETARIS-VERIFICATION.md). Observations expire after one hour: recapture real checks when necessary, preserving timestamps. A reread alone does not refresh old evidence. Do not restart or replace the existing Docker services just to use Cursor.
 
 ## Keep context small and private
 

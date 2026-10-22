@@ -22,7 +22,11 @@ The final seven-slide r4 review deck is available as an editable PPTX and a view
 
 ## Remaining gates
 
-Cursor's only reply as of the 10:20 UTC inbox check is the AI Support Assistant escalation at 08:10:45 UTC, ticket T-I13133. No human decision or restored access is established. The installed CLI alone supplies no development evidence.
+Cursor's only reply as of the 10:20 UTC inbox check was the AI Support Assistant escalation at 08:10:45 UTC, ticket T-I13133. No later inbox or authenticated account check was performed for this editor setup; restored AI access is not established.
+
+The installed Cursor 3.17.19 now has a project workspace, manual Node tasks, an API debug configuration, concise project rules and private context exclusions. The existing user-level Qarinah MCP entry was inspected without changing it. The clean `c87a8a9` validation passed all 51 tests, typecheck, build and vendor integrity; both localhost endpoints returned HTTP 200. A CLI status report identified this project in Cursor's Agents window. The classic editor was requested separately, without changing global preferences or using desktop control. See [the Cursor guide](CURSOR.md) and [the sanitized validation receipt](validation/2026-10-22-cursor-workspace.json).
+
+The user subsequently reported **Task passed** in response to running validation inside Cursor. This is recorded as user-reported editor execution. No fresh editor-run receipt was present in the local validation directory at the follow-up check; the captured receipt remains the earlier Codex terminal execution. Neither editor AI account restoration nor independently captured Cursor development use is claimed. The final video and deck remain dated demonstrations and were not rewritten to assert eligibility.
 
 Official rule 5.1 requires Zetaris and Meterless integration and Cursor use during development. Cursor is a development requirement, not a server dependency. Work can continue here; eligibility still needs genuine Cursor development use or official clarification.
 
