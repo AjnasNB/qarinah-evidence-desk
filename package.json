@@ -11,6 +11,7 @@
     "start": "node --import tsx server/index.ts",
     "build": "vite build",
     "typecheck": "tsc --project tsconfig.json",
+    "evidence": "node scripts/capture-handoff.mjs",
     "test": "node scripts/test.mjs"
   },
   "dependencies": {

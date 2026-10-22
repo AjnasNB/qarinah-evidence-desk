@@ -1,0 +1,16 @@
+# Use with the vendor's matched Compose file and private .env, never standalone.
+services:
+  ui:
+    ports: !override
+      - "127.0.0.1:${UI_PORT:-3000}:3000"
+  api:
+    environment:
+      TELEMETRY_ENABLED: "false"
+  postgres:
+    ports: !override []
+  driver:
+    ports: !override
+      - "127.0.0.1:10000:10000"
+      - "127.0.0.1:4040:4040"
+  caddy:
+    ports: !override []
