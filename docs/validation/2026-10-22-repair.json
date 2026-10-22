@@ -47,5 +47,73 @@
     "Caller-declared actual local observations; not independently authenticated CI.",
     "Browser recording, live sponsor execution and Cursor use are separate evidence.",
     "No release authority or provider-token savings established."
-  ]
+  ],
+  "actualBrowserRecording": {
+    "capturedAt": "2026-10-22T10:02:13.320Z",
+    "manifestSha256": "735499ec67d7572be43d8fb475d02849385ccf79dfae75f864e64825e69ae335",
+    "freshPacketMatches": true,
+    "oldPacketUnmodified": true,
+    "productMatchesFreshRevision": true,
+    "results": [
+      {
+        "id": "old-review",
+        "status": "abstained",
+        "decision": null,
+        "reason": "missing-current-revision",
+        "citedRecords": 0,
+        "providerAttempts": 0,
+        "repairStatus": "refresh-needed",
+        "repairKinds": [
+          "stale",
+          "stale",
+          "stale",
+          "stale"
+        ]
+      },
+      {
+        "id": "fresh-review",
+        "status": "answered",
+        "decision": "ready",
+        "reason": "release-ready-within-imported-evidence",
+        "citedRecords": 4,
+        "providerAttempts": 0,
+        "repairStatus": "complete",
+        "repairKinds": []
+      },
+      {
+        "id": "synthetic-failure-review",
+        "status": "answered",
+        "decision": "hold",
+        "reason": "release-held",
+        "citedRecords": 4,
+        "providerAttempts": 0,
+        "repairStatus": "blocked",
+        "repairKinds": [
+          "failed"
+        ]
+      },
+      {
+        "id": "synthetic-missing-review",
+        "status": "abstained",
+        "decision": null,
+        "reason": "missing-required-artifact",
+        "citedRecords": 3,
+        "providerAttempts": 0,
+        "repairStatus": "refresh-needed",
+        "repairKinds": [
+          "missing"
+        ]
+      }
+    ],
+    "blockedRequests": 0,
+    "pageErrors": 0,
+    "scope": "Actual localhost application, unchanged old and fresh observations, separately labeled invented failure/missing replays; no sponsor requests."
+  },
+  "chromeReview": {
+    "commit": "968764add439b8ea7e7b75f9989a91dd607ec0d3",
+    "citedRecords": 4,
+    "decision": "ready within imported evidence",
+    "scope": "Actual clean packet explicitly imported and reviewed in the user Chrome project tab.",
+    "recordedAt": "2026-10-22T10:07:18.458Z"
+  }
 }
