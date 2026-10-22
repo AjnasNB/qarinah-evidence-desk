@@ -13,3 +13,4 @@ renders/
 *.wav
 *.log
 .agent-*
+showtime-out/

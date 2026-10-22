@@ -1,0 +1,90 @@
+{
+  "observedAtUtc": "2026-10-22T14:03:47.580Z",
+  "skills": [
+    {
+      "id": "phuryn--pm-skills--brainstorm-ideas-existing",
+      "name": "brainstorm-ideas-existing",
+      "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+      "source": "https://github.com/phuryn/pm-skills/tree/c68487d721e419ec87af1ae6412a842978eab785/pm-product-discovery/skills/brainstorm-ideas-existing",
+      "license": "MIT",
+      "installer": "SkillDash pinned-file installer",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 2951,
+          "sha256": "cf950494541bd9b47e60054f1a917cef02094fe8c769d5feca86603282e2bd5b"
+        },
+        {
+          "path": "UPSTREAM-LICENSE",
+          "bytes": 1068,
+          "sha256": "a2c922f9b81b4f40347ddfa79c38eda0f1278b5a6d108bd4099b4da254c774ee"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "phuryn--pm-skills--identify-assumptions-existing",
+      "name": "identify-assumptions-existing",
+      "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+      "source": "https://github.com/phuryn/pm-skills/tree/c68487d721e419ec87af1ae6412a842978eab785/pm-product-discovery/skills/identify-assumptions-existing",
+      "license": "MIT",
+      "installer": "SkillDash pinned-file installer",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 2102,
+          "sha256": "59d788213014552ac64f589c71ce82b135f9ef4b84fec457446ad90795fd439f"
+        },
+        {
+          "path": "UPSTREAM-LICENSE",
+          "bytes": 1068,
+          "sha256": "a2c922f9b81b4f40347ddfa79c38eda0f1278b5a6d108bd4099b4da254c774ee"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "phuryn--pm-skills--brainstorm-experiments-existing",
+      "name": "brainstorm-experiments-existing",
+      "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+      "source": "https://github.com/phuryn/pm-skills/tree/c68487d721e419ec87af1ae6412a842978eab785/pm-product-discovery/skills/brainstorm-experiments-existing",
+      "license": "MIT",
+      "installer": "SkillDash pinned-file installer",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 2408,
+          "sha256": "d72da1f4f08d5514662d7bad37dfc3ed4ef11fcc5b5ddec6ca5a8ac0e47f45c5"
+        },
+        {
+          "path": "UPSTREAM-LICENSE",
+          "bytes": 1068,
+          "sha256": "a2c922f9b81b4f40347ddfa79c38eda0f1278b5a6d108bd4099b4da254c774ee"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "obra--superpowers--verification-before-completion",
+      "name": "verification-before-completion",
+      "revision": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "source": "https://github.com/obra/superpowers/tree/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/verification-before-completion",
+      "license": "MIT",
+      "installer": "Codex skill-installer pinned GitHub helper plus verified upstream license",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 3646,
+          "sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3"
+        },
+        {
+          "path": "UPSTREAM-LICENSE",
+          "bytes": 1070,
+          "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400"
+        }
+      ],
+      "verified": true
+    }
+  ],
+  "scope": "Personal local skills; automatic discovery on next turn/session; current application uses inspected instructions. No external publication or application change."
+}
