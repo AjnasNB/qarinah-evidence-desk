@@ -5,6 +5,7 @@ dist/
 !.env.example
 .qarinah/
 .runtime/
+.local/
 .notebook/
 recordings/
 renders/

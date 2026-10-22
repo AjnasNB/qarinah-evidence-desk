@@ -1,0 +1,12 @@
+export const HMEM_COMMIT = '70ca80fe88ad8d27288501e8dd08b091ed38c095';
+export const LIMITS = Object.freeze({ requestBytes: 16_384, sourceResponseBytes: 131_072, sourceRecords: 20, sourceContentBytes: 2_048, snapshotCount: 8, snapshotAgeMs: 3_600_000, memories: 200, recalledMemories: 5, contextBytes: 8_192, questionBytes: 1_024, journalBytes: 4_194_304, stateBytes: 4_194_304, storageReserveBytes: 262_144, maxProviderCallsPerDay: 10, outputTokens: 400 });
+export type DemoCase = 'clean' | 'conflict' | 'missing';
+export type EvidenceRecord = { id: string; sourceId: string; title: string; content: string; hash: string; observedAt: string; subject?: string; factKey?: string; value?: string };
+export type Snapshot = { id: string; mode: 'synthetic' | 'zetaris'; case?: DemoCase; queryKey?: string; createdAt: string; expiresAt: string; sources: EvidenceRecord[]; memoryCount: number; sourceResponseBytes: number; warnings: string[] };
+export type ProviderUsage = { promptTokens: number | null; completionTokens: number | null; totalTokens: number | null };
+export type Metrics = { availableEvidenceBytes: number; selectedEvidenceBytes: number; memoryContextBytes: number; instructionBytes: number; questionBytes: number; selectionOverheadBytes: number; promptBytes: number; fullContextPromptBytes: number; requestBytes: number; fullContextRequestBytes: number; toolDefinitionsBytes: number; sourceResponseBytes: number; sourceCalls: number; providerAttempts: number; providerUsage: ProviderUsage | null; elapsedMs: number };
+export type Claim = { text: string; citationIds: string[] };
+export type Answer = { status: 'retrieved' | 'answered' | 'abstained' | 'unavailable'; mode: 'retrieval-only' | 'nemotron'; snapshotId: string; question: string; answer: string; claims: Claim[]; citations: EvidenceRecord[]; excluded: { id: string; reason: string }[]; conflicts: { factKey: string; sourceIds: string[] }[]; memories: { id: string; content: string; source: string; relevance: number }[]; trace: { strategy: string; reason: string }; metrics: Metrics; reason?: string };
+export type QueryKey = 'probe' | 'taxi-zones' | 'reasons';
+export type AppConfig = { workspace: string; dataDir: string; distDir: string; zetarisUrl?: string; zetarisKey?: string; zetarisOrgId?: string; nemotronKey?: string; nemotronModel: string; allowNemotron: boolean };
+export class DeskError extends Error { usage: ProviderUsage | null = null; constructor(public status: number, public code: string, message: string) { super(message); } }
