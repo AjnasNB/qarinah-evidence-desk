@@ -6,10 +6,10 @@
   "tagline": "Inspect the evidence behind a developer release handoff.",
   "event": "Open Agent Hackathon 2026",
   "proposedRoute": "Wildcard existing-project extension",
-  "status": "draft-saved-awaiting-approved-source-and-assets",
-  "readyToSubmit": false,
-  "published": false,
-  "submitted": false,
+  "status": "submitted",
+  "readyToSubmit": true,
+  "published": true,
+  "submitted": true,
   "team": {
     "name": "Cognifyr / Ajnas N B",
     "members": [
@@ -22,7 +22,7 @@
   "existingWorkDisclosed": true,
   "aiAssistanceDisclosed": true,
   "links": {
-    "githubSource": null,
+    "githubSource": "https://github.com/AjnasNB/qarinah-evidence-desk",
     "video": null,
     "liveDemo": null
   },
@@ -131,13 +131,14 @@
     },
     "pdfFormat": "Image-page companion from slide renders; editable objects remain in PPTX",
     "powerPointApplicationTest": "not performed",
-    "evidenceStatus": "Actual Zetaris and Meterless execution, founder-reported Cursor validation, most implementation Codex, no Cursor AI session. Reviewed96-second R6 film; no publication/submission claimed.",
+    "evidenceStatus": "Actual Zetaris and Meterless execution, founder-reported Cursor validation, most implementation Codex, no Cursor AI session. Reviewed R5 PDF and 96-second R6 film uploaded to submitted HackOS entry.",
     "changedSlides": [
       1,
       6,
       7
     ],
-    "uploaded": false
+    "uploaded": true,
+    "uploadedFormat": "PDF"
   },
   "videoReview": {
     "status": "reviewed-entry-r6",
@@ -170,13 +171,19 @@
     "qa": "docs/video/r6/QA.md",
     "publicUrl": null,
     "first90SecondsPicturePreserved": true,
-    "uploaded": false
+    "uploaded": true,
+    "destination": "HackOS submission; file URL persists after reload",
+    "hostedPlayback": {
+      "observedAtUtc": "2026-10-22T13:57:31.026Z",
+      "started": true,
+      "durationSeconds": 95.999999,
+      "readyState": 4,
+      "muted": true,
+      "mediaError": null,
+      "scope": "DOM media state confirms playback start; no full remote viewing or human listening review claimed"
+    }
   },
-  "blockingGates": [
-    "Approved public GitHub source and final video/deck uploads",
-    "Required source/video fields completed and verified",
-    "Final submission confirmation"
-  ],
+  "blockingGates": [],
   "limitations": [
     "Underlying local observations are caller-declared, not independently authenticated CI.",
     "Meterless uses its deterministic reference hash embedder, not learned semantic embeddings.",
@@ -213,8 +220,17 @@
     "track": "Wildcard [Tinkerer]: Bring Your Own Project",
     "description": "docs/submission/HACKOS-DESCRIPTION.txt",
     "descriptionCharacters": 1680,
-    "submissionStatus": "draft",
+    "submissionStatus": "submitted",
     "videoUploadSupported": true,
-    "deckUploadSupported": true
-  }
+    "deckUploadSupported": true,
+    "persistedAfterReload": true
+  },
+  "sourcePublication": {
+    "url": "https://github.com/AjnasNB/qarinah-evidence-desk",
+    "visibility": "PUBLIC",
+    "branch": "master",
+    "approvedAndPublishedCommit": "e1d7d6f2bc204de1a91a1bdad077f1eb4bd8ef9b",
+    "remoteCommitVerified": true
+  },
+  "submissionReceipt": "docs/submission/SUBMISSION-RECEIPT-2026-10-22.json"
 }

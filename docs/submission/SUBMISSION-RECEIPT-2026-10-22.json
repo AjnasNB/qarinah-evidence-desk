@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "qarinah.hackos-submission.v1",
+  "observedAtUtc": "2026-10-22T13:53:51.917Z",
+  "event": "Open Agent Hackathon 2026",
+  "eventUrl": "https://hackathon.genai.works/event/open-agent-hackathon-2026",
+  "team": "Cognifyr / Ajnas N B",
+  "members": 1,
+  "track": "Wildcard [Tinkerer]: Bring Your Own Project",
+  "status": "submitted",
+  "platformCounter": "Submitted 1/1",
+  "persistedAfterPageReload": true,
+  "descriptionPath": "docs/submission/HACKOS-DESCRIPTION.txt",
+  "descriptionCharacters": 1680,
+  "descriptionPersistedExactly": true,
+  "source": {
+    "url": "https://github.com/AjnasNB/qarinah-evidence-desk",
+    "visibility": "PUBLIC",
+    "branch": "master",
+    "approvedAndPublishedCommit": "e1d7d6f2bc204de1a91a1bdad077f1eb4bd8ef9b",
+    "remoteCommitVerified": true
+  },
+  "assets": {
+    "video": {
+      "path": ".local/video/r6-entry/qarinah-evidence-r6.mp4",
+      "bytes": 29768735,
+      "sha256": "c0bb774c0fe42d50e774a0d12962005d7d5d01b496bcb65be14e2949b7f0dcc8"
+    },
+    "pptx": {
+      "path": ".local/submission/output/evidence-desk-review-r5.pptx",
+      "bytes": 542390,
+      "sha256": "39a23770ac4a285037e61a7081ff0879c4c8d89081f59773f2a22856c04c5226"
+    },
+    "pdf": {
+      "path": ".local/submission/output/evidence-desk-review-r5.pdf",
+      "bytes": 550958,
+      "sha256": "7d5dc3f117414d4b4a5430fdcee083fd6b74dc84690fe33a365b0d384cab24b0"
+    }
+  },
+  "uploadPersistence": {
+    "videoUrlPresentAfterReload": true,
+    "videoHost": "iframe.mediadelivery.net",
+    "deckUrlPresentAfterReload": true,
+    "deckHost": "hackathon-server.genai.works",
+    "uploadedDeckFormat": "PDF",
+    "fullAssetUrls": "Retained privately outside Git"
+  },
+  "taskBoard": {
+    "openTasksReportedByPlatform": 14,
+    "openRequirementsReportedByPlatform": 0,
+    "confirmationUsed": "Submit anyway",
+    "tasksMarkedComplete": false
+  },
+  "cursorUse": "Founder-reported local validation in Cursor; most implementation Codex; no Cursor AI session or new recording claimed",
+  "productValidation": {
+    "lastCleanValidationCommit": "c87a8a997fe8e51374bde822f2b11fc14c60845d",
+    "testsPassed": 51,
+    "typecheck": "passed",
+    "build": "passed",
+    "vendor": "passed",
+    "productionCodeUnchangedAtPublishedCommit": true,
+    "filmedCaptureCommit": "968764add439b8ea7e7b75f9989a91dd607ec0d3",
+    "filmedTestsPassed": 46
+  },
+  "limits": [
+    "Submitted status is verified; organizer eligibility, judging and any prize payment are not guaranteed",
+    "No authenticated CI, measured token saving or new model request claimed"
+  ],
+  "receiptCommitPublishing": "Post-submission documentation remains local pending any further push approval",
+  "hostedVideoPlayback": {
+    "observedAtUtc": "2026-10-22T13:57:31.026Z",
+    "started": true,
+    "durationSeconds": 95.999999,
+    "readyState": 4,
+    "muted": true,
+    "mediaError": null,
+    "scope": "DOM media state confirms playback start; no full remote viewing or human listening review claimed"
+  }
+}
