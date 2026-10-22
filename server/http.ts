@@ -25,8 +25,9 @@ export function createDeskServer(desk: EvidenceDesk, distDir = desk.config.distD
       if (!/^(?:127\.0\.0\.1|localhost|\[::1\])(?::\d+)?$/.test(host)) throw new DeskError(403, 'HOST', 'Use this application through its local address.');
       const origin = request.headers.origin;
       if (origin && !['http://' + host, 'http://127.0.0.1:5183', 'http://localhost:5183'].includes(origin)) throw new DeskError(403, 'ORIGIN', 'This request did not come from the local application.');
-      if (request.headers['sec-fetch-site'] === 'cross-site') throw new DeskError(403, 'ORIGIN', 'Cross-site requests are not supported.');
       const url = new URL(request.url ?? '/', 'http://' + host);
+      const appNavigation = ['GET', 'HEAD'].includes(request.method ?? '') && request.headers['sec-fetch-mode'] === 'navigate' && request.headers['sec-fetch-dest'] === 'document' && !url.pathname.startsWith('/api/');
+      if (request.headers['sec-fetch-site'] === 'cross-site' && !appNavigation) throw new DeskError(403, 'ORIGIN', 'Cross-site requests are not supported.');
       if (url.pathname.startsWith('/api/')) {
         if (url.search) throw new DeskError(400, 'QUERY_PARAMETERS', 'API inputs belong in the JSON body.');
         if (request.method === 'GET' && url.pathname === '/api/status') return reply(response, 200, desk.status());

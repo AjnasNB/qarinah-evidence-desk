@@ -5,6 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
+import http from 'node:http';
 import { EvidenceDesk } from '../server/desk.ts';
 import { importHandoff, RELEASE_QUESTION, type Packet } from '../server/handoff.ts';
 import { verifyReceipt } from '../server/receipt.ts';
@@ -157,4 +158,20 @@ test('offline CLI accepts a separate trusted digest and rejects digest mismatch 
     result = run('--sha256=' + '0'.repeat(64)); assert.equal(result.status, 1); assert.equal(JSON.parse(result.stdout).code, 'RECEIPT_DIGEST');
     fs.writeFileSync(file, '{"bad":'); result = run(); assert.equal(result.status, 1); assert.equal(JSON.parse(result.stdout).code, 'RECEIPT_JSON');
   } finally { cleanup(directory); }
+});
+
+test('a top-level app navigation from another site is safe, while cross-site API and subresources stay blocked', async () => {
+  const directory = temp(), setup = config(directory);
+  fs.mkdirSync(setup.distDir); fs.writeFileSync(path.join(setup.distDir, 'index.html'), '<!doctype html><title>Local review</title>');
+  const server = createDeskServer(new EvidenceDesk(setup));
+  await new Promise<void>(resolve => server.listen(0, '127.0.0.1', resolve));
+  const origin = `http://127.0.0.1:${(server.address() as any).port}`;
+  const get = (route: string, headers: Record<string, string>) => new Promise<number>(resolve => http.get(origin + route, { headers }, response => { response.resume(); response.on('end', () => resolve(response.statusCode!)); }));
+  try {
+    const navigation = { 'sec-fetch-site': 'cross-site', 'sec-fetch-mode': 'navigate', 'sec-fetch-dest': 'document' };
+    assert.equal(await get('/', navigation), 200);
+    assert.equal(await get('/api/status', navigation), 403);
+    assert.equal(await get('/assets/app.js', { ...navigation, 'sec-fetch-mode': 'cors', 'sec-fetch-dest': 'script' }), 403);
+    assert.equal(await get('/', { ...navigation, origin: 'https://foreign.invalid' }), 403);
+  } finally { await new Promise<void>(resolve => server.close(() => resolve())); cleanup(directory); }
 });
