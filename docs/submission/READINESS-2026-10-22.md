@@ -31,8 +31,8 @@ An authentic privacy-reviewed capture could corroborate the report if available,
 | Zetaris | Actual bounded native reads; old packet abstains, separate fresh packet returns four matched citations; cleanup confirmed | Retain exact source identities; do not relabel caller-declared observations as authenticated CI |
 | Cursor | Founder-reported validation task execution; no fresh observed editor receipt | Use the accurate disclosure above; do not add a screenshot, code-change or AI-use prerequisite |
 | Product validation | Clean filmed `968764a` capture: 46 tests/build/typecheck; later suite: 51 tests | Keep these identities distinct; do not relabel old capture as newest code |
-| Video | Reviewed local r5, 96 seconds; actual product and separate verified source chapter; a minimal disclosure update is being prepared | The actual form permits a direct video upload, avoiding a separate YouTube publication; approve the final file and verify upload/processing |
-| Deck | Reviewed local seven-slide r4 PPTX/PDF | Attach the reviewed file; update any Cursor status only when the fact changes |
+| Video | Reviewed local r6, 96 seconds; first 90s picture preserved, closing founder-report disclosure updated; zero decode errors | The actual form permits a direct video upload, avoiding a separate YouTube publication; approve the exact file and verify upload/processing |
+| Deck | Reviewed local seven-slide r5 PPTX/PDF; native layout preserved and changed slides 1/6/7 inspected | Attach the reviewed PDF, retaining editable PPTX as a companion |
 | Source | Local Git/README ready; entry GitHub URL remains null | Review publication scope, credentials/vendor licensing and reproducible setup; obtain specific push/publication approval |
 | Final entry | User requested submission; Wildcard draft saved; no submitted receipt | Complete GitHub source and video fields plus the deck upload; recheck the final result and actual form's terms/approval boundary |
 

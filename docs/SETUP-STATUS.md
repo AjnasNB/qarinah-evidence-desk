@@ -16,9 +16,9 @@ The local Zetaris integration is verified. Source publication, video publication
 
 ## Media and review package
 
-The final r5 film is exactly 96 seconds with actual current repair footage and a separate verified live Zetaris chapter. Generic local narration explains the workflow over the original beat. Full decode, timing, captions, ASR, all-frame checks and independent final review passed. Prior films remain preserved. See [film QA](video/r5/QA.md).
+The final r6 film is exactly 96 seconds with real dated repair footage and a separate verified live Zetaris chapter. Its first 90 seconds of picture match r5; only the closing Cursor disclosure and narration changed. Full decode, timing, captions, bounded closing ASR and independent final review passed. Audio measures −14.03 LUFS / −1.41 dBTP. Prior films remain preserved. See [film QA](video/r6/QA.md).
 
-The final seven-slide r4 review deck is available as an editable PPTX and a viewing PDF. Native elements, geometry and font checks passed, with the changed final slide inspected. See [the package review](submission/REVIEW.md). Public media and repository URLs remain empty until authorized publication.
+The final seven-slide r5 review deck is available as an editable PPTX and a viewing PDF. Native elements, geometry and font checks passed; changed slides 1, 6 and 7 were inspected. See [the package review](submission/REVIEW.md). Source publication and the final direct HackOS uploads remain pending approval.
 
 ## Remaining gates
 
@@ -26,7 +26,7 @@ Cursor's only reply as of the 10:20 UTC inbox check was the AI Support Assistant
 
 The installed Cursor 3.17.19 now has a project workspace, manual Node tasks, an API debug configuration, concise project rules and private context exclusions. The existing user-level Qarinah MCP entry was inspected without changing it. The clean `c87a8a9` validation passed all 51 tests, typecheck, build and vendor integrity; both localhost endpoints returned HTTP 200. A CLI status report identified this project in Cursor's Agents window. The classic editor was requested separately, without changing global preferences or using desktop control. See [the Cursor guide](CURSOR.md) and [the sanitized validation receipt](validation/2026-10-22-cursor-workspace.json).
 
-The user subsequently reported **Task passed** in response to running validation inside Cursor. This is recorded as user-reported editor execution. No fresh editor-run receipt was present in the local validation directory at the follow-up check; the captured receipt remains the earlier Codex terminal execution. Neither editor AI account restoration nor independently captured Cursor development use is claimed. The final video and deck remain dated demonstrations and were not rewritten to assert eligibility.
+The user subsequently reported **Task passed** in response to running validation inside Cursor. This is recorded as user-reported editor execution. No fresh editor-run receipt was present in the local validation directory at the follow-up check; the captured receipt remains the earlier Codex terminal execution. Neither editor AI account restoration nor independently captured Cursor development use is claimed. The final film and deck now disclose this report, without claiming eligibility or a new Cursor recording.
 
 Official rule 5.1 requires Zetaris and Meterless integration and Cursor use during development; rule 6.4 asks how Cursor was used. No independent screenshot, code change or AI session is specified. The founder's direct task-pass report is accepted as user-attested development activity and disclosed without claiming a retained Cursor-run receipt. It is not an additional blocking gate merely because a later UI relaunch failed. The organizer determines final eligibility. Cursor is a development tool, not a server dependency.
 

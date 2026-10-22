@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "qarinah.entry-assets.v1",
+  "verifiedAt": "2026-10-22T13:37:37.252Z",
+  "assets": {
+    "video": {
+      "path": ".local/video/r6-entry/qarinah-evidence-r6.mp4",
+      "bytes": 29768735,
+      "sha256": "c0bb774c0fe42d50e774a0d12962005d7d5d01b496bcb65be14e2949b7f0dcc8"
+    },
+    "pptx": {
+      "path": ".local/submission/output/evidence-desk-review-r5.pptx",
+      "bytes": 542390,
+      "sha256": "39a23770ac4a285037e61a7081ff0879c4c8d89081f59773f2a22856c04c5226"
+    },
+    "pdf": {
+      "path": ".local/submission/output/evidence-desk-review-r5.pdf",
+      "bytes": 550958,
+      "sha256": "7d5dc3f117414d4b4a5430fdcee083fd6b74dc84690fe33a365b0d384cab24b0"
+    }
+  },
+  "video": {
+    "durationSeconds": 96,
+    "frames": 2880,
+    "fullDecodeErrors": 0,
+    "first90SecondsDecodedPictureIdentical": true,
+    "integratedLufs": -14.03,
+    "truePeakDbtp": -1.41,
+    "cursorUse": "founder-reported validation; no new Cursor recording"
+  },
+  "deck": {
+    "revision": "r5",
+    "slides": 7,
+    "nativeTables": 4,
+    "changedSlides": [
+      1,
+      6,
+      7
+    ],
+    "packageAndGeometryChecks": "passed"
+  },
+  "independentReview": "Changed slides and encoded ending approved; no material asset blocker",
+  "limits": [
+    "No subjective human listening or physical-phone viewing claimed",
+    "Source observations remain caller-declared; no eligibility or prize guarantee"
+  ],
+  "published": false,
+  "submitted": false
+}

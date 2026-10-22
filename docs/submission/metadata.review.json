@@ -101,19 +101,20 @@
     "entryDraft": "docs/submission/ENTRY-DRAFT.md",
     "editableCopy": "docs/submission/SLIDES.json",
     "builder": "scripts/build-submission-deck.mjs",
-    "pptx": ".local/submission/output/evidence-desk-review-r4.pptx",
-    "pdf": ".local/submission/output/evidence-desk-review-r4.pdf"
+    "pptx": ".local/submission/output/evidence-desk-review-r5.pptx",
+    "pdf": ".local/submission/output/evidence-desk-review-r5.pdf",
+    "editor": "scripts/update-entry-deck.mjs"
   },
   "deckReview": {
-    "revision": "r4",
+    "revision": "r5",
     "slides": 7,
     "nativeTables": 4,
     "nativeTextShapes": 20,
-    "pptxSha256": "ff5678a7098e59ae32220c5d68f7b4918f1e0e2f87a9539a776db7d610163310",
-    "pdfSha256": "9a8c358054acda4ba6fc125037e558721617deefae98c5c605923b7dff083f78",
+    "pptxSha256": "39a23770ac4a285037e61a7081ff0879c4c8d89081f59773f2a22856c04c5226",
+    "pdfSha256": "7d5dc3f117414d4b4a5430fdcee083fd6b74dc84690fe33a365b0d384cab24b0",
     "artifactToolReopen": "passed",
     "packageLayoutAndFontChecks": "passed",
-    "visualReview": "All seven r3 slides inspected; changed r4 slide 7 inspected; slides 1–6 text and rendered pixels unchanged; native geometry validated on all seven slides.",
+    "visualReview": "Changed slides1,6,7 inspected in exportedPDF; slides2–5 retain identical text/pixels. Canonical frozen inventory and actual file hashes match; independent final asset review passed.",
     "visibleCoverage": {
       "problemAndApproach": [
         2,
@@ -130,38 +131,46 @@
     },
     "pdfFormat": "Image-page companion from slide renders; editable objects remain in PPTX",
     "powerPointApplicationTest": "not performed",
-    "evidenceStatus": "Current deck shows actual Zetaris and Meterless use, repair guidance, separate 46-test and 51-test evidence, the reviewed 96-second film and pending Cursor evidence. Nothing published or submitted."
+    "evidenceStatus": "Actual Zetaris and Meterless execution, founder-reported Cursor validation, most implementation Codex, no Cursor AI session. Reviewed96-second R6 film; no publication/submission claimed.",
+    "changedSlides": [
+      1,
+      6,
+      7
+    ],
+    "uploaded": false
   },
   "videoReview": {
-    "status": "independently-reviewed-qualified-dated-product-demo",
-    "path": ".local/video/r5-repair/qarinah-evidence-r5.mp4",
-    "captions": ".local/video/r5-repair/qarinah-evidence-r5.srt",
+    "status": "reviewed-entry-r6",
+    "path": ".local/video/r6-entry/qarinah-evidence-r6.mp4",
+    "captions": ".local/video/r6-entry/qarinah-evidence-r6.srt",
     "durationSeconds": 96,
     "width": 1920,
     "height": 1080,
     "fps": 30,
-    "sha256": "9183bb9f53f83b1d31923e1118bbfb3d31488c6fd20485e03c1261cb50f5331a",
-    "bytes": 29761979,
+    "sha256": "c0bb774c0fe42d50e774a0d12962005d7d5d01b496bcb65be14e2949b7f0dcc8",
+    "bytes": 29768735,
     "sourceCaptureCommit": "968764add439b8ea7e7b75f9989a91dd607ec0d3",
     "realProductFootage": true,
     "separateVerifiedZetarisChapter": true,
     "silent": false,
     "narration": {
       "voice": "Generic local synthetic Kokoro af_heart",
-      "words": 165,
+      "words": 166,
       "speed": 1,
-      "lastWordEnd": 93.977
+      "lastWordEnd": 94.958
     },
     "music": "Original 120 BPM local score, continuous with smooth speech ducking",
     "authenticLogo": true,
     "colour": "BT.709",
-    "finalIntegratedLufs": -14.08,
-    "finalTruePeakDbtp": -1.46,
+    "finalIntegratedLufs": -14.03,
+    "finalTruePeakDbtp": -1.41,
     "fullDecode": "zero picture/audio errors",
     "checkedVideoFrames": 2880,
-    "independentReview": "Ship as a qualified dated product demonstration; no material blocker",
-    "qa": "docs/video/r5/QA.md",
-    "publicUrl": null
+    "independentReview": "Approved changed ending and retained qualified dated demonstration; no material asset blocker",
+    "qa": "docs/video/r6/QA.md",
+    "publicUrl": null,
+    "first90SecondsPicturePreserved": true,
+    "uploaded": false
   },
   "blockingGates": [
     "Approved public GitHub source and final video/deck uploads",

@@ -47,6 +47,16 @@
       "durationSeconds": 96,
       "change": "Referenced in slide 7 only. Film bytes are unchanged and the film is not embedded in the PPTX.",
       "claimBoundary": "Qualified dated product demonstration with a separate verified Zetaris chapter at 58–66 seconds, actual local repair journey and labeled synthetic failure/missing cases. Cursor remains pending. Independent review does not grant publication or submission permission."
+    },
+    {
+      "path": ".local/video/r6-entry/qarinah-evidence-r6.mp4",
+      "kind": "reviewed-entry-film-r6",
+      "qa": "docs/video/r6/QA.md",
+      "sha256": "c0bb774c0fe42d50e774a0d12962005d7d5d01b496bcb65be14e2949b7f0dcc8",
+      "bytes": 29768735,
+      "durationSeconds": 96,
+      "change": "Only90–96second editorial ending and narration updated to founder-reported Cursor validation. First90seconds decoded picture and first11 source voice cues retained; final audio remastered. R5 preserved.",
+      "claimBoundary": "Real dated product and Zetaris source footage plus labeled synthetic cases. Founder-reported Cursor validation; no new Cursor recording, AI session, authenticated CI or measured token savings claimed."
     }
   ]
 }
