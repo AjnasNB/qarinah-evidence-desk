@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { HMEM } from '../vendor/meterless-hmem/src/index.ts';
 import { demo, digest, emptyMetrics, jsonBytes, utf8 } from './evidence.ts';
-import { generate, modelBody, queryZetaris, SYSTEM, zetarisConfigured } from './providers.ts';
+import { bundledZetarisConfigured, generate, modelBody, queryZetaris, SQL, SYSTEM, zetarisConfigured, zetarisProtocol, zetarisQueries } from './providers.ts';
 import { DeskError, HMEM_COMMIT, LIMITS, type Answer, type AppConfig, type DemoCase, type EvidenceRecord, type QueryKey, type Snapshot } from './types.ts';
 import { assessRelease, importHandoff, RELEASE_QUESTION } from './handoff.ts';
 
@@ -23,6 +23,7 @@ export class EvidenceDesk {
   private chain: Promise<unknown> = Promise.resolve();
   private budget: { day: string; attempts: number };
   private lastZetarisRead?: string;
+  private lastZetarisReleaseRead?: string;
   constructor(readonly config: AppConfig, readonly fetcher: typeof fetch = fetch, readonly clock = Date.now) {
     this.directory = path.join(config.dataDir, digest(path.resolve(config.workspace)).slice(0, 24));
     fs.mkdirSync(this.directory, { recursive: true });
@@ -55,7 +56,7 @@ export class EvidenceDesk {
     catch { throw new DeskError(503, 'BUDGET_UNAVAILABLE', 'The model-attempt reservation could not be stored. No model request was made.'); }
   }
   status() {
-    return { name: 'Qarinah Evidence Desk', version: '0.1.0', memory: { engine: 'Meterless H-MEM reference', commit: HMEM_COMMIT, embedding: 'deterministic 64-dimensional hash reference (not learned embeddings)', records: this.hmem.store.all().length, maxRecords: LIMITS.memories }, zetaris: { configured: zetarisConfigured(this.config), verified: Boolean(this.lastZetarisRead), lastVerifiedAt: this.lastZetarisRead }, nemotron: { configured: Boolean(this.config.nemotronKey), enabled: this.config.allowNemotron && Boolean(this.config.nemotronKey), model: this.config.nemotronModel }, handoff: { format: 'qarinah-handoff-v1', question: RELEASE_QUESTION, maxRevisions: 3, maxCI: 6, maxReleases: 3, localOnly: true }, limits: LIMITS };
+    return { name: 'Qarinah Evidence Desk', version: '0.1.0', memory: { engine: 'Meterless H-MEM reference', commit: HMEM_COMMIT, embedding: 'deterministic 64-dimensional hash reference (not learned embeddings)', records: this.hmem.store.all().length, maxRecords: LIMITS.memories }, zetaris: { configured: zetarisConfigured(this.config), protocol: zetarisProtocol(this.config), supportedQueries: zetarisQueries(this.config), verified: Boolean(this.lastZetarisRead), lastVerifiedAt: this.lastZetarisRead, currentRelease: { configured: bundledZetarisConfigured(this.config), verified: Boolean(this.lastZetarisReleaseRead), lastVerifiedAt: this.lastZetarisReleaseRead } }, nemotron: { configured: Boolean(this.config.nemotronKey), enabled: this.config.allowNemotron && Boolean(this.config.nemotronKey), model: this.config.nemotronModel }, handoff: { format: 'qarinah-handoff-v1', question: RELEASE_QUESTION, maxRevisions: 3, maxCI: 6, maxReleases: 3, localOnly: true }, limits: LIMITS };
   }
   private save(snapshot: Snapshot): Snapshot {
     this.storageRoom();
@@ -89,8 +90,8 @@ export class EvidenceDesk {
     return this.serial(() => { const start = performance.now(); const value = this.save(demo((input as { case: DemoCase }).case, this.clock())); const metrics = emptyMetrics(value.sourceResponseBytes); metrics.availableEvidenceBytes = jsonBytes(value.sources); metrics.elapsedMs = Math.round(performance.now() - start); return { snapshot: value, metrics }; });
   }
   async querySource(input: unknown) {
-    if (!ownKeys(input, ['queryKey']) || !['probe', 'taxi-zones', 'reasons'].includes((input as { queryKey: string }).queryKey)) throw new DeskError(400, 'QUERY_KEY', 'Choose a supported fixed read-only query.');
-    return this.serial(async () => { this.storageRoom(); const start = performance.now(); const value = this.save(await queryZetaris(this.config, (input as { queryKey: QueryKey }).queryKey, this.clock(), this.fetcher)); this.lastZetarisRead = value.createdAt; const metrics = emptyMetrics(value.sourceResponseBytes, 1); metrics.availableEvidenceBytes = jsonBytes(value.sources); metrics.elapsedMs = Math.round(performance.now() - start); return { snapshot: value, metrics }; });
+    if (!ownKeys(input, ['queryKey']) || typeof (input as { queryKey: unknown }).queryKey !== 'string' || !Object.hasOwn(SQL, (input as { queryKey: string }).queryKey)) throw new DeskError(400, 'QUERY_KEY', 'Choose a supported fixed read-only query.');
+    return this.serial(async () => { this.storageRoom(); const start = performance.now(); const value = this.save(await queryZetaris(this.config, (input as { queryKey: QueryKey }).queryKey, this.clock(), this.fetcher)); this.lastZetarisRead = value.createdAt; if (value.transport?.queryKey === 'current-release') this.lastZetarisReleaseRead = value.createdAt; const metrics = emptyMetrics(value.sourceResponseBytes, 1); metrics.availableEvidenceBytes = jsonBytes(value.sources); metrics.elapsedMs = Math.round(performance.now() - start); return { snapshot: value, metrics }; });
   }
   async importHandoff(input: unknown) {
     return this.serial(() => { const start = performance.now(); const value = this.save(importHandoff(input, this.clock())); const metrics = emptyMetrics(value.sourceResponseBytes); metrics.availableEvidenceBytes = jsonBytes(value.sources); metrics.elapsedMs = Math.round(performance.now() - start); return { snapshot: value, metrics }; });
