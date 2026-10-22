@@ -4,6 +4,8 @@ The local Zetaris integration is verified. After the user's specific approval, s
 
 ## Verified product and source path
 
+Later local refinement adds v2 receipt replay through an isolated real Desk/Meterless instance, a browser form and offline CLI. Its final code checks passed 81 tests, typecheck, build and vendor integrity; the new real footage retains its own earlier clean 80-test capture at `79ace48`. The original submitted entry and its 46-test source footage remain unchanged. See [replay behavior](RECEIPT-REPLAY.md), [the evidence receipt](validation/2026-10-22-receipt-replay.json), and [the idea/experiment plan](IDEA-REFINEMENT-2026-10-22.md). The separate loopback preview is available at http://127.0.0.1:5184/ with inference disabled.
+
 - Clean capture `968764add439b8ea7e7b75f9989a91dd607ec0d3` records actual local tests and build at 09:59 UTC: 46 tests passed, build and typecheck passed. Actual localhost recording and Chrome review show four citations, source hashes and bounded repair guidance. See [the capture and browser receipt](validation/2026-10-22-repair.json).
 - The later native catalog fix passed the complete 51-test suite. Its five added regressions reject malformed or ambiguous catalog results and preserve existing objects.
 - The approved Zetaris driver, API, UI and PostgreSQL images are loaded. All required services passed Docker health checks. Loopback-only ports and disabled telemetry remain configured.

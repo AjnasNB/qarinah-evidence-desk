@@ -1,0 +1,204 @@
+{
+  "schemaVersion": "qarinah.receipt-replay-evidence.v1",
+  "observedAtUtc": "2026-10-22T14:29:08.047Z",
+  "publishedEntrySource": "e1d7d6f2bc204de1a91a1bdad077f1eb4bd8ef9b",
+  "localProductImplementation": "7cc1fdc9e8c40e877c7782eab378abba6eee0c65",
+  "filmedCleanCapture": {
+    "commit": "79ace480758daf2dbee42608c43ec99aed4434f4",
+    "dirty": false,
+    "testsPassed": 80,
+    "checks": [
+      {
+        "check": "tests",
+        "command": [
+          "npm",
+          "test"
+        ],
+        "outcome": "passed",
+        "observedAt": "2026-10-22T14:17:03.459Z",
+        "elapsedMs": 2252,
+        "outputSha256": "bf284dceb4612d6250728b63b4cea3da4f030cab65462e56120e35217d09c4d1",
+        "retainedBytes": 7768,
+        "truncated": false
+      },
+      {
+        "check": "build",
+        "command": [
+          "npm",
+          "run",
+          "build"
+        ],
+        "outcome": "passed",
+        "observedAt": "2026-10-22T14:17:04.377Z",
+        "elapsedMs": 917,
+        "outputSha256": "397e6bb37ecd2265815fa4dea465cb55be356dbe9bad0c16dbe22b69ec3aaa51",
+        "retainedBytes": 402,
+        "truncated": false
+      }
+    ],
+    "logsMatchRetainedHashes": true,
+    "packetSha256": "ddaf97be831a187b774e14a6417e5ea0202b401938dfa94fdf8c7a40a8398589"
+  },
+  "laterValidation": {
+    "schemaVersion": "qarinah.editor-validation.v1",
+    "startedAt": "2026-10-22T14:28:07.605Z",
+    "completedAt": "2026-10-22T14:28:10.543Z",
+    "revision": "79ace480758daf2dbee42608c43ec99aed4434f4",
+    "dirty": true,
+    "revisionUnchanged": true,
+    "workingTreeStatusUnchanged": true,
+    "nodeVersion": "v24.15.0",
+    "checks": [
+      {
+        "name": "tests",
+        "command": [
+          "node",
+          "scripts/test.mjs"
+        ],
+        "passed": true,
+        "exitCode": 0,
+        "elapsedMs": 1697,
+        "outputSha256": "eef44cef5f0e3c85c29bbe034d8f55b7731e40afa18b7f1c902b64ba904b1257",
+        "outputBytes": 7814,
+        "retainedBytes": 7814,
+        "truncated": false
+      },
+      {
+        "name": "typecheck",
+        "command": [
+          "node",
+          "node_modules/typescript/bin/tsc",
+          "--project",
+          "tsconfig.json"
+        ],
+        "passed": true,
+        "exitCode": 0,
+        "elapsedMs": 231,
+        "outputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "outputBytes": 0,
+        "retainedBytes": 0,
+        "truncated": false
+      },
+      {
+        "name": "build",
+        "command": [
+          "node",
+          "node_modules/vite/bin/vite.js",
+          "build"
+        ],
+        "passed": true,
+        "exitCode": 0,
+        "elapsedMs": 690,
+        "outputSha256": "2eec7210246c2ab0cba75c4617dc01ba6d7c40416f8ef10ff65384df1e603485",
+        "outputBytes": 351,
+        "retainedBytes": 351,
+        "truncated": false
+      },
+      {
+        "name": "vendor",
+        "command": [
+          "node",
+          "scripts/verify-vendor.mjs"
+        ],
+        "passed": true,
+        "exitCode": 0,
+        "elapsedMs": 93,
+        "outputSha256": "379278a5669bf5829d29929a8928d149aa8d0fa032b4cfe3fe36bfac2f1552b9",
+        "outputBytes": 86,
+        "retainedBytes": 86,
+        "truncated": false
+      }
+    ],
+    "passed": true,
+    "actualCursorDevelopmentUseVerified": false,
+    "note": "Local validation only. A terminal receipt does not identify the editor or authenticate CI. Same-status source edits during execution are not detected.",
+    "receiptPath": ".local/editor-validation/20261022T142807605Z-ec1c88c5/receipt.json",
+    "testsPassed": 81,
+    "scope": "Validation after safe top-level browser-navigation fix; filmed receipt retains its original clean80-test identity."
+  },
+  "recordedWorkflow": {
+    "actualReceiptBytes": 12841,
+    "actualReceiptResult": {
+      "status": "consistent",
+      "reviewPolicy": "qarinah-release-review-v1",
+      "checkedAt": "2026-10-22T14:17:20.155Z",
+      "reviewedAt": "2026-10-22T14:17:14.056Z",
+      "exportedAt": "2026-10-22T14:17:14.063Z",
+      "sourceRecordsChecked": 4,
+      "recorded": {
+        "status": "answered",
+        "decision": "ready",
+        "reason": "release-ready-within-imported-evidence"
+      },
+      "current": {
+        "status": "answered",
+        "decision": "ready",
+        "reason": "release-ready-within-imported-evidence"
+      },
+      "snapshotExpiredNow": false,
+      "provenance": "local-observation",
+      "sourceAuthentication": "not independently authenticated",
+      "providerCalls": 0,
+      "limits": [
+        "Consistency reproduces a decision from supplied observations; it does not establish that CI or the historical memory lookup ran.",
+        "Hashes are not signatures. A fully rewritten, internally consistent receipt can pass without a separately trusted file digest or producer signature.",
+        "The current assessment uses the same saved packet, without rereading external sources. Neither result authorizes a release.",
+        "Runtime flags, provider usage, latency, byte counters, historical memory IDs, repair guidance and sponsor transport metadata are not verified."
+      ]
+    },
+    "alteredReceiptRejection": {
+      "code": "RECEIPT_DECISION",
+      "message": "The saved decision, claims, citations or exclusions do not match an isolated replay."
+    },
+    "explicitSyntheticExpiryResult": {
+      "status": "consistent",
+      "reviewPolicy": "qarinah-release-review-v1",
+      "checkedAt": "2026-10-22T14:17:44.188Z",
+      "reviewedAt": "2026-10-22T12:17:14.063Z",
+      "exportedAt": "2026-10-22T12:17:14.063Z",
+      "sourceRecordsChecked": 4,
+      "recorded": {
+        "status": "answered",
+        "decision": "ready",
+        "reason": "release-ready-within-imported-evidence"
+      },
+      "current": {
+        "status": "abstained",
+        "decision": null,
+        "reason": "stale-snapshot"
+      },
+      "snapshotExpiredNow": true,
+      "provenance": "synthetic-replay",
+      "sourceAuthentication": "not independently authenticated",
+      "providerCalls": 0,
+      "limits": [
+        "Consistency reproduces a decision from supplied observations; it does not establish that CI or the historical memory lookup ran.",
+        "Hashes are not signatures. A fully rewritten, internally consistent receipt can pass without a separately trusted file digest or producer signature.",
+        "The current assessment uses the same saved packet, without rereading external sources. Neither result authorizes a release.",
+        "Runtime flags, provider usage, latency, byte counters, historical memory IDs, repair guidance and sponsor transport metadata are not verified."
+      ]
+    },
+    "providerCalls": 0,
+    "pageErrors": [],
+    "blockedRequests": [],
+    "mobileViewport": {
+      "width": 390,
+      "height": 844,
+      "documentOverflow": false
+    },
+    "browser": "Actual headless Chrome product recordings; separate authenticated Chrome preview also reproduced the real receipt"
+  },
+  "review": {
+    "findingsClosed": [
+      "Zetaris transport-specific repair guidance excluded from consistency comparison and covered by mocked query-to-export replay test",
+      "Dated assessment labels and checkedAt avoid presenting a stale open screen as current",
+      "Safe top-level local page navigation works while foreign origins, cross-site API reads and subresources remain blocked"
+    ]
+  },
+  "limitations": [
+    "Caller-declared observations; no independent CI or producer authentication",
+    "Synthetic mutation/control tests are not user research or a representative error rate",
+    "No provider token saving, user impact, prize probability or new sponsor query is established",
+    "No new public push, asset upload or submission update has been performed"
+  ]
+}
