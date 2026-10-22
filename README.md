@@ -27,6 +27,8 @@ The default release recommendation is `hold`. An explicit local reviewer may run
 
 Paste the generated `packet.json` into Developer handoff, inspect the preview, select Import handoff, then review **What is the current release decision?** Imported provenance is caller-declared; this is not authenticated CI. Editing the question clears its result. Editing pasted JSON changes only the preview until Import handoff is selected; it does not replace the active snapshot. Unknown fields and malformed references are rejected by the backend.
 
+Bounded Next steps identify stale, missing, failed or conflicting observations and link to their exact evidence. Fix failed checks at their source and capture real new results. The explicit import or source-reread action retrieves observations; it never changes outcomes, runs CI or grants deployment permission.
+
 Synthetic Atlas/Beacon cases remain available for clean, conflicting and missing support evidence. They are visibly labeled replay data, not live sponsor calls.
 
 For the bundled Zetaris platform, **Investigate handoff** reads the fixed latest developer packet, prepares the release question and clears the earlier review. It does not run CI or deploy. A successful connection probe does not mark this separate handoff query verified. Review timestamps and a historical-result cue make expired observations visible without silently fetching new data. See [source preparation and configuration](docs/ZETARIS-HANDOFF.md).
@@ -42,7 +44,9 @@ Byte measurements describe serialized UTF-8 data. The full-context prompt is a c
 
 ## Validate
 
-At clean revision `dee9387`, all 40 tests, the production build and typecheck passed. Chrome reviewed the new actual capture with four citations; a separate API cross-check confirmed zero provider attempts. The earlier real packet correctly abstained after its observations became stale. See [the current validation receipt](docs/validation/2026-10-22-bundled.json); the [original 30-test receipt](docs/validation/2026-10-22-local.json) remains preserved. Live Zetaris and Cursor-use evidence remain pending; local checks do not establish event eligibility.
+The full suite passed 51 tests after the native catalog verifier fix. The clean movie capture at `968764a` passed 46 tests, the production build and typecheck. Chrome and the actual recording demonstrated stale repair guidance followed by a separate fresh capture with four citations. See [the capture receipt](docs/validation/2026-10-22-repair.json); earlier receipts remain preserved.
+
+Real bundled Zetaris authentication, native source registration, exact old/fresh source reads and query cleanup also passed. The old observations abstained; an explicit reread after the genuine source update returned the expected revision and four matching citations. No model attempt was made. See [the live verification receipt](docs/validation/2026-10-22-zetaris-live.json) and [local verification runbook](docs/runtime/LOCAL-ZETARIS-VERIFICATION.md). These observations do not independently authenticate CI. Cursor development evidence remains pending, so no event eligibility or submission is claimed.
 
 ```text
 npm test

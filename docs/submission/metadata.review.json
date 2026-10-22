@@ -26,25 +26,32 @@
     "liveDemo": null
   },
   "localEvidence": {
-    "validationReceipt": "docs/validation/2026-10-22-bundled.json",
-    "validationReceiptCommit": "69e29c6",
-    "testedCommit": "dee93876a5a108ff711aa25f2021705fa618cb34",
+    "validationReceipt": "docs/validation/2026-10-22-repair.json",
+    "validationReceiptCommit": "2106e54",
+    "testedCommit": "968764add439b8ea7e7b75f9989a91dd607ec0d3",
     "workingTreeDirtyAtCapture": false,
     "tests": {
-      "passed": 40,
+      "passed": 46,
       "failed": 0,
       "skipped": 0
     },
     "build": "passed",
     "typecheck": "passed",
     "browserReview": {
-      "source": "actual fresh local packet through Chrome",
+      "source": "Actual stale-to-fresh imports and real Zetaris source read/reread in Chrome",
       "citedRecords": 4,
-      "separateApiProviderAttempts": 0
+      "providerAttempts": 0
     },
     "authenticatedCI": false,
     "deploymentAuthorization": false,
-    "historicalReceipt": "docs/validation/2026-10-22-local.json"
+    "historicalReceipt": "docs/validation/2026-10-22-local.json",
+    "laterCompleteSuite": {
+      "commit": "289c624",
+      "passed": 51,
+      "failed": 0,
+      "skipped": 0,
+      "scope": "Actual npm test after native catalog verifier fix; captured movie packet retains its original46-test identity."
+    }
   },
   "sponsorEvidence": {
     "meterless": {
@@ -53,9 +60,16 @@
       "embedding": "deterministic hash reference"
     },
     "zetaris": {
-      "status": "live-query-pending",
-      "successfulLiveQuery": false,
-      "adapter": "bundled-2.4.3-fixed-current-release-40-local-tests"
+      "status": "verified-local-native-source",
+      "successfulLiveQuery": true,
+      "adapter": "bundled-2.4.3-fixed-current-release",
+      "receipt": "docs/validation/2026-10-22-zetaris-live.json",
+      "receiptCommit": "f66c3c8",
+      "queryCleanup": "confirmed",
+      "sourceMatchesPreparedPacket": true,
+      "oldObservationOutcome": "abstained",
+      "freshObservationOutcome": "ready-with-four-citations",
+      "authenticatedCI": false
     },
     "cursor": {
       "status": "support-escalated-access-not-restored",
@@ -135,16 +149,40 @@
     "publicUrl": null
   },
   "blockingGates": [
-    "Verified live Zetaris use",
-    "Actual Cursor development evidence",
-    "Completion of sponsor footage and approved final public video URL",
+    "Actual Cursor development evidence or official clarification",
+    "Completed reviewed final demo and deck, and approved public video URL",
     "Approved GitHub source publication with README",
     "Final review and action-specific submission approval"
   ],
   "limitations": [
-    "Local imported observations are caller-declared, not independently authenticated CI.",
-    "Meterless uses its reference hash embedder, not learned semantic embeddings.",
-    "Fixture bytes establish neither provider billing nor total savings.",
-    "No deployment, live sponsor success, award or winning probability is claimed."
-  ]
+    "Underlying local observations are caller-declared, not independently authenticated CI.",
+    "Meterless uses its deterministic reference hash embedder, not learned semantic embeddings.",
+    "Finite synthetic regressions and body-byte measurements establish neither representative error rates nor provider-token savings.",
+    "Actual source transport passed; deployment authority, user impact and winning probability remain unestablished."
+  ],
+  "releaseChallenge": {
+    "receipt": "docs/validation/release-challenge.json",
+    "classification": "hand-authored synthetic regression; not blind evaluation",
+    "expectedMatches": 20,
+    "total": 20,
+    "falseReady": 0,
+    "nonReadyCases": 18,
+    "httpRequests": 83,
+    "requestBodyBytes": 21279,
+    "responseBodyBytes": 196794,
+    "providerCalls": 0,
+    "modelAttempts": 0,
+    "winningProbability": null
+  },
+  "qualityReview": {
+    "score": 74,
+    "maximum": 100,
+    "classification": "Independent subjective prototype rubric; not a win probability",
+    "impact": 20,
+    "technical": 17,
+    "innovation": 9,
+    "demo": 13,
+    "ux": 8,
+    "sponsors": 7
+  }
 }

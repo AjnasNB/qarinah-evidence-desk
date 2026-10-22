@@ -2,46 +2,43 @@
 
 ## Current judgment
 
-The strongest scope is a developer's release handoff: inspect the current revision and referenced checks, explain the recommendation, and withhold it when evidence expires or disagrees. React/Vite and a local Node service fit this prototype. Meterless supplies actual bounded memory and audit operations; its reference hash embedder is disclosed. Zetaris should supply a real developer source rather than an unrelated connection sample. Cursor is a required development tool for this event, not a server dependency.
+Qarinah Evidence Desk is a working, narrowly scoped developer-handoff prototype. Its useful behavior is the complete investigation path: retrieve an exact source packet, inspect current revision and checks, explain blockers, explicitly obtain updated evidence, then reassess with citations. Missing or conflicting observations remain visible.
 
-The fixed handoff query and explicit Investigate action connect that workflow in code. Forty-six local tests cover the provider contract, assessment and bounded repair guidance, including secret redaction, malformed packets and cleanup errors. Failed checks require actual source fixes and new results; a reread cannot turn them into successful checks. Plans cite only records in the selected snapshot and retain original observation times. Live authentication, source registration and query cleanup remain unverified while vendor images download. These tests are not live sponsor evidence.
+The live Zetaris path is now verified. The unchanged old source produced abstention, and the separately captured fresh source produced READY with four matching evidence identities and confirmed cleanup. Actual Chrome actions demonstrated the stale repair plan and explicit source reread. This proves the selected observations traveled through the integration. It does not independently authenticate the underlying CI or confer release authority.
 
-A separate 20-case synthetic HTTP challenge matched all expected classifications, with zero false-ready results across its 18 non-ready cases and zero provider calls. Its complete request/response bodies totalled 218,073 bytes, including audit responses. This is a finite hand-authored regression set, not a blind study, representative error rate or evidence of token savings. See [the measured boundaries and results](BENCHMARK.md).
+Meterless executes its pinned reference memory and audit implementation, using the disclosed deterministic hash embedder. Optional model generation is disabled. The release assessment and repair plan use typed rules over explicit observations, rather than general autonomous reasoning.
 
-The second independent subjective rubric review scored the current prototype **69/100**: impact 20/30, technical execution 16/20, innovation 9/15, demo 13/15, product/UX 8/10 and sponsor technology 3/10. This assesses observed prototype quality; it is not a winning probability. Other entries, judges' decisions and actual user outcomes are unknown. No measured basis supports a 99% win claim. Mandatory sponsor conditions also remain unresolved regardless of score. The largest next improvement is the existing source-backed journey: genuine Zetaris retrieval, inspectable repair needs, explicit refresh and changed cited reassessment.
+## Evidence and measured boundaries
 
-One actual ageing check at 08:29:51 UTC on 22 October re-imported the unchanged 07:29:47 capture. The running service abstained with `missing-current-revision`, excluded all four records as `stale-source`, and made zero provider attempts. The UI now timestamps reviews and marks historical results rather than presenting an earlier ready result as current.
+The clean movie capture at `968764a` passed 46 tests, build and typecheck. After the native catalog fix, the full suite passed 51 tests. Five new verifier regressions reject malformed or ambiguous native catalogs, preserve existing objects and stop after unconfirmed creation.
 
-The main limitations are substantive: observations are caller-declared, the source currently carries a bounded packet rather than independently authenticated CI, only one release question is supported, and total workflow/token savings are unmeasured. The product is a useful scoped prototype. A claim of general autonomous reasoning, authenticated release approval, proven savings or near-certain prize success would exceed the evidence.
+Seven actual localhost browser checks covered stale repair guidance, source links, plan clearing and the 390 px layout. A separate 20-case hand-authored synthetic HTTP challenge matched all expected outcomes, with zero false-ready results across 18 non-ready cases and zero provider calls. Its complete bodies totalled 218,073 bytes. These finite regressions supply no blind evaluation, representative error rate, user-impact result or token-savings claim.
 
-Submission should wait for authentic Zetaris execution and actual Cursor development evidence, then a new recorded integration segment. Existing local footage remains a historical demonstration of its named build.
+Sources: [capture and browser recording](validation/2026-10-22-repair.json), [live sponsor execution](validation/2026-10-22-zetaris-live.json), [challenge measurement](BENCHMARK.md), and [repair UI check](validation/repair-ui.md).
 
-Initial review: 22 October 2026, before the developer-handoff extension. The initial 19 tests, typecheck and build passed. Those checks cover local code and mocked provider contracts; no authenticated live Zetaris query or real model inference is established here. Optional model generation is currently disabled.
+## Independent subjective rubric
 
-## Follow-up implementation
+The latest independent review scores the observed prototype **74/100**:
 
-An explicit developer-handoff import now accepts revision, CI and release observations. Typed rules hold failed/dirty handoffs and abstain on missing, stale or conflicting evidence; validated supersession remains inspectable through Meterless. A local capture script runs actual tests/build and hashes output. Import is still caller-declared, not independently authenticated CI. It does not yet establish a Zetaris-backed developer source of record.
+| Criterion | Score |
+| --- | ---: |
+| Impact | 20/30 |
+| Technical execution | 17/20 |
+| Innovation | 9/15 |
+| Demo | 13/15 |
+| Product and UX | 8/10 |
+| Sponsor technology | 7/10 |
 
-Independent review found and prompted fixes for three material defects: array-to-string enum coercion could produce false readiness, malformed timestamp objects could crash the preview, and deterministic results were labeled model-assisted. Regressions cover these cases. Clean revision `d0c2bce` passed all 30 tests, build and typecheck; its real capture was reviewed through Chrome with four citations and zero provider attempts. See [the receipt](validation/2026-10-22-local.json). Live sponsor evidence and measured overall utility remain open.
+Earlier reviews scored 61 before the repair/measurement work and 69 before live Zetaris verification. The increase reflects specific observed improvements. These are subjective quality scores against the published rubric, not winning probabilities. Other entries, judges and user outcomes remain unknown. No evidence supports a 99% win claim.
 
-## What exists
+The idea is relevant to the developer workflow theme, with inspectable provenance and honest abstention. Its distinction is still modest: one exact supported release question and a controlled observation file. A broader product, authenticated source adapters and measured task utility remain future work.
 
-The product now reviews one typed developer handoff question alongside the original synthetic Atlas/Beacon support facts and fixed Zetaris connection/sample queries. It uses actual pinned Meterless H-MEM reference code, resolves required evidence against the selected snapshot, exposes citations and exclusions, validates explicit same-revision supersession, and expires snapshots. H-MEM's embedder is deterministic reference code, not a learned semantic model.
+## Remaining gates and highest-value improvements
 
-The observation-envelope package separately demonstrates explicit projection and reference reuse. It is not yet a general adapter around developer tools. The clean-revision capture/import rehearsal establishes a working local path. Comparative measurements are still needed to demonstrate its utility and total cost.
+1. Resolve Cursor access through official support or obtain official eligibility clarification. Rule 5.1 requires Cursor use during development; installing its CLI or building here does not establish that use. The product itself has no Cursor server dependency.
+2. Finish the refreshed real-footage demo and deck, retain exact capture identities, then review approved public source/video links and submission fields. Local media and receipts alone are not a submitted entry.
+3. Add independently authenticated, revision-bound CI observations, retaining precise source identity and authority boundaries.
+4. Compare representative developer handoffs against a full-context workflow. Measure complete requests, wrappers, retrieval, audit reads, failures, retries and actual provider usage alongside correct outcomes. Include real developers before claiming user impact.
+5. Broaden questions only when source coverage and evaluation justify it. Preserve refusal for missing evidence and explicit user control over source reads and external actions.
 
-## Meaningful remaining gaps
-
-- **Workflow relevance:** the former lack of developer import is partially resolved. A strict schema now accepts revision, tests/build and release observations for one exact release-decision question. It is not a general tool-output or approval-evidence adapter. The separate support workflow still uses a narrow keyword classifier; fixed Zetaris samples do not establish developer-event storage and retrieval.
-- **Measured utility:** the large synthetic fixture demonstrates byte accounting. It does not establish representative savings, preserved task quality or lower provider costs. Synthesis currently selects exact cited excerpts rather than generating a broader explanation.
-- **Source lifecycle:** explicit revision references, supersession and freshness checks are implemented. They do not authenticate CI, establish approval authority or detect external changes after capture. Retain the source packet for re-import after restart; persisted memory alone does not restore an evicted snapshot or prove current repository state.
-- **Integration evidence:** configuration, mocked tests and an account-ready email cannot establish a live sponsor interaction. Mandatory sponsor-use claims require actual evidence. H-MEM execution is present; authenticated Zetaris use remains unverified. Actual Cursor work must be evidenced separately. Disabled model inference cannot support a Nemotron-use claim; verify the chosen track's exact requirements before calling the entry eligible.
-
-## Ranked next improvements
-
-1. Complete the approved live sponsor path; do not present the demonstrated local import or fixed-query adapters as a Zetaris-backed developer source of record.
-2. Measure that task against a full-context baseline, including selection, memory and synthesis overhead. Add changed-source, missing-artifact, unresolved-conflict and hostile-text cases. Report unsuccessful cases too.
-3. Provide inspectable bounded packs before optional transmission, durable artifact resolution and visible input/result freshness. Preserve abstention when the pack omits required evidence.
-4. Complete genuine sponsor receipts and real product footage using only approved free access. If a required integration is unavailable, report the limitation rather than simulate it.
-
-The strongest product story is a verifiable developer handoff with a measured context budget. Do not present the current prototype as a proven general solution, claim a fixed number of creative iteration cycles, or imply a winning probability.
+The original work and vendor reference remain attributed. Existing dated captures and earlier review files are preserved. No fixed iteration count, autonomous release authority, authenticated CI, measured provider saving or competition result is claimed.
