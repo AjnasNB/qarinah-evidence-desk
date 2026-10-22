@@ -21,7 +21,8 @@ if (copy.slides.length !== 7) throw new Error('This review deck must have exactl
 const revision = process.argv.find(arg => arg.startsWith('--revision='))?.slice('--revision='.length) ?? 'r1';
 if (!/^r[1-9][0-9]?$/.test(revision)) throw new Error('Use a bounded revision such as --revision=r2.');
 const suffix = revision === 'r1' ? '' : '-' + revision;
-const screenshotPath = process.env.SCREENSHOT_PATH ? path.resolve(process.env.SCREENSHOT_PATH) : path.join(root, '.local/submission/assets/product-review.png');
+const screenshotPath = process.env.SCREENSHOT_PATH ? path.resolve(process.env.SCREENSHOT_PATH) : path.join(root, copy.screenshotPath ?? '.local/submission/assets/product-review.png');
+const templatePath = copy.templatePptx ? path.resolve(root, copy.templatePptx) : undefined;
 const buildDir = path.join(root, '.local/submission/build' + suffix);
 const outputDir = path.join(root, '.local/submission/output');
 const rendersDir = path.join(root, '.local/submission/rendered' + suffix);
@@ -41,7 +42,7 @@ if (resume) {
 
 const font = resolvePresentationFont();
 const colors = { paper: '#F5F8F6', ink: '#153E35', muted: '#51665B', mint: '#25E6A1', dark: '#102A24', line: '#DCE5DF' };
-const presentation = resume ? await PresentationFile.importPptx(await FileBlob.load(finalPath)) : Presentation.create({ slideSize: { width: 1280, height: 720 } });
+const presentation = resume || templatePath ? await PresentationFile.importPptx(await FileBlob.load(resume ? finalPath : templatePath)) : Presentation.create({ slideSize: { width: 1280, height: 720 } });
 function text(slide, value, x, y, w, h, size = 28, color = colors.ink, bold = false) {
   const box = slide.shapes.add({ geometry: 'textbox', position: { left: x, top: y, width: w, height: h }, fill: 'none', line: { fill: 'none', width: 0 } });
   box.text = value;
@@ -61,7 +62,28 @@ function table(slide, rows, widths, top, height) {
 }
 const imageBytes = async file => { const value = await fs.readFile(file); return value.buffer.slice(value.byteOffset, value.byteOffset + value.byteLength); };
 
-if (!resume) for (const item of copy.slides) {
+if (!resume && templatePath) {
+  if (presentation.slides.items.length !== 7) throw new Error('The existing review deck must contain seven slides.');
+  await presentation.inspect({ select: '$.slides[*]', include: ['id', 'index', 'layout', 'elements.id', 'elements.kind', 'elements.text'], fileName: path.join(buildDir, 'source-layout.ndjson') });
+  for (const [i, item] of copy.slides.entries()) {
+    const slide = presentation.slides.items[i];
+    const values = item.layout === 'cover' ? [item.title, item.subtitle, item.owner, item.disclosure] : item.layout === 'close' ? [item.title, item.body, item.owner, item.disclosure] : item.layout === 'screenshot' ? [item.title, item.caption, item.disclosure] : item.layout === 'workflow' ? [item.title, item.body, item.disclosure] : [item.title, item.disclosure];
+    if (slide.shapes.items.length !== values.length) throw new Error('Unexpected reference text structure on slide ' + (i + 1));
+    for (const [j, value] of values.entries()) slide.shapes.items[j].text = value;
+    if (item.rows) {
+      if (slide.tables.items.length !== 1) throw new Error('Expected one native reference table on slide ' + (i + 1));
+      const native = slide.tables.items[0];
+      for (let r = 0; r < item.rows.length; r++) for (let c = 0; c < item.rows[r].length; c++) native.cells.set(r, c, item.rows[r][c]);
+    }
+    if (item.layout === 'screenshot') {
+      const image = slide.images.items[0];
+      const frame = image.frame, crop = image.crop, fit = image.fit;
+      image.replace({ blob: await imageBytes(screenshotPath), contentType: 'image/png', alt: 'Actual Zetaris source review with four cited observations and caller-declared CI disclaimer', fit });
+      image.frame = frame; image.crop = item.crop ?? crop;
+    }
+    slide.speakerNotes.text = item.notes;
+  }
+} else if (!resume) for (const item of copy.slides) {
   const s = presentation.slides.add();
   const dark = item.layout === 'cover' || item.layout === 'close';
   s.background.fill = dark ? colors.dark : colors.paper;
@@ -103,7 +125,7 @@ for (const [i, slide] of presentation.slides.items.entries()) {
   await fs.writeFile(path.join(rendersDir, `slide-${String(i + 1).padStart(2, '0')}.png`), new Uint8Array(await png.arrayBuffer()));
 }
 if (!resume) await (await PresentationFile.exportPptx(presentation)).save(draftPath);
-const result = resume ? JSON.parse(await fs.readFile(path.join(buildDir, 'validation.json'), 'utf8')) : await finalizePresentation({ workspaceDir: root, candidatePath: draftPath, finalPath, pythonExecutable: runtimePython, integrityValidatorPath: path.join(skillDir, 'container_tools/inspect_presentation_package_integrity.py'), layoutValidatorPath: path.join(skillDir, 'container_tools/inspect_presentation_layout_geometry.py'), explicitTotalSlideCount: 7, requiredNativeTableOwnerSlides: [2, 4, 5, 6], requiredNativeChartOwnerSlides: [], layoutArgs: ['--expected-slide-size-emu', '12192000,6858000', '--validate-bullet-geometry', '--validate-heading-fit', ...[2, 4, 5, 6].flatMap(slide => ['--require-native-table-slide', String(slide)])], fontPolicy: { basis: 'design', families: [font] }, verifyArtifactToolImport: true, receiptPath: path.join(buildDir, 'validation.json') }).catch(async error => { await fs.writeFile(path.join(buildDir, 'finalizer-error.json'), JSON.stringify({ message: error.message }, null, 2)); throw new Error(error.message.split('\n')[0] + ' (see .local/submission/build/finalizer-error.json)'); });
+const result = resume ? JSON.parse(await fs.readFile(path.join(buildDir, 'validation.json'), 'utf8')) : await finalizePresentation({ workspaceDir: root, candidatePath: draftPath, finalPath, pythonExecutable: runtimePython, integrityValidatorPath: path.join(skillDir, 'container_tools/inspect_presentation_package_integrity.py'), layoutValidatorPath: path.join(skillDir, 'container_tools/inspect_presentation_layout_geometry.py'), explicitTotalSlideCount: 7, requiredNativeTableOwnerSlides: [2, 4, 5, 6], requiredNativeChartOwnerSlides: [], layoutArgs: ['--expected-slide-size-emu', '12192000,6858000', '--validate-bullet-geometry', '--validate-heading-fit', ...[2, 4, 5, 6].flatMap(slide => ['--require-native-table-slide', String(slide)])], fontPolicy: templatePath ? { basis: 'reference', families: [font], referencePath: templatePath, referenceSha256: createHash('sha256').update(await fs.readFile(templatePath)).digest('hex') } : { basis: 'design', families: [font] }, verifyArtifactToolImport: true, receiptPath: path.join(buildDir, 'validation.json') }).catch(async error => { await fs.writeFile(path.join(buildDir, 'finalizer-error.json'), JSON.stringify({ message: error.message }, null, 2)); throw new Error(error.message.split('\n')[0] + ' (see private build finalizer-error.json)'); });
 let pdfMode = 'native-artifact-export';
 try {
   const pdf = await presentation.export({ format: 'pdf' });

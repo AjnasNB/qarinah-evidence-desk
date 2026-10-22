@@ -2,6 +2,22 @@
   "schemaVersion": "qarinah.submission-assets.v1",
   "assets": [
     {
+      "path": ".local/submission/assets-r3/live-release-review.png",
+      "kind": "actual-product-video-frame",
+      "source": ".local/video/live-20261022T101816860Z/raw.webm",
+      "sourceManifest": ".local/video/live-20261022T101816860Z/manifest.json",
+      "sourceVideoSha256": "576df5935da5047851bbd81838282ef3d8bc57cb14e2aa3d754a6c682a974f12",
+      "sourceManifestSha256": "954ebd8eca5722e6a13a00dc2f46dd82b7ca523db0ef4ee5826cf6c9ae7e3088",
+      "sha256": "8a6e6ef4b3291ce3141333302f9801c94c12058a3d5303be535fa260713437b9",
+      "bytes": 504894,
+      "width": 1600,
+      "height": 900,
+      "sourceTimeSeconds": 11,
+      "change": "One unaltered frame extracted with installed FFmpeg. Native slide crop preserves the result, four citations and authority disclaimer. Source recording remains unchanged.",
+      "privacyReview": "Inspected actual pixels: localhost product review and public-safe commit/observations. No credentials, private account page or authorization link visible.",
+      "claimBoundary": "Actual Zetaris local-runtime source read and deterministic release review. Source packet 968764a contains 46-test observations. The later 51-test suite at 289c624 is separate. CI provenance remains caller-declared."
+    },
+    {
       "path": ".local/submission/assets/product-review.png",
       "formerDraftPath": "docs/submission/assets/product-review.png",
       "kind": "actual-product-screenshot",

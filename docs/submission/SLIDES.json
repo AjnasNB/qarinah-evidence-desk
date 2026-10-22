@@ -1,19 +1,21 @@
 {
   "title": "Qarinah Evidence Desk",
-  "status": "Local review draft, submission blocked",
+  "status": "Local review draft, Cursor evidence and public links pending",
+  "templatePptx": ".local/submission/output/evidence-desk-review-r2.pptx",
+  "screenshotPath": ".local/submission/assets-r3/live-release-review.png",
   "slides": [
     {
       "layout": "cover",
       "title": "Qarinah\nEvidence Desk",
       "subtitle": "Developer release handoff review",
       "owner": "Cognifyr / Ajnas N B",
-      "disclosure": "Local draft. Required sponsor evidence remains pending.",
-      "notes": "Independent extension started 22 October 2026. Existing Qarinah concepts and brand assets predate the event. Sources: PRODUCT.md; public/brand/SOURCE.txt; THIRD-PARTY-NOTICES.txt."
+      "disclosure": "Local review draft. Cursor evidence and public links remain pending.",
+      "notes": "Independent extension started 22 October 2026. Existing Qarinah concepts and brand assets predate the event. Actual local Zetaris and Meterless use is now evidenced. Cursor remains pending. Sources: PRODUCT.md; public/brand/SOURCE.txt; THIRD-PARTY-NOTICES.txt; docs/validation/2026-10-22-zetaris-live.json."
     },
     {
       "layout": "workflow",
-      "title": "Release handoff evidence",
-      "body": "A release recommendation needs a matching revision and supporting checks. The desk reviews observations the developer explicitly imports.",
+      "title": "Evidence, assessment and repair",
+      "body": "Read the fixed Zetaris source or explicitly import a handoff. The desk checks its revision and referenced tests and build before it answers.",
       "rows": [
         [
           "Observation",
@@ -25,46 +27,52 @@
         ],
         [
           "Tests and build",
-          "Current revision references, outcomes and explicit supersession"
+          "Matching revision, outcomes and explicit supersession"
         ],
         [
-          "Release statement",
-          "Referenced checks and unresolved conflicts"
+          "Next steps",
+          "Missing or stale: refresh. Failed or dirty: fix the source."
         ]
       ],
-      "disclosure": "Imported statements retain their sources. They do not grant release authority.",
-      "notes": "Sources: server/handoff.ts; README.md. Only the exact current-release-decision question is supported for typed developer handoffs. Provenance is caller-declared."
+      "disclosure": "Refreshing reads observations. CI runs and deployment require separate action.",
+      "notes": "Sources: server/handoff.ts; server/repair.ts; src/RepairPlan.jsx; docs/validation/repair-ui.md; docs/validation/2026-10-22-repair.json. At most six bounded repair items reference only evidence IDs in the snapshot. Failed/dirty evidence requires genuine source work and new results. Exact supported question: What is the current release decision? The app does not run CI, rewrite old observations or deploy."
     },
     {
       "layout": "screenshot",
-      "title": "Actual local product review",
-      "caption": "Four cited observations. Zero provider attempts.",
-      "disclosure": "Actual local capture at d0c2bce. Supplied observations remain caller-declared.",
-      "notes": "Screenshot: .local/submission/assets/product-review.png, copied byte-for-byte from .local/video/20261022T073700734Z/03-real-review.png. Original screenshot shows the actual imported local packet. No provider or deployment action. Validation: docs/validation/2026-10-22-local.json, committed9fbf949. The slide crop preserves the result and its authority disclaimer."
+      "title": "Actual Zetaris source review",
+      "caption": "Four cited observations. Zero model attempts.",
+      "disclosure": "Filmed packet: 46 tests at 968764a. Latest suite: 51 passed at 289c624.",
+      "crop": {
+        "left": 0.1375,
+        "top": 0.211111111,
+        "right": 0.2375,
+        "bottom": 0.338888889
+      },
+      "notes": "Actual unaltered frame at 11 seconds of .local/video/live-20261022T101816860Z/raw.webm, extracted to .local/submission/assets-r3/live-release-review.png. Real browser source and answer requests returned HTTP 200 without fabricated responses. Packet commit 968764add439b8ea7e7b75f9989a91dd607ec0d3 retains its genuine 46-test/build capture. The later verifier suite at 289c624 passed 51 tests. These are separate observations. Native crop preserves the result, four citations and authority disclaimer. Sources: docs/validation/2026-10-22-zetaris-live.json; docs/validation/2026-10-22-repair.json; actual live manifest. Caller-declared CI remains unauthenticated."
     },
     {
       "layout": "rules",
       "title": "Release assessment rules",
       "rows": [
         [
-          "Current imported evidence",
+          "Current supplied evidence",
           "Result"
         ],
         [
           "Clean revision, referenced tests/build pass, ready statement",
-          "Ready within imported evidence"
+          "Ready within supplied evidence"
         ],
         [
           "Dirty revision or a conclusive required-check failure",
-          "Hold"
+          "Hold and source-fix guidance"
         ],
         [
           "Missing, stale, unknown or unresolved conflicting evidence",
-          "Abstain"
+          "Abstain and bounded next steps"
         ]
       ],
-      "disclosure": "30 tests passed. Build and typecheck passed at clean commit d0c2bce.",
-      "notes": "Source: docs/validation/2026-10-22-local.json. The assessment is deterministic. Readiness is conditional on required consistent evidence, and grants no authorization. Typed enum and malformed preview regressions are part of the current local suite."
+      "disclosure": "Live source checks: old packet abstained. Fresh packet returned ready with four citations.",
+      "notes": "Actual local registration/read of the unchanged old d0c2bce packet passed transport verification and abstained with zero citations. A separate read of the original fresh 968764a packet returned ready with four citations and confirmed query cleanup. Neither read changed source times. Source: docs/validation/2026-10-22-zetaris-live.json. Both reviews used zero model attempts and no provider token receipt. docs/validation/repair-ui.md covers bounded local repair checks. Synthetic failed/missing footage remains visibly distinct from actual CI observations."
     },
     {
       "layout": "architecture",
@@ -76,7 +84,7 @@
         ],
         [
           "React / Vite",
-          "Preview and explicitly import chosen JSON"
+          "Inspect results, source evidence and bounded next steps"
         ],
         [
           "Node.js / TypeScript",
@@ -84,19 +92,19 @@
         ],
         [
           "Meterless H-MEM",
-          "Resolve sources through actual reference memory"
+          "Persist, retrieve and audit cited reference memory"
         ],
         [
-          "Zetaris adapter",
-          "Fixed read queries. Live verification pending."
+          "Zetaris local runtime",
+          "Verified fixed CSV query and query cleanup"
         ],
         [
           "NVIDIA Nemotron",
           "Optional excerpt selection. Disabled."
         ]
       ],
-      "disclosure": "Developer handoff review stays local and deterministic. Imported statements remain caller-declared.",
-      "notes": "Sources: server/handoff.ts; server/desk.ts; server/providers.ts; src/HandoffPanel.jsx; package.json. Actual H-MEM reference uses deterministic hash embeddings. Zetaris has no successful live query and NVIDIA is disabled. Separate synthetic envelope benchmark:36,584 UTF-8 source bytes,789 first wrapped result,758 repeated. That benchmark excludes total workflow costs, provider billing and answer-quality comparison. See docs/TOKEN-OVERHEAD.md."
+      "disclosure": "Actual source transport preserves original times. CI provenance remains caller-declared.",
+      "notes": "Sources: server/desk.ts; server/providers.ts; server/handoff.ts; server/repair.ts; vendor/; THIRD-PARTY-NOTICES.txt; docs/validation/2026-10-22-zetaris-live.json. Actual H-MEM reference is pinned at 70ca80fe88ad8d27288501e8dd08b091ed38c095 and uses deterministic hash embeddings, not learned embeddings. Zetaris 2.4.3 reads QARINAH.handoffs through a fixed bounded query and confirms cleanup. CSV/Base64 transport adds bytes and provides no encryption. NVIDIA remains disabled. Byte measurements include overhead and remain distinct from actual provider tokens. No token saving or answer-quality comparison is claimed."
     },
     {
       "layout": "sponsors",
@@ -114,30 +122,30 @@
         ],
         [
           "Zetaris",
-          "Pending",
-          "No successful live query yet"
+          "Verified locally",
+          "Old abstain, fresh ready, cleanup confirmed"
         ],
         [
           "Cursor",
           "Pending",
-          "CLI installation only"
+          "No completed development session"
         ],
         [
           "NVIDIA",
           "Disabled",
-          "Optional model use, no inference receipt"
+          "No model inference or token receipt"
         ]
       ],
-      "disclosure": "Configuration and installation alone do not establish sponsor use.",
-      "notes": "Sources: PRODUCT.md; docs/validation/2026-10-22-local.json. Main task verified the intended Wildcard route requires Zetaris, Meterless and Cursor development evidence, with NVIDIA where it contributes. Official organizer: https://hackathon.genai.works/ . No independent live sponsor proof is supplied by this deck."
+      "disclosure": "Required Cursor development evidence remains pending. No eligibility claim.",
+      "notes": "Source: docs/validation/2026-10-22-zetaris-live.json records actual probe, old registration and fresh source verification, confirmed cleanup and real browser recording. Actual H-MEM integration is separately evidenced in the app. Cursor installation and access attempts do not establish completed development use. NVIDIA remains optional and disabled. The main task verified the intended Wildcard route requires Zetaris, Meterless and Cursor evidence. Official organizer: https://hackathon.genai.works/ . This local deck does not establish eligibility, public availability or submission."
     },
     {
       "layout": "close",
-      "title": "Future enhancements",
-      "body": "Authenticated CI receipts\nDeveloper observations retrieved from Zetaris\nHeld-out comparisons of total workflow cost, provider usage and answer quality",
+      "title": "Review package and next steps",
+      "body": "96-second narrated repair film in review\nSeparate actual Zetaris source recording\nFuture work: authenticated CI and workflow cost comparisons",
       "owner": "Cognifyr / Ajnas N B",
-      "disclosure": "Submission blocked. Sponsor proof and public links remain pending.",
-      "notes": "These are proposed future enhancements, not completed features. Sources: docs/CRITIQUE.md; docs/submission/metadata.review.json. Existing implementation accepts caller-declared local observations, supports fixed Zetaris sample reads only, and has no provider-token baseline or downstream task-quality comparison. Video and GitHub public entry links remain null. No release authority, publication or submission is claimed."
+      "disclosure": "Submission remains blocked by Cursor evidence and public links.",
+      "notes": "The new film preserves the 96-second original score and narrated format. Actual old/fresh local review footage is separate from labeled synthetic failure/missing cases. The 46-test source capture at 968764a differs from the later 51-test suite at 289c624. A passed actual Zetaris recording supplies the reserved source chapter, subject to final encode and independent review. Sources: docs/video/r5/README.md; docs/validation/2026-10-22-repair.json; docs/validation/2026-10-22-zetaris-live.json. Authenticated CI and held-out workflow/provider/quality comparisons remain proposed. No release authority, publication, submission, prize or winning probability is claimed."
     }
   ]
 }

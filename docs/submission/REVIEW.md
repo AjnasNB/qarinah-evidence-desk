@@ -1,33 +1,37 @@
 # Local submission package review
 
-This package is blocked for competition submission. The entry draft and metadata distinguish actual local evidence from pending sponsor use and public links.
+This seven-slide r3 review deck reflects actual local Zetaris and Meterless execution. Competition submission remains blocked by Cursor development evidence and approved public links.
 
-## Deck deliverables
+## Current deliverables
 
-- Current editable PowerPoint, r2: `.local/submission/output/evidence-desk-review-r2.pptx`
-- Current viewing PDF, r2: `.local/submission/output/evidence-desk-review-r2.pdf`
+- Editable PowerPoint: `.local/submission/output/evidence-desk-review-r3.pptx`
+- Viewing PDF: `.local/submission/output/evidence-desk-review-r3.pdf`
 - Editable copy: `docs/submission/SLIDES.json`
 - Builder: `scripts/build-submission-deck.mjs`
-- Private screenshot and source-only provenance ledger: `.local/submission/assets/product-review.png`, `docs/submission/ASSETS.json`
+- Source provenance: `docs/submission/ASSETS.json`
 
-The r2 PPTX has seven slides, four native tables, 20 native text shapes and seven notes pages. The finalizer passed package, geometry and declared Arial font checks with no findings or warnings. Artifact Tool reopened the final PPTX successfully. The original seven slide renders were inspected at 1280×720. For r2, only changed slides 5 and 7 received another visual review, with final import/native counts checked across the deck. The actual product screenshot and sponsor-status slide remain unchanged. The screenshot retains its authority disclaimer and four citations, and its source file remains a byte-for-byte copy.
+The deck distinguishes two genuine observations. The filmed packet at `968764a` contains the original 46-test/build capture. The later verifier revision `289c624` passed 51 tests. The actual old-packet Zetaris read abstained, while the separate fresh-packet read returned ready with four citations and confirmed query cleanup. Both reviews made zero model attempts. The result remains conditional on caller-declared CI observations.
 
-Slide 5 now shows the concrete local architecture and stack. Slide 7 shows proposed authenticated CI, Zetaris developer observations and held-out workflow/provider measurements, while retaining the blocked-submission footer and team. The synthetic byte benchmark remains in the entry, metadata and speaker notes rather than a visible slide.
+Slide 2 explains bounded repair guidance and the separate source-work requirement. Slide 3 uses an unaltered frame from the passed actual Zetaris browser recording, retaining the qualified result, four citations and authority disclaimer. Slides 5–6 show actual Meterless reference memory and local Zetaris execution, with Cursor pending and NVIDIA disabled. Slide 7 labels the newer 96-second narrated repair film **in review** because its final encode and independent review were still pending when this deck froze. The film's actual repair journey and separately verified live-source chapter remain distinct from its clearly labeled synthetic failure/missing cases.
 
-No PowerPoint or Google Slides application test was performed. The supplied runtime's native PDF export failed because its `#standard-fonts/Helvetica` module was unavailable. The delivered seven-page PDF therefore embeds the inspected slide renders. Use the PPTX to edit text and tables. No new dependency was installed.
+Sources: `docs/validation/2026-10-22-repair.json`, `docs/validation/2026-10-22-zetaris-live.json`, `docs/validation/repair-ui.md` and `docs/video/r5/README.md`. The deck makes no authenticated-CI, release-authority, token-saving, downstream-quality, eligibility, prize or winning-probability claim.
 
-Current r2 PPTX SHA-256: `5a122a79ca002dfe931599635812d2a357c18c7da6d4f02f58c4df9a2fecbb84`
+## Layout and visual review
 
-Current r2 PDF SHA-256: `86c26ac88b9929690da5e116582763cbd2149fe346b2a8a5d86d110d441d4506`
+The builder imported r2 and edited its existing elements. All seven original and all seven r3 renders received individual visual inspection at 1280×720. The existing forest/paper palette, Arial typography, logo, slide order and native table layouts remain. The new screenshot crop preserves its evidence and authority limit. No clipping or unintended overlap was observed.
 
-The current private validation receipt and output inventory are under `.local/submission/build-r2/`, with renders under `.local/submission/rendered-r2/`. Generated decks, screenshot, renders and private build directories remain ignored. The original r1 PowerPoint remains at `.local/submission/output/evidence-desk-review.pptx`; its original hash `9a14e1707b781803008abe9e6b31930816a808089fec124e64e314d8420ecea5` was rechecked unchanged. Its historical screenshot path is mapped by `ASSETS.json`; current r2 notes use the private path. No source staging or commit was performed by this reviewer.
+The validated r3 PPTX has seven slides, four editable native tables, 20 text shapes and seven notes pages. Package and geometry validation reported zero findings and zero warnings. The declared reference font policy passed, including verification of Arial in r2. Artifact Tool reopened the final PPTX. A separate XML comparison confirmed unchanged element frames, table column widths and row heights on every slide. Validation, output inventory and `template-geometry.json` remain private under `.local/submission/build-r3/`; renders are under `.local/submission/rendered-r3/`.
 
-## Reproduction
+No PowerPoint or Google Slides application test was performed. The supplied runtime's native PDF export still lacks its `#standard-fonts/Helvetica` module. The seven-page viewing PDF therefore embeds the inspected slide renders. The PPTX retains editable text and tables. No dependency was installed.
 
-The optional builder needs the supplied Codex Node/Artifact Tool runtime and Presentations skill. It installs nothing and makes no provider request. Runtime locations can be overridden with `RUNTIME_NODE_MODULES`, `RUNTIME_PYTHON` and `PRESENTATIONS_SKILL_DIR`. The product screenshot stays outside Git. Provide an authorized, auth-free 1600×900 PNG via `SCREENSHOT_PATH`, or place it at the documented private screenshot path. The source app does not depend on this optional renderer.
+PPTX SHA-256: `aa7380b045877070bf64cdc32d025b34e19e3f8ba94a8e07934282d5b6ef935c`
 
-Use an unused revision name to preserve existing outputs, for example `node scripts/build-submission-deck.mjs --revision=r3` with the supplied runtime. To regenerate derived renders/PDF for the current r2, use `--revision=r2 --resume-export`. Resume verifies the PPTX hash against its private receipt before reopening it. It does not change the validated PowerPoint.
+PDF SHA-256: `aa3c0f6b084857e5df683f19d04c2ba30ee774ebff974f41d918717fb984a9e4`
 
-## Current boundary
+## Preserved earlier editions and reproduction
 
-The committed local product receipt records 30 passing tests, a passing build/typecheck and the actual four-citation review with zero provider attempts. The main task also reports a completed 108-second local video draft using actual footage. Live Zetaris, actual Cursor use, final sponsor footage and approved public video/source links remain pending. Optional NVIDIA generation remains disabled. This review records no publication, submission, award or winning probability.
+Earlier outputs remain unchanged. The original r1 PPTX hash is `9a14e1707b781803008abe9e6b31930816a808089fec124e64e314d8420ecea5`; r2 remains `5a122a79ca002dfe931599635812d2a357c18c7da6d4f02f58c4df9a2fecbb84`. Their original PNG/PDF outputs and private assets remain available.
+
+The optional builder uses the supplied Codex Node/Artifact Tool runtime and Presentations skill. It installs nothing and makes no provider request. Runtime paths accept `RUNTIME_NODE_MODULES`, `RUNTIME_PYTHON` and `PRESENTATIONS_SKILL_DIR`. Current copy references the existing private r2 PPTX and the private actual live-review PNG. `SCREENSHOT_PATH` can explicitly supply the same authorized auth-free 1600×900 frame.
+
+Choose a new revision to preserve final files, for example `node scripts/build-submission-deck.mjs --revision=r4` using the supplied Node runtime. To regenerate r3's derived renders/PDF without changing its validated PowerPoint, use `--revision=r3 --resume-export`; resume checks the PPTX hash first. Generated decks, source footage, frames, renders and private receipts remain ignored. Publication and submission remain separate approved actions.
