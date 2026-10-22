@@ -42,7 +42,7 @@ Byte measurements describe serialized UTF-8 data. The full-context prompt is a c
 
 ## Validate
 
-At clean revision `d0c2bce`, all 30 tests, the production build and typecheck passed. The actual capture packet was imported and reviewed in Chrome, returning four cited records and zero provider attempts. See [the local validation receipt](docs/validation/2026-10-22-local.json). Live Zetaris and Cursor-use evidence remain pending; local checks do not establish event eligibility.
+At clean revision `dee9387`, all 40 tests, the production build and typecheck passed. Chrome reviewed the new actual capture with four citations; a separate API cross-check confirmed zero provider attempts. The earlier real packet correctly abstained after its observations became stale. See [the current validation receipt](docs/validation/2026-10-22-bundled.json); the [original 30-test receipt](docs/validation/2026-10-22-local.json) remains preserved. Live Zetaris and Cursor-use evidence remain pending; local checks do not establish event eligibility.
 
 ```text
 npm test

@@ -1,0 +1,109 @@
+{
+  "kind": "local-validation",
+  "recordedAt": "2026-10-22T09:01:03.941Z",
+  "commit": "dee93876a5a108ff711aa25f2021705fa618cb34",
+  "workingTreeDirtyAtCapture": false,
+  "startedAt": "2026-10-22T08:59:12.942Z",
+  "tests": {
+    "command": [
+      "npm",
+      "test"
+    ],
+    "passed": 40,
+    "failed": 0,
+    "skipped": 0,
+    "check": "tests",
+    "outcome": "passed",
+    "observedAt": "2026-10-22T08:59:14.264Z",
+    "elapsedMs": 1321,
+    "outputSha256": "d44c9738d2e29649a938ee364b4d5b372f69bc4645a0cc5ffa50a8b0beb46a56",
+    "retainedBytes": 4491,
+    "truncated": false
+  },
+  "build": {
+    "check": "build",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "outcome": "passed",
+    "observedAt": "2026-10-22T08:59:15.477Z",
+    "elapsedMs": 1211,
+    "outputSha256": "bfb7a3aca712dbcd782f945219cd142b9a838420ca00e76f06eb31d1a643fe2a",
+    "retainedBytes": 402,
+    "truncated": false
+  },
+  "typecheck": {
+    "command": "npm run typecheck",
+    "outcome": "passed",
+    "source": "separate actual root command after capture"
+  },
+  "packetSha256": "43aa5f7ebcd40a7ee7436ce04276dbaeace7cabed26818944c79a7f2aa2152a8",
+  "browserReview": {
+    "source": "actual new packet imported and reviewed through Chrome",
+    "question": "What is the current release decision?",
+    "citedRecords": 4,
+    "releaseDecision": "ready within supplied observations",
+    "reviewTimestampVisible": true
+  },
+  "separateApiCrossCheck": {
+    "status": "answered",
+    "releaseDecision": "ready",
+    "citations": [
+      {
+        "id": "ev-e4b8b96384714a611aa3de95",
+        "hash": "e4b8b96384714a611aa3de9513a4cdb602ba99de797b01eba8a452d042f406cc"
+      },
+      {
+        "id": "ev-554e5487496be92dd0d5b53e",
+        "hash": "554e5487496be92dd0d5b53e28e008657c758995d9c4e51a88432effb133bcba"
+      },
+      {
+        "id": "ev-c415a9f012d170efd4245282",
+        "hash": "c415a9f012d170efd4245282acbf9709792e1a534906d4038fd0b7013dec3e5d"
+      },
+      {
+        "id": "ev-d6fc3e8c6534a59b54915e35",
+        "hash": "d6fc3e8c6534a59b54915e35396201e5897b36729582bed896a551b4262717e4"
+      }
+    ],
+    "metrics": {
+      "availableEvidenceBytes": 2981,
+      "selectedEvidenceBytes": 2981,
+      "memoryContextBytes": 1832,
+      "instructionBytes": 407,
+      "questionBytes": 37,
+      "selectionOverheadBytes": 166,
+      "promptBytes": 2462,
+      "fullContextPromptBytes": 2462,
+      "requestBytes": 0,
+      "fullContextRequestBytes": 2572,
+      "toolDefinitionsBytes": 0,
+      "sourceResponseBytes": 1141,
+      "sourceCalls": 0,
+      "providerAttempts": 0,
+      "providerUsage": null,
+      "elapsedMs": 8
+    }
+  },
+  "historicalCheck": {
+    "testedAt": "2026-10-22T08:29:51.156Z",
+    "originalRevisionTime": "2026-10-22T07:29:47.054Z",
+    "status": "abstained",
+    "reason": "missing-current-revision",
+    "staleExclusions": 4,
+    "providerAttempts": 0
+  },
+  "sponsors": {
+    "meterless": "actual pinned local reference",
+    "zetaris": "configured; live query not verified",
+    "cursor": "support escalation; development use not verified"
+  },
+  "notes": [
+    "Actual local command outcomes and supplied evidence; not independently authenticated CI or release authority.",
+    "Browser review and API cross-check are separate requests against the same unmodified packet.",
+    "The reviewed film depicts the earlier named d0c2bce capture.",
+    "No provider token savings or event eligibility is established."
+  ]
+}
