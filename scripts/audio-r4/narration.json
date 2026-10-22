@@ -1,0 +1,22 @@
+{
+  "engine": "kokoro",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "gap": 0.35,
+  "tail": 0.8,
+  "lufs": -16,
+  "lines": [
+    { "id": "01-overview", "at": 0.5, "text": "Qarinah Evidence Desk checks the evidence behind a developer handoff." },
+    { "id": "02-real-input", "at": 6.4, "text": "This packet records actual local tests and a build at a clean revision. Inspect it, and import only the observations you choose." },
+    { "id": "03-import", "at": 16.3, "text": "Import the observations, then review the release question." },
+    { "id": "03-result", "at": 20.8, "text": "Ready, within this imported evidence, with four citations. This review is not permission to deploy." },
+    { "id": "04-citation", "at": 28.5, "text": "Open a citation to inspect its exact source text, timestamp, and content hash. The recorded test output also has its own hash." },
+    { "id": "05-audit", "at": 40.5, "text": "The source and memory audit makes retrieval inspectable. This reference uses deterministic hash embeddings, rather than a learned semantic model." },
+    { "id": "06-context", "at": 50.5, "text": "The context view counts bytes, including overhead. With no provider request here, actual token usage remains unknown." },
+    { "id": "07-replay-intro", "at": 60.4, "text": "Now, a synthetic replay. These observations are invented." },
+    { "id": "07-hold", "at": 65.0, "text": "The handoff recommends ready, but its tests fail. The desk holds the review and shows the conflicting evidence." },
+    { "id": "08-replay-intro", "at": 74.4, "text": "In this second synthetic replay, remove the build artifact." },
+    { "id": "08-abstain", "at": 79.0, "text": "With that required evidence missing, the desk abstains. It explains what is missing instead of guessing a release decision." },
+    { "id": "09-limits", "at": 88.5, "text": "Live sponsor evidence remains pending. This dated local demo makes no submission claim." }
+  ]
+}
