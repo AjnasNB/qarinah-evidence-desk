@@ -264,3 +264,14 @@
     gap: 9px;
   }
 }
+
+/* The fixed handoff read is distinct from connection and sample queries. */
+.live-area > .live-area-heading { grid-row: auto; grid-column: 1 / -1; margin-bottom: 13px; }
+.handoff-investigation { grid-column: 1 / -1; min-width: 0; }
+.handoff-investigation-heading { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.handoff-investigation-heading > strong { font-size: 12px; }
+.handoff-investigation > p, .sample-query-area > p { font-size: 11px; line-height: 1.7; margin: 9px 0; color: var(--muted); }
+.handoff-investigation > .button { width: 100%; white-space: normal; min-height: 44px; }
+.sample-query-area { grid-column: 1 / -1; min-width: 0; margin-top: 16px; border-top: 1px solid var(--line); padding-top: 14px; }
+.sample-query-area > label { display: block; margin-bottom: 6px; }
+.historical-review { margin: 10px 0 14px; padding: 12px; border: 1px solid #ead4af; border-radius: 6px; background: var(--amber-light); color: var(--amber); font-size: 12px; line-height: 1.7; }
