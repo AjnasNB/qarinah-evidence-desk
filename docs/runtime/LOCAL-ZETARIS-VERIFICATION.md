@@ -4,6 +4,16 @@ This runbook prepares a one-time local check. Its existence and mock validation 
 
 Prerequisites: root owns Compose startup, loopback binding, telemetry configuration, public-safe capture/export and file copying. Wait for the real UI/API/driver to become healthy. Restart the Evidence Desk backend with the committed bundled adapter when coordinated. Keep existing private `ZETARIS_UI_URL`, `ZETARIS_USERNAME` and `ZETARIS_PASSWORD` in ignored `.env.local`; the UI origin must be loopback HTTP. Never print this file or put credentials in arguments.
 
+## Shipped UI contract, statically checked
+
+On 22 October, the approved UI image `zetaris-new-ui:2.4.3-v2.4.3.1-hackathon.88e49b0db015979a2d071d2d68a6865d38a39f15` was inspected through a temporary, never-started container with networking disabled. The container was removed after copying three compiled route files into ignored local inspection storage. No credentials were used in this inspection.
+
+The shipped `/api/auth/login` POST route accepts `username` and `password`, calls the API's `/api/v1.0/internal/auth/legacy-login` GET route on port 8889 using Basic authentication, and passes a successful response through. The `/api/proxy/{path}` route forwards to `/api/v1.0/{path}` on port 8888, retaining the HTTP method, body, query string, authorization and organisation headers, and response status/body. Its exported methods include DELETE. This independently supports the adapter's version-specific login and SQL close mapping; it does not prove an actual successful login, SQL execution or cleanup body.
+
+The inspected login route SHA-256 is `319b13f172da1258ed89bab6daa7d73294b9dece2d2098c1cfc6fd971aae0c3b`; the proxy route SHA-256 is `b0b78734e87aba01fd1aa1a31cb5e049c8616ddf002398177491127ff799890f`. Vendor implementation files remain outside Git. Live verification below remains required.
+
+## One-time runtime verification
+
 From the project root, probe once:
 
 ```powershell
