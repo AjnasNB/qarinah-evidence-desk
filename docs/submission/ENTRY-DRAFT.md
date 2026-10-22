@@ -14,15 +14,17 @@ The local capture helper runs this project's tests and build, records their outp
 
 The backend stores sourced observations through the actual pinned Meterless H-MEM reference implementation. Review resolves selected evidence against the active snapshot and exposes citations, exclusions and memory audit history. Supplied observation text remains untrusted data. Import and handoff review execute no source instructions and make no model request.
 
-Separate synthetic Atlas/Beacon support examples demonstrate consistent, conflicting and missing evidence. The new Investigate handoff action reads a fixed developer packet through the bundled Zetaris adapter, preserving its original times and provenance. Forty local tests pass, including mocked provider contracts, but a live authenticated Zetaris query has not yet succeeded. Optional NVIDIA excerpt selection remains disabled. Cursor support acknowledged escalation; account access and actual development use remain unverified.
+Separate synthetic Atlas/Beacon support examples demonstrate consistent, conflicting and missing evidence. Investigate handoff reads a fixed developer packet through the bundled Zetaris adapter, preserving its original times and provenance. Bounded next steps distinguish missing or stale observations from source failures and conflicts. Rereading cannot repair CI; failed checks require genuine source work and new results. Forty-six local tests pass, including mocked provider contracts, but a live authenticated Zetaris query has not yet succeeded. Optional NVIDIA excerpt selection remains disabled. Cursor support acknowledged escalation; account access and actual development use remain unverified.
 
 ## Verified local result
 
-The current committed validation receipt records a clean capture at `dee93876a5a108ff711aa25f2021705fa618cb34`: 40 tests passed, with no failures or skips, and build/typecheck passed. Chrome reviewed the actual new packet with four citations; a separate API cross-check confirmed zero provider attempts. Re-importing the unchanged older capture after its observations expired correctly produced abstention.
+The latest validation receipt records a clean capture at `968764add439b8ea7e7b75f9989a91dd607ec0d3`: 46 tests passed, with no failures or skips, and build/typecheck passed. The preceding 40-test capture was reviewed in Chrome with four citations and zero provider attempts. The new repair interface separately passed seven actual localhost browser checks: the unchanged older packet abstained after expiry, repair links resolved, transitions cleared old plans and the mobile view stayed within its viewport.
 
-This verifies a local rehearsal using caller-declared observations. It does not independently authenticate CI or reproduce captured logs. Source: `docs/validation/2026-10-22-bundled.json`, committed in `69e29c6`. The original `d0c2bce` 30-test receipt remains preserved for the dated film and r2 deck; the deck needs a final refresh after real sponsor verification.
+This verifies local rehearsals using caller-declared observations. It does not independently authenticate CI. Sources: `docs/validation/2026-10-22-repair.json`, the preceding `2026-10-22-bundled.json`, and `repair-ui.md`. The retained actual test/build logs match their capture hashes. The original `d0c2bce` 30-test receipt remains preserved for the dated film and r2 deck; the deck needs a final refresh after real sponsor verification.
 
-A revised local 96-second, 1080p/30 fps demo combines actual product recordings, the authentic logo, original 120 BPM instrumental, texture and clearly editorial motion graphics. Full decode, motion, audio-level and BT.709 checks passed; an independent visual review cleared the earlier timing/disclosure issues. It is a dated demonstration of the named `d0c2bce` capture, not footage of the newer backend or proof that old observations remain current. Sponsor footage and an approved public video URL remain pending. No narration or human listening review is claimed. See `docs/video/r3/QA.md`.
+A local 96-second, 1080p/30 fps demo combines actual product recordings, the authentic logo, original 120 BPM instrumental, texture and clearly editorial motion graphics. The r4 edition adds a generic local synthetic narration at normal speed and ducks the original beat under speech. Full decode, exact duration, unchanged picture, speech timing, ASR, audio-level and BT.709 checks passed; an independent review cleared it as a dated local demo. It depicts the named `d0c2bce` capture, not the newer repair interface or proof that old observations remain current. Sponsor footage and an approved public video URL remain pending. No human listening review is claimed. See `docs/video/r4/QA.md`.
+
+Twenty hand-authored synthetic HTTP challenges matched all expected classifications, with zero false-ready results across 18 non-ready cases. Complete request/response bodies totalled 218,073 bytes across 83 requests, including audit reads. This finite regression set supplies no blind evaluation, user-impact result, representative error rate or token-savings claim. See `docs/BENCHMARK.md`.
 
 A separate synthetic observation-envelope benchmark measured 36,584 UTF-8 source bytes against 789 bytes for the first complete serialized result wrapper and 758 for a repeated result. These are fixture byte measurements. Total workflow cost, provider-token savings and downstream task quality remain unmeasured.
 
@@ -46,7 +48,7 @@ Future work would add independently authenticated CI receipts, developer observa
 | Cursor development | Access blocked, CLI installed, actual use unverified |
 | NVIDIA | Optional, disabled, no inference receipt |
 | Deck | Local editable review deck and PDF |
-| Video | Local 108-second draft complete, sponsor footage and public URL pending, narration optional |
+| Video | Reviewed local 96-second narrated edit; sponsor footage and public URL pending |
 | GitHub source and README | Public entry source URL pending approval |
 | Final competition entry | Blocked, no submission |
 

@@ -1,0 +1,51 @@
+{
+  "kind": "local-validation",
+  "recordedAt": "2026-10-22T10:00:43.663Z",
+  "commit": "968764add439b8ea7e7b75f9989a91dd607ec0d3",
+  "workingTreeDirtyAtCapture": false,
+  "startedAt": "2026-10-22T09:59:55.995Z",
+  "tests": {
+    "check": "tests",
+    "command": [
+      "npm",
+      "test"
+    ],
+    "outcome": "passed",
+    "observedAt": "2026-10-22T09:59:57.282Z",
+    "elapsedMs": 1285,
+    "outputSha256": "d11cb6b6bd7bbe6733f491b76252b7b3f0c5a0aef4a060d936e30c4808511fa0",
+    "retainedBytes": 5173,
+    "truncated": false,
+    "counts": {
+      "tests": 46,
+      "pass": 46,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  "build": {
+    "check": "build",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "outcome": "passed",
+    "observedAt": "2026-10-22T09:59:58.229Z",
+    "elapsedMs": 946,
+    "outputSha256": "c0d0518fcc3682427e7bfd2c5ee90b360851f081d7da3193b46cd015a61bbf43",
+    "retainedBytes": 402,
+    "truncated": false
+  },
+  "typecheck": {
+    "command": "npm run typecheck",
+    "outcome": "passed",
+    "source": "actual root command immediately before capture"
+  },
+  "packetSha256": "5a09d9e2ca927e8b137d127c021b5c7df46c41fa9d89ce4f3a9db363f2877b9b",
+  "limitations": [
+    "Caller-declared actual local observations; not independently authenticated CI.",
+    "Browser recording, live sponsor execution and Cursor use are separate evidence.",
+    "No release authority or provider-token savings established."
+  ]
+}
