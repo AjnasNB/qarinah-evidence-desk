@@ -54,14 +54,17 @@ export function preparedCsv(raw, now) {
   if (new Set(rows.map(row => row.capturedAt)).size !== rows.length) fail('CSV_ORDER_UNCERTAIN');
   return { rows, latest: rows.at(-1), sha256: sha256(raw), bytes: raw.byteLength };
 }
-function catalogNames(body, kind) {
-  if (!body || typeof body !== 'object' || Array.isArray(body) || Object.keys(body).some(key => key !== 'result') || !Array.isArray(body.result) || body.result.length > 100) fail('CATALOG_SHAPE_UNVERIFIED');
-  const names = kind === 'database' ? ['name', 'datasource', 'datasourcename', 'database', 'databasename'] : ['name', 'table', 'tablename', 'relation', 'relationname'];
-  return body.result.map(row => {
-    if (!row || typeof row !== 'object' || Array.isArray(row)) fail('CATALOG_SHAPE_UNVERIFIED');
-    const entries = Object.entries(row).filter(([key]) => names.includes(key.toLowerCase().replace(/_/g, '')));
-    if (entries.length !== 1 || typeof entries[0][1] !== 'string' || !/^[A-Za-z0-9_. -]{1,128}$/.test(entries[0][1])) fail('CATALOG_SHAPE_UNVERIFIED');
-    return entries[0][1].toLowerCase();
+function nativeCatalog(body, kind, databaseId) {
+  if (!Array.isArray(body) || body.length > 100) fail('CATALOG_SHAPE_UNVERIFIED');
+  const fields = kind === 'database' ? ['databaseId', 'name', 'description', 'tableCount'] : ['databaseId', 'name', 'description', 'tags'];
+  const names = new Set(), ids = new Set();
+  return body.map(row => {
+    if (!row || typeof row !== 'object' || Array.isArray(row) || Object.keys(row).some(key => !fields.includes(key)) || !Number.isSafeInteger(row.databaseId) || row.databaseId <= 0 || typeof row.name !== 'string' || !row.name.trim() || row.name.length > 128 || /[\u0000-\u001f\u007f]/.test(row.name) || (row.description !== undefined && row.description !== null && (typeof row.description !== 'string' || row.description.length > 4096))) fail('CATALOG_SHAPE_UNVERIFIED');
+    if (kind === 'database' ? !Number.isSafeInteger(row.tableCount) || row.tableCount < 0 : row.databaseId !== databaseId || !Array.isArray(row.tags) || row.tags.length > 100 || row.tags.some(tag => typeof tag !== 'string' || tag.length > 256)) fail('CATALOG_SHAPE_UNVERIFIED');
+    const name = row.name.toLowerCase();
+    if (names.has(name) || (kind === 'database' && ids.has(row.databaseId))) fail('CATALOG_AMBIGUOUS');
+    names.add(name); ids.add(row.databaseId);
+    return { name: row.name, databaseId: row.databaseId };
   });
 }
 /** Dependency injection exists only for local mock checks; the CLI always uses native fetch. */
@@ -110,13 +113,16 @@ export async function runVerification(options, { env = process.env, fetcher = fe
           if (!body || typeof body !== 'object' || !Array.isArray(body.result) || body.result.length > 100 || Object.keys(body).some(key => key !== 'result')) fail('GENERIC_RESPONSE_UNVERIFIED');
           return body;
         };
-        let databases = catalogNames(await generic('catalog-databases', 'SHOW DATASOURCES'), 'database');
-        const databaseExisted = databases.includes('qarinah');
-        if (!databaseExisted) { await generic('register-database', ddl.database); databases = catalogNames(await generic('confirm-database', 'SHOW DATASOURCES'), 'database'); if (!databases.includes('qarinah')) fail('DATABASE_REGISTRATION_UNCONFIRMED'); }
-        let tables = catalogNames(await generic('catalog-tables', 'SHOW DATASOURCE TABLES QARINAH'), 'table');
-        const hasTable = names => names.includes('handoffs') || names.includes('qarinah.handoffs');
-        const tableExisted = hasTable(tables);
-        if (!tableExisted) { await generic('register-table', ddl.table); tables = catalogNames(await generic('confirm-table', 'SHOW DATASOURCE TABLES QARINAH'), 'table'); if (!hasTable(tables)) fail('TABLE_REGISTRATION_UNCONFIRMED'); }
+        const catalogHeaders = { authorization: 'Bearer ' + auth.idToken, 'x-org-id': String(auth.orgId), 'x-request-id': randomUUID() };
+        const databases = async label => nativeCatalog(await jsonRequest(label, origin + '/api/proxy/lightning-database/databases', { headers: catalogHeaders }), 'database');
+        const findDatabase = rows => rows.find(row => row.name.toLowerCase() === 'qarinah');
+        let database = findDatabase(await databases('catalog-databases'));
+        const databaseExisted = Boolean(database);
+        if (!database) { await generic('register-database', ddl.database); database = findDatabase(await databases('confirm-database')); if (!database) fail('DATABASE_REGISTRATION_UNCONFIRMED'); }
+        const tables = async label => nativeCatalog(await jsonRequest(label, origin + '/api/proxy/lightning-database/databases/' + encodeURIComponent(database.name) + '/file-store-tables', { headers: catalogHeaders }), 'table', database.databaseId);
+        const hasTable = rows => rows.some(row => row.name.toLowerCase() === 'handoffs');
+        const tableExisted = hasTable(await tables('catalog-tables'));
+        if (!tableExisted) { await generic('register-table', ddl.table); if (!hasTable(await tables('confirm-table'))) fail('TABLE_REGISTRATION_UNCONFIRMED'); }
         report.registration = { databaseExisted, tableExisted, databaseConfirmed: true, tableConfirmed: true, existingObjectsReplaced: false };
       }
       const latest = source.latest;
