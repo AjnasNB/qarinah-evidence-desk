@@ -9,6 +9,8 @@ This package requires a new explicit approval. It does not record one. The exist
 3. Replace its description with the exact 1,959-character [R7 copy](HACKOS-DESCRIPTION-R7.txt). Keep the current project identity, team, track and repository link.
 4. Use Save Changes and verify the existing submitted state survives reload. Do not create a duplicate entry or mark unfinished board tasks complete.
 
+Approval also accepts this as a desktop technical demo: both final independent comparisons prefer it and both reviewers would post it, with zero supported blockers. One remaining should-fix concerns detailed evidence text at phone size. Minor retained polish concerns one-frame source-panel dips and two short narration fragments. Full mobile-video readability and human listening are not claimed. Automated QA reports zero failures and two intentional result/closing reading holds.
+
 Review the commit identity in the approval question; a commit cannot contain its own final Git hash. The publication includes this review document, the implementation and its evidence. If a new source change or different asset is needed after approval, prepare it for separate review rather than expanding the authorization.
 
 ## Exact media

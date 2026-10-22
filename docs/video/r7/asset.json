@@ -63,5 +63,25 @@
     "truePeakDbtp": -2.02,
     "phoneReview": "partial",
     "provenance": "Showtime final round-3 QA of final-r7-ready.mp4"
+  },
+  "independentReview": {
+    "rounds": 3,
+    "finalComparisonPreferredNewInBothOrders": true,
+    "wouldPostBoth": true,
+    "blockers": 0,
+    "remainingShouldFix": [
+      {
+        "id": "r3o1-S1",
+        "time": 37,
+        "issue": "Detailed result text is too small for phone viewing",
+        "disposition": "Desktop technical demo; user acceptance requested with publication approval"
+      }
+    ],
+    "remainingPolish": [
+      "Contained one-frame dark source-panel resets",
+      "Two brief introductory caption spans measure 235/201 wpm within slower contiguous sentences"
+    ],
+    "humanListening": false,
+    "findings": "showtime-out/qed-receipt-proof-20261022-193800/review/round-3/VERDICT.md"
   }
 }

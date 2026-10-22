@@ -25,6 +25,10 @@ The new 68-word narration matches local `small.en` readback of both the dry voic
 
 The current automated verdict is **WARN: zero failures, two warnings**, for a 2.9-second picture hold at 136.07–138.97 seconds while the dated result and provenance remain available to inspect, and the six-second closing card that holds the repository and qualifications for reading. These are explicit inspection/closing holds. The earlier cut's four loudness-change warnings coincided with speech after quieter pauses; the first critic rejected those as proof of an unexplained gain jump. Exact hearing measurements and subsequent pairwise findings remain in the ignored Showtime review folder. The automated phone check is partial; desktop product labels and the actual 390-pixel responsive form were visually checked separately.
 
+## Independent final review
+
+Across three rounds, five independent media critics inspected the supplied frames, text crops, story and measured audio. Both final blind comparisons prefer this cut over the previous version, and both reviewers would post it. They establish no blocker. One remaining should-fix concerns detailed result text at phone size; this is a 16:9 desktop technical demonstration. Publication approval explicitly requests acceptance of that limitation. The retained polish items are brief dark source-panel transitions and two short introductory narration spans measured at 235/201 wpm within slower contiguous sentences. No human listening or full mobile-video suitability is claimed. A working responsive product form does not prove phone readability of this video.
+
 ## Reproduce
 
 The recording script needs the installed Chrome browser and an available Playwright module. It launches a separate headless browser and isolated loopback application; it does not drive the Windows desktop or reuse a private login profile.
