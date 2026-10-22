@@ -1,0 +1,317 @@
+{
+  "kind": "verified-local-zetaris-integration",
+  "recordedAt": "2026-10-22T10:20:02.040Z",
+  "verifierCommit": "289c624",
+  "testValidation": {
+    "command": "npm test",
+    "passed": 51,
+    "failed": 0,
+    "skipped": 0,
+    "source": "actual root full-suite command after reviewed native-catalog fix"
+  },
+  "reports": {
+    "probe": {
+      "sha256": "ffd4a35d9b7a8121569d8cee75b53af3e558e95c9f139b36e73d197ac5b7de9b",
+      "format": "qarinah.zetaris-local-verification.v1",
+      "startedAt": "2026-10-22T10:11:45.691Z",
+      "mode": "probe",
+      "status": "passed",
+      "steps": [
+        {
+          "stage": "ui-health",
+          "method": "GET",
+          "status": "passed",
+          "httpStatus": 200
+        },
+        {
+          "stage": "probe-login",
+          "method": "POST",
+          "status": "received",
+          "httpStatus": 200
+        },
+        {
+          "stage": "probe-select",
+          "method": "POST",
+          "status": "received",
+          "httpStatus": 200
+        },
+        {
+          "stage": "probe-close",
+          "method": "DELETE",
+          "status": "received",
+          "httpStatus": 200
+        }
+      ],
+      "uncertainties": [],
+      "note": "No credentials, tokens, raw provider errors, source detail or account identifiers are retained in this receipt.",
+      "probe": {
+        "one": 1,
+        "cleanup": "confirmed",
+        "sourceResponseBytes": 148,
+        "httpRequests": 3
+      },
+      "finishedAt": "2026-10-22T10:11:52.675Z"
+    },
+    "old": {
+      "sha256": "4f212e9f58ad62a39d5948e4dba9d9f8cff8d225d570c3f3ab625f0baecd64b1",
+      "format": "qarinah.zetaris-local-verification.v1",
+      "startedAt": "2026-10-22T10:17:33.092Z",
+      "mode": "register-source",
+      "status": "passed",
+      "steps": [
+        {
+          "stage": "ui-health",
+          "method": "GET",
+          "status": "passed",
+          "httpStatus": 200
+        },
+        {
+          "stage": "probe-login",
+          "method": "POST",
+          "status": "received",
+          "httpStatus": 200
+        },
+        {
+          "stage": "probe-select",
+          "method": "POST",
+          "status": "received",
+          "httpStatus": 200
+        },
+        {
+          "stage": "probe-close",
+          "method": "DELETE",
+          "status": "received",
+          "httpStatus": 200
+        },
+        {
+          "stage": "app-status",
+          "method": "GET",
+          "status": "received",
+          "httpStatus": 200,
+          "bytes": 1059
+        },
+        {
+          "stage": "setup-login",
+          "method": "POST",
+          "status": "received",
+          "httpStatus": 200,
+          "bytes": 1238
+        },
+        {
+          "stage": "catalog-databases",
+          "method": "GET",
+          "status": "received",
+          "httpStatus": 200,
+          "bytes": 287
+        },
+        {
+          "stage": "catalog-tables",
+          "method": "GET",
+          "status": "received",
+          "httpStatus": 200,
+          "bytes": 2
+        },
+        {
+          "stage": "register-table",
+          "method": "POST",
+          "status": "received",
+          "httpStatus": 200,
+          "bytes": 13
+        },
+        {
+          "stage": "confirm-table",
+          "method": "GET",
+          "status": "received",
+          "httpStatus": 200,
+          "bytes": 65
+        },
+        {
+          "stage": "app-current-release",
+          "method": "POST",
+          "status": "received",
+          "httpStatus": 200,
+          "bytes": 4794
+        },
+        {
+          "stage": "app-release-answer",
+          "method": "POST",
+          "status": "received",
+          "httpStatus": 200,
+          "bytes": 2153
+        }
+      ],
+      "uncertainties": [],
+      "note": "No credentials, tokens, raw provider errors, source detail or account identifiers are retained in this receipt.",
+      "probe": {
+        "one": 1,
+        "cleanup": "confirmed",
+        "sourceResponseBytes": 148,
+        "httpRequests": 3
+      },
+      "registration": {
+        "databaseExisted": true,
+        "tableExisted": false,
+        "databaseConfirmed": true,
+        "tableConfirmed": true,
+        "existingObjectsReplaced": false
+      },
+      "source": {
+        "csvBytes": 1576,
+        "csvSha256": "f74f237b9b422af05a554a374e4c0ca381193d39a7926d283b874bf91c7d3260",
+        "rowCount": 1,
+        "packetSha256": "0110ee3169a86afa2b20fb492c55aa18360d46cf9890f92c83875b878dd40b91",
+        "observedAt": "2026-10-22T07:29:47.054Z",
+        "commit": "d0c2bce75d8eba29a83fcfa2d1f9518a727cec94",
+        "expectedObservations": 4,
+        "confidentiality": "Base64 is not encryption; source is public-safe caller-declared local observations."
+      },
+      "application": {
+        "snapshotId": "ee262db1-be2b-4604-81e5-0af2e36a8f51",
+        "sourceMatchesPreparedPacket": true,
+        "transport": {
+          "cleanup": "confirmed",
+          "sourceResponseBytes": 1681
+        },
+        "answer": {
+          "status": "abstained",
+          "releaseDecision": null,
+          "citations": [],
+          "providerAttempts": 0,
+          "providerUsage": null
+        },
+        "note": "Transport verification does not authenticate CI, certify release safety or authorize deployment. Old observations remain old."
+      },
+      "finishedAt": "2026-10-22T10:17:36.610Z"
+    },
+    "fresh": {
+      "sha256": "4f0d62c0e8e9ecfb460ba501fc25d7023ab3f516f29a55c8bec12beb1bcf5096",
+      "format": "qarinah.zetaris-local-verification.v1",
+      "startedAt": "2026-10-22T10:18:05.731Z",
+      "mode": "verify-source",
+      "status": "passed",
+      "steps": [
+        {
+          "stage": "ui-health",
+          "method": "GET",
+          "status": "passed",
+          "httpStatus": 200
+        },
+        {
+          "stage": "probe-login",
+          "method": "POST",
+          "status": "received",
+          "httpStatus": 200
+        },
+        {
+          "stage": "probe-select",
+          "method": "POST",
+          "status": "received",
+          "httpStatus": 200
+        },
+        {
+          "stage": "probe-close",
+          "method": "DELETE",
+          "status": "received",
+          "httpStatus": 200
+        },
+        {
+          "stage": "app-status",
+          "method": "GET",
+          "status": "received",
+          "httpStatus": 200,
+          "bytes": 1145
+        },
+        {
+          "stage": "app-current-release",
+          "method": "POST",
+          "status": "received",
+          "httpStatus": 200,
+          "bytes": 4793
+        },
+        {
+          "stage": "app-release-answer",
+          "method": "POST",
+          "status": "received",
+          "httpStatus": 200,
+          "bytes": 6061
+        }
+      ],
+      "uncertainties": [],
+      "note": "No credentials, tokens, raw provider errors, source detail or account identifiers are retained in this receipt.",
+      "probe": {
+        "one": 1,
+        "cleanup": "confirmed",
+        "sourceResponseBytes": 148,
+        "httpRequests": 3
+      },
+      "source": {
+        "csvBytes": 3126,
+        "csvSha256": "590df0934a617076c31e053f6ece5287969cd1326f4507940ce16610aa4fcbc6",
+        "rowCount": 2,
+        "packetSha256": "3764abcc347dc10937f95cbb8dbdaffd27a7ae1fc1ed1cfd37b7efca726d442e",
+        "observedAt": "2026-10-22T09:59:55.995Z",
+        "commit": "968764add439b8ea7e7b75f9989a91dd607ec0d3",
+        "expectedObservations": 4,
+        "confidentiality": "Base64 is not encryption; source is public-safe caller-declared local observations."
+      },
+      "application": {
+        "snapshotId": "402b1222-99dd-4ae9-b4c5-5eb47a259216",
+        "sourceMatchesPreparedPacket": true,
+        "transport": {
+          "cleanup": "confirmed",
+          "sourceResponseBytes": 1681
+        },
+        "answer": {
+          "status": "answered",
+          "releaseDecision": "ready",
+          "citations": [
+            "ev-d97a2b51a0d61405ad431467",
+            "ev-3f7a261a5f4ea9c033b3631f",
+            "ev-64dd8bcc85863c94cd49c77f",
+            "ev-3503c22de5e9bf2dc0b557c9"
+          ],
+          "providerAttempts": 0,
+          "providerUsage": null
+        },
+        "note": "Transport verification does not authenticate CI, certify release safety or authorize deployment. Old observations remain old."
+      },
+      "finishedAt": "2026-10-22T10:18:06.658Z"
+    }
+  },
+  "chromeJourney": {
+    "old": "Investigate handoff read unchanged old observations; review abstained and showed four stale next-step items.",
+    "fresh": "Explicit Read current release evidence after the source file update returned the separate actual capture; review became complete with four citations.",
+    "scope": "Actual Chrome UI; no changed timestamps, simulated responses, CI execution or deployment."
+  },
+  "liveRecording": {
+    "manifestSha256": "954ebd8eca5722e6a13a00dc2f46dd82b7ca523db0ef4ee5826cf6c9ae7e3088",
+    "capturedAt": "2026-10-22T10:18:49.262Z",
+    "capturedCommit": "968764add439b8ea7e7b75f9989a91dd607ec0d3",
+    "packetSha256": "5a09d9e2ca927e8b137d127c021b5c7df46c41fa9d89ce4f3a9db363f2877b9b",
+    "duration": 30.417,
+    "passed": true,
+    "responses": [
+      {
+        "route": "/api/source/query",
+        "status": 200
+      },
+      {
+        "route": "/api/answer",
+        "status": 200
+      }
+    ],
+    "pageErrors": 0,
+    "blockedRequests": 0
+  },
+  "repair": {
+    "initialFailure": "DATABASE_REGISTRATION_UNCONFIRMED",
+    "cause": "Generic SHOW did not provide the native Lightning catalog.",
+    "fix": "Use confirmed native catalog GET routes, preserve existing QARINAH, create only the missing handoffs table and verify its exact source result."
+  },
+  "limitations": [
+    "Successful source transport does not independently authenticate CI or confer deployment permission.",
+    "Observations retain original capture times and expire; rereading alone does not refresh them.",
+    "No actual provider-token measurement, cost reduction, user study or winning probability is established.",
+    "Cursor development use and public submission remain separate pending gates."
+  ]
+}
